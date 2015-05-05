@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prova", "Prova\Prova.csproj", "{57F958B5-F8DC-4382-BD64-EA6A6279EEA2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Workstation", "Workstation\Workstation.csproj", "{4CE268C1-612E-4BB0-A0AD-9FEF22C4D776}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{57F958B5-F8DC-4382-BD64-EA6A6279EEA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{57F958B5-F8DC-4382-BD64-EA6A6279EEA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{57F958B5-F8DC-4382-BD64-EA6A6279EEA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{57F958B5-F8DC-4382-BD64-EA6A6279EEA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CE268C1-612E-4BB0-A0AD-9FEF22C4D776}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CE268C1-612E-4BB0-A0AD-9FEF22C4D776}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CE268C1-612E-4BB0-A0AD-9FEF22C4D776}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CE268C1-612E-4BB0-A0AD-9FEF22C4D776}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
