@@ -73,6 +73,9 @@
     <Compile Include="ChooseView_UC.Designer.cs">
       <DependentUpon>ChooseView_UC.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomClasses\EnglishStringValues.cs" />
+    <Compile Include="CustomClasses\LoginController.cs" />
+    <Compile Include="CustomClasses\PersistanceManager.cs" />
     <Compile Include="PictureBoxLogout_UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -304,6 +307,7 @@
       <DependentUpon>View_ModificarProducte.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\ViewsProjecteFinal.ServiceReference.m13_projectEntities.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

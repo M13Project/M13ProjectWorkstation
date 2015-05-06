@@ -12,9 +12,12 @@ namespace ViewsProjecteFinal
 {
     public partial class MainViewAgent : Form
     {
-        public MainViewAgent()
+        private int agentId;
+
+        public MainViewAgent(int agentId)
         {
             InitializeComponent();
+            this.agentId = agentId;
         }
     }
 }

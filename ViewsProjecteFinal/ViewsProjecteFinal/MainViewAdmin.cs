@@ -12,9 +12,12 @@ namespace ViewsProjecteFinal
 {
     public partial class MainViewAdmin : Form
     {
-        public MainViewAdmin()
+        private int adminId;
+
+        public MainViewAdmin(int adminId)
         {
             InitializeComponent();
+            this.adminId = adminId;
         }
 
         private void MainView_Load(object sender, EventArgs e)
