@@ -15,6 +15,7 @@ namespace ViewsProjecteFinal.CustomClasses
             pm = new PersistanceManager();
         }
 
+        //This method search in the database if user with introduced username and password exsists
         public int checkUserSignIn(string username, string password) {
             int userId = 0;            
             Usuari user = pm.getUserWithUsernameAndPassword(username, password);

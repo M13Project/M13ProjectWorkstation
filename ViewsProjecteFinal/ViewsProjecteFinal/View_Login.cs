@@ -49,5 +49,15 @@ namespace ViewsProjecteFinal
                 }    
             }
         }
+
+        private void txtUsername_EnterFocus(object sender, EventArgs e)
+        {
+            txtUsername.Text = "";
+        }
+
+        private void txtPassword_EnterFocus(object sender, EventArgs e)
+        {
+            txtPassword.Text = "";
+        }
     }
 }

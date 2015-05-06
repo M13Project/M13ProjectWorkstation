@@ -42,10 +42,12 @@
             this.txtPassword.MaximumSize = new System.Drawing.Size(700, 100);
             this.txtPassword.MinimumSize = new System.Drawing.Size(400, 67);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtPassword.Size = new System.Drawing.Size(447, 52);
             this.txtPassword.TabIndex = 1;
             this.txtPassword.Text = "Password";
+            this.txtPassword.Enter += new System.EventHandler(this.txtPassword_EnterFocus);
             // 
             // txtUsername
             // 
@@ -57,6 +59,7 @@
             this.txtUsername.Size = new System.Drawing.Size(447, 52);
             this.txtUsername.TabIndex = 2;
             this.txtUsername.Text = "Username";
+            this.txtUsername.Enter += new System.EventHandler(this.txtUsername_EnterFocus);
             // 
             // btnSignIn
             // 

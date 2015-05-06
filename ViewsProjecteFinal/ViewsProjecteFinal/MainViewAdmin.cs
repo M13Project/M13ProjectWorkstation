@@ -17,12 +17,14 @@ namespace ViewsProjecteFinal
         public MainViewAdmin(int adminId)
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
             this.adminId = adminId;
         }
 
         private void MainView_Load(object sender, EventArgs e)
         {
             //chooseView_UC_CAgents.BackColor = System.Drawing.Color.FromArgb(7, 59, 90);
+            
         }
     }
 }
