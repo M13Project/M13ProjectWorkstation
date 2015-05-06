@@ -21,5 +21,10 @@ namespace ViewsProjecteFinal
         {
             this.WindowState = FormWindowState.Maximized;
         }
+
+        private void btnSignIn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
