@@ -16,6 +16,7 @@ namespace ViewsProjecteFinal
         {
             InitializeComponent();
             this.btnBack.BackColor = Color.FromArgb(26, 183, 234);
+            this.btnBack.ForeColor = Color.FromArgb(7, 59, 90);
         }
     }
 }
