@@ -34,6 +34,7 @@
             this.chooseView_UC3 = new ViewsProjecteFinal.ChooseView_UC();
             this.chooseView_UC4 = new ViewsProjecteFinal.ChooseView_UC();
             this.lblTitolView = new System.Windows.Forms.Label();
+            this.buttonBack_UC1 = new ViewsProjecteFinal.ButtonBack_UC();
             this.SuspendLayout();
             // 
             // pictureBoxLogout_UC1
@@ -86,12 +87,20 @@
             this.lblTitolView.TabIndex = 16;
             this.lblTitolView.Text = "Main";
             // 
+            // buttonBack_UC1
+            // 
+            this.buttonBack_UC1.Location = new System.Drawing.Point(126, 56);
+            this.buttonBack_UC1.Name = "buttonBack_UC1";
+            this.buttonBack_UC1.Size = new System.Drawing.Size(70, 21);
+            this.buttonBack_UC1.TabIndex = 17;
+            // 
             // MainViewAgent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ViewsProjecteFinal.Properties.Resources.fonsViews;
             this.ClientSize = new System.Drawing.Size(1362, 741);
+            this.Controls.Add(this.buttonBack_UC1);
             this.Controls.Add(this.lblTitolView);
             this.Controls.Add(this.chooseView_UC4);
             this.Controls.Add(this.chooseView_UC3);
@@ -113,5 +122,6 @@
         private ChooseView_UC chooseView_UC3;
         private ChooseView_UC chooseView_UC4;
         private System.Windows.Forms.Label lblTitolView;
+        private ButtonBack_UC buttonBack_UC1;
     }
 }

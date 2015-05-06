@@ -17,5 +17,12 @@ namespace ViewsProjecteFinal
             InitializeComponent();
             this.btnBack.BackColor = Color.FromArgb(26, 183, 234);
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Parent.Hide();
+            Form viewLogin = new View_Login();
+            viewLogin.Show();
+        }
     }
 }

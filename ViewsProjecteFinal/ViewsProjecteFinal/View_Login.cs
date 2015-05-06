@@ -21,5 +21,22 @@ namespace ViewsProjecteFinal
         {
             this.WindowState = FormWindowState.Maximized;
         }
+
+        private void btnSignIn_Click(object sender, EventArgs e)
+        {
+            if (txtUsername.Text.Equals("admin") && txtPassword.Text.Equals("admin"))
+            {
+                this.Hide();
+                Form mainViewAdmin = new MainViewAdmin();
+                mainViewAdmin.Show();
+            }
+            else if (txtUsername.Text.Equals("agent") && txtPassword.Text.Equals("agent"))
+            {
+                this.Hide();
+                Form mainViewAgent = new MainViewAgent();
+                mainViewAgent.Show();
+            }
+
+        }
     }
 }
