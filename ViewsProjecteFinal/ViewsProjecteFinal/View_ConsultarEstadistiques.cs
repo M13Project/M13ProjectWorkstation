@@ -15,6 +15,10 @@ namespace ViewsProjecteFinal
         public View_ConsultarEstadistiques()
         {
             InitializeComponent();
+            this.lblTitolView.ForeColor = Color.FromArgb(26, 183, 234);
+            this.btnMostClients.BackColor = Color.FromArgb(26, 183, 234);
+            this.btnMostOrders.BackColor = Color.FromArgb(26, 183, 234);
+            this.btnMostSold.BackColor = Color.FromArgb(26, 183, 234);
         }
     }
 }

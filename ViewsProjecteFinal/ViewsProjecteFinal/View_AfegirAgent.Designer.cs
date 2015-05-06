@@ -39,20 +39,21 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBoxLogout_UC1 = new ViewsProjecteFinal.PictureBoxLogout_UC();
+            this.lblTitolView = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonBack_UC1
             // 
-            this.buttonBack_UC1.Location = new System.Drawing.Point(624, 373);
+            this.buttonBack_UC1.Location = new System.Drawing.Point(663, 381);
             this.buttonBack_UC1.Name = "buttonBack_UC1";
-            this.buttonBack_UC1.Size = new System.Drawing.Size(124, 37);
+            this.buttonBack_UC1.Size = new System.Drawing.Size(70, 21);
             this.buttonBack_UC1.TabIndex = 22;
             // 
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(646, 326);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.Size = new System.Drawing.Size(102, 31);
             this.btnAdd.TabIndex = 21;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -132,11 +133,24 @@
             this.pictureBoxLogout_UC1.Size = new System.Drawing.Size(50, 50);
             this.pictureBoxLogout_UC1.TabIndex = 23;
             // 
+            // lblTitolView
+            // 
+            this.lblTitolView.AutoSize = true;
+            this.lblTitolView.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitolView.Font = new System.Drawing.Font("Palatino Linotype", 40F);
+            this.lblTitolView.Location = new System.Drawing.Point(559, 60);
+            this.lblTitolView.Name = "lblTitolView";
+            this.lblTitolView.Size = new System.Drawing.Size(308, 73);
+            this.lblTitolView.TabIndex = 24;
+            this.lblTitolView.Text = "New Agent";
+            // 
             // View_AfegirAgent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::ViewsProjecteFinal.Properties.Resources.fonsViews;
             this.ClientSize = new System.Drawing.Size(1362, 741);
+            this.Controls.Add(this.lblTitolView);
             this.Controls.Add(this.pictureBoxLogout_UC1);
             this.Controls.Add(this.buttonBack_UC1);
             this.Controls.Add(this.btnAdd);
@@ -168,5 +182,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private PictureBoxLogout_UC pictureBoxLogout_UC1;
+        private System.Windows.Forms.Label lblTitolView;
     }
 }

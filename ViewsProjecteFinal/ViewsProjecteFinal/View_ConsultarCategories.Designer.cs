@@ -28,74 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.pictureBoxLogout_UC1 = new ViewsProjecteFinal.PictureBoxLogout_UC();
             this.buttonBack_UC1 = new ViewsProjecteFinal.ButtonBack_UC();
             this.btnDelete = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lblSelect = new System.Windows.Forms.Label();
             this.btnModify = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.gridView = new System.Windows.Forms.DataGridView();
-            this.pictureBoxLogout_UC1 = new ViewsProjecteFinal.PictureBoxLogout_UC();
+            this.lblTitolView = new System.Windows.Forms.Label();
+            this.lblSelect = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
             this.SuspendLayout();
-            // 
-            // buttonBack_UC1
-            // 
-            this.buttonBack_UC1.Location = new System.Drawing.Point(626, 501);
-            this.buttonBack_UC1.Name = "buttonBack_UC1";
-            this.buttonBack_UC1.Size = new System.Drawing.Size(124, 37);
-            this.buttonBack_UC1.TabIndex = 16;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Location = new System.Drawing.Point(808, 425);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 23);
-            this.btnDelete.TabIndex = 15;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(521, 462);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(197, 20);
-            this.textBox1.TabIndex = 14;
-            // 
-            // lblSelect
-            // 
-            this.lblSelect.AutoSize = true;
-            this.lblSelect.Location = new System.Drawing.Point(475, 465);
-            this.lblSelect.Name = "lblSelect";
-            this.lblSelect.Size = new System.Drawing.Size(40, 13);
-            this.lblSelect.TabIndex = 13;
-            this.lblSelect.Text = "Select:";
-            // 
-            // btnModify
-            // 
-            this.btnModify.Location = new System.Drawing.Point(727, 425);
-            this.btnModify.Name = "btnModify";
-            this.btnModify.Size = new System.Drawing.Size(75, 23);
-            this.btnModify.TabIndex = 12;
-            this.btnModify.Text = "Modify";
-            this.btnModify.UseVisualStyleBackColor = true;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(473, 425);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnAdd.TabIndex = 11;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            // 
-            // gridView
-            // 
-            this.gridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridView.Location = new System.Drawing.Point(341, 134);
-            this.gridView.Name = "gridView";
-            this.gridView.Size = new System.Drawing.Size(680, 279);
-            this.gridView.TabIndex = 10;
             // 
             // pictureBoxLogout_UC1
             // 
@@ -104,19 +47,92 @@
             this.pictureBoxLogout_UC1.Size = new System.Drawing.Size(50, 50);
             this.pictureBoxLogout_UC1.TabIndex = 17;
             // 
+            // buttonBack_UC1
+            // 
+            this.buttonBack_UC1.Location = new System.Drawing.Point(634, 634);
+            this.buttonBack_UC1.Name = "buttonBack_UC1";
+            this.buttonBack_UC1.Size = new System.Drawing.Size(70, 21);
+            this.buttonBack_UC1.TabIndex = 23;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(809, 545);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(102, 31);
+            this.btnDelete.TabIndex = 22;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.LightCyan;
+            this.textBox1.Location = new System.Drawing.Point(492, 596);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(197, 20);
+            this.textBox1.TabIndex = 21;
+            // 
+            // btnModify
+            // 
+            this.btnModify.Location = new System.Drawing.Point(701, 545);
+            this.btnModify.Name = "btnModify";
+            this.btnModify.Size = new System.Drawing.Size(102, 31);
+            this.btnModify.TabIndex = 20;
+            this.btnModify.Text = "Modify";
+            this.btnModify.UseVisualStyleBackColor = true;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(447, 545);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(102, 31);
+            this.btnAdd.TabIndex = 19;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            // 
+            // gridView
+            // 
+            this.gridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridView.Location = new System.Drawing.Point(255, 157);
+            this.gridView.Name = "gridView";
+            this.gridView.Size = new System.Drawing.Size(851, 367);
+            this.gridView.TabIndex = 18;
+            // 
+            // lblTitolView
+            // 
+            this.lblTitolView.AutoSize = true;
+            this.lblTitolView.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitolView.Font = new System.Drawing.Font("Palatino Linotype", 40F);
+            this.lblTitolView.Location = new System.Drawing.Point(453, 39);
+            this.lblTitolView.Name = "lblTitolView";
+            this.lblTitolView.Size = new System.Drawing.Size(488, 73);
+            this.lblTitolView.TabIndex = 50;
+            this.lblTitolView.Text = "Consult Categories";
+            // 
+            // lblSelect
+            // 
+            this.lblSelect.AutoSize = true;
+            this.lblSelect.BackColor = System.Drawing.Color.Transparent;
+            this.lblSelect.Location = new System.Drawing.Point(448, 599);
+            this.lblSelect.Name = "lblSelect";
+            this.lblSelect.Size = new System.Drawing.Size(40, 13);
+            this.lblSelect.TabIndex = 51;
+            this.lblSelect.Text = "Select:";
+            // 
             // View_ConsultarCategories
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::ViewsProjecteFinal.Properties.Resources.fonsViews;
             this.ClientSize = new System.Drawing.Size(1362, 741);
-            this.Controls.Add(this.pictureBoxLogout_UC1);
+            this.Controls.Add(this.lblSelect);
+            this.Controls.Add(this.lblTitolView);
             this.Controls.Add(this.buttonBack_UC1);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.lblSelect);
             this.Controls.Add(this.btnModify);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.gridView);
+            this.Controls.Add(this.pictureBoxLogout_UC1);
             this.Name = "View_ConsultarCategories";
             this.Text = "View_ConsultarCategories";
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
@@ -127,13 +143,14 @@
 
         #endregion
 
+        private PictureBoxLogout_UC pictureBoxLogout_UC1;
         private ButtonBack_UC buttonBack_UC1;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label lblSelect;
         private System.Windows.Forms.Button btnModify;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.DataGridView gridView;
-        private PictureBoxLogout_UC pictureBoxLogout_UC1;
+        private System.Windows.Forms.Label lblTitolView;
+        private System.Windows.Forms.Label lblSelect;
     }
 }

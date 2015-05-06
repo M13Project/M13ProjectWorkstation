@@ -15,6 +15,8 @@ namespace ViewsProjecteFinal
         public View_AfegirAgent()
         {
             InitializeComponent();
+            this.btnAdd.BackColor = Color.FromArgb(26, 183, 234);
+            this.lblTitolView.ForeColor = Color.FromArgb(26, 183, 234);
         }
     }
 }

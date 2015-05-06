@@ -15,6 +15,11 @@ namespace ViewsProjecteFinal
         public View_ConsultarAgents()
         {
             InitializeComponent();
+            this.lblTitolView.ForeColor = Color.FromArgb(26, 183, 234);
+            this.btnAdd.BackColor = Color.FromArgb(26, 183, 234);
+            this.btnDelete.BackColor = Color.FromArgb(26, 183, 234);
+            this.btnModify.BackColor = Color.FromArgb(26, 183, 234);
+
         }
     }
 }

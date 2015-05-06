@@ -15,6 +15,8 @@ namespace ViewsProjecteFinal
         public View_AfegirCategoria()
         {
             InitializeComponent();
+            this.lblTitolView.ForeColor = Color.FromArgb(26, 183, 234);
+            this.btnAdd.BackColor = Color.FromArgb(26, 183, 234);
         }
     }
 }

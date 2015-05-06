@@ -15,6 +15,7 @@ namespace ViewsProjecteFinal
         public ButtonBack_UC()
         {
             InitializeComponent();
+            this.btnBack.BackColor = Color.FromArgb(26, 183, 234);
         }
     }
 }

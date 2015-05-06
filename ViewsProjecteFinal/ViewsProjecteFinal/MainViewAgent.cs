@@ -15,6 +15,7 @@ namespace ViewsProjecteFinal
         public MainViewAgent()
         {
             InitializeComponent();
+            this.lblTitolView.ForeColor = Color.FromArgb(26, 183, 234);
         }
     }
 }

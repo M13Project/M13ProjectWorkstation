@@ -12,14 +12,17 @@ namespace ViewsProjecteFinal
 {
     public partial class MainViewAdmin : Form
     {
+        
         public MainViewAdmin()
         {
             InitializeComponent();
+            this.lblTitolView.ForeColor = Color.FromArgb(26, 183, 234);
+            
         }
-
+        
         private void MainView_Load(object sender, EventArgs e)
         {
-            //chooseView_UC_CAgents.BackColor = System.Drawing.Color.FromArgb(7, 59, 90);
+            
         }
     }
 }

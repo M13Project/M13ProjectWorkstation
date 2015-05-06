@@ -40,6 +40,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pboxProfilePicture = new System.Windows.Forms.PictureBox();
+            this.lblTitolView = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pboxProfilePicture)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,22 +53,23 @@
             // 
             // buttonBack_UC1
             // 
-            this.buttonBack_UC1.Location = new System.Drawing.Point(565, 377);
+            this.buttonBack_UC1.Location = new System.Drawing.Point(637, 383);
             this.buttonBack_UC1.Name = "buttonBack_UC1";
-            this.buttonBack_UC1.Size = new System.Drawing.Size(124, 37);
+            this.buttonBack_UC1.Size = new System.Drawing.Size(70, 21);
             this.buttonBack_UC1.TabIndex = 33;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(587, 330);
+            this.btnAdd.Location = new System.Drawing.Point(622, 340);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.Size = new System.Drawing.Size(102, 31);
             this.btnAdd.TabIndex = 32;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
             // 
             // txtHabilitat
             // 
+            this.txtHabilitat.BackColor = System.Drawing.Color.LightCyan;
             this.txtHabilitat.Location = new System.Drawing.Point(597, 291);
             this.txtHabilitat.Name = "txtHabilitat";
             this.txtHabilitat.Size = new System.Drawing.Size(30, 20);
@@ -75,6 +77,7 @@
             // 
             // txtDescompte
             // 
+            this.txtDescompte.BackColor = System.Drawing.Color.LightCyan;
             this.txtDescompte.Location = new System.Drawing.Point(597, 255);
             this.txtDescompte.Name = "txtDescompte";
             this.txtDescompte.Size = new System.Drawing.Size(30, 20);
@@ -82,6 +85,7 @@
             // 
             // txtPreu
             // 
+            this.txtPreu.BackColor = System.Drawing.Color.LightCyan;
             this.txtPreu.Location = new System.Drawing.Point(597, 214);
             this.txtPreu.Name = "txtPreu";
             this.txtPreu.Size = new System.Drawing.Size(50, 20);
@@ -89,6 +93,7 @@
             // 
             // txtName
             // 
+            this.txtName.BackColor = System.Drawing.Color.LightCyan;
             this.txtName.Location = new System.Drawing.Point(597, 173);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(92, 20);
@@ -132,17 +137,30 @@
             // 
             // pboxProfilePicture
             // 
-            this.pboxProfilePicture.Location = new System.Drawing.Point(764, 173);
+            this.pboxProfilePicture.Location = new System.Drawing.Point(746, 173);
             this.pboxProfilePicture.Name = "pboxProfilePicture";
             this.pboxProfilePicture.Size = new System.Drawing.Size(121, 138);
             this.pboxProfilePicture.TabIndex = 35;
             this.pboxProfilePicture.TabStop = false;
             // 
+            // lblTitolView
+            // 
+            this.lblTitolView.AutoSize = true;
+            this.lblTitolView.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitolView.Font = new System.Drawing.Font("Palatino Linotype", 40F);
+            this.lblTitolView.Location = new System.Drawing.Point(514, 42);
+            this.lblTitolView.Name = "lblTitolView";
+            this.lblTitolView.Size = new System.Drawing.Size(353, 73);
+            this.lblTitolView.TabIndex = 48;
+            this.lblTitolView.Text = "New Product";
+            // 
             // View_AfegirProducte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::ViewsProjecteFinal.Properties.Resources.fonsViews;
             this.ClientSize = new System.Drawing.Size(1362, 741);
+            this.Controls.Add(this.lblTitolView);
             this.Controls.Add(this.pboxProfilePicture);
             this.Controls.Add(this.pictureBoxLogout_UC1);
             this.Controls.Add(this.buttonBack_UC1);
@@ -177,5 +195,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pboxProfilePicture;
+        private System.Windows.Forms.Label lblTitolView;
     }
 }
