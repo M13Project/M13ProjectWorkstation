@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Workstation.Properties
+namespace ViewsProjecteFinal.Properties
 {
 
 

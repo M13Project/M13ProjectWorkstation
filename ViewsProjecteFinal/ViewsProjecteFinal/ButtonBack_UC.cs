@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Workstation
+namespace ViewsProjecteFinal
 {
-    public partial class Form1 : Form
+    public partial class ButtonBack_UC : UserControl
     {
-        public Form1()
+        public ButtonBack_UC()
         {
             InitializeComponent();
         }
