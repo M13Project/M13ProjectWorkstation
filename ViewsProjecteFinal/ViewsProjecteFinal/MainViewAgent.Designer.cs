@@ -80,7 +80,7 @@
             this.lblTitolView.AutoSize = true;
             this.lblTitolView.BackColor = System.Drawing.Color.Transparent;
             this.lblTitolView.Font = new System.Drawing.Font("Palatino Linotype", 40F);
-            this.lblTitolView.Location = new System.Drawing.Point(616, 77);
+            this.lblTitolView.Location = new System.Drawing.Point(616, 39);
             this.lblTitolView.Name = "lblTitolView";
             this.lblTitolView.Size = new System.Drawing.Size(157, 73);
             this.lblTitolView.TabIndex = 16;

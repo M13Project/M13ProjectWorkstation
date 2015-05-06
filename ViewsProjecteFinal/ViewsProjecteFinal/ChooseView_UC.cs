@@ -16,7 +16,8 @@ namespace ViewsProjecteFinal
         public ChooseView_UC()
         {
             InitializeComponent();
-            this.BackColor = System.Drawing.Color.FromArgb(7, 59, 90);
+            this.BackColor = Color.FromArgb(7, 59, 90);
+            this.lblOption.ForeColor = Color.FromArgb(7, 59, 90);
         }
     }
 }

@@ -43,7 +43,7 @@
             this.lblTitolView.AutoSize = true;
             this.lblTitolView.BackColor = System.Drawing.Color.Transparent;
             this.lblTitolView.Font = new System.Drawing.Font("Palatino Linotype", 40F);
-            this.lblTitolView.Location = new System.Drawing.Point(616, 77);
+            this.lblTitolView.Location = new System.Drawing.Point(616, 39);
             this.lblTitolView.Name = "lblTitolView";
             this.lblTitolView.Size = new System.Drawing.Size(157, 73);
             this.lblTitolView.TabIndex = 15;
@@ -52,7 +52,7 @@
             // chooseView_UC6
             // 
             this.chooseView_UC6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(59)))), ((int)(((byte)(90)))));
-            this.chooseView_UC6.Location = new System.Drawing.Point(386, 436);
+            this.chooseView_UC6.Location = new System.Drawing.Point(365, 436);
             this.chooseView_UC6.Name = "chooseView_UC6";
             this.chooseView_UC6.Size = new System.Drawing.Size(156, 157);
             this.chooseView_UC6.TabIndex = 14;
@@ -60,7 +60,7 @@
             // chooseView_UC5
             // 
             this.chooseView_UC5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(59)))), ((int)(((byte)(90)))));
-            this.chooseView_UC5.Location = new System.Drawing.Point(878, 436);
+            this.chooseView_UC5.Location = new System.Drawing.Point(857, 436);
             this.chooseView_UC5.Name = "chooseView_UC5";
             this.chooseView_UC5.Size = new System.Drawing.Size(156, 157);
             this.chooseView_UC5.TabIndex = 13;
@@ -68,7 +68,7 @@
             // chooseView_UC4
             // 
             this.chooseView_UC4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(59)))), ((int)(((byte)(90)))));
-            this.chooseView_UC4.Location = new System.Drawing.Point(634, 436);
+            this.chooseView_UC4.Location = new System.Drawing.Point(613, 436);
             this.chooseView_UC4.Name = "chooseView_UC4";
             this.chooseView_UC4.Size = new System.Drawing.Size(156, 157);
             this.chooseView_UC4.TabIndex = 12;
@@ -76,7 +76,7 @@
             // chooseView_UC3
             // 
             this.chooseView_UC3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(59)))), ((int)(((byte)(90)))));
-            this.chooseView_UC3.Location = new System.Drawing.Point(878, 209);
+            this.chooseView_UC3.Location = new System.Drawing.Point(857, 209);
             this.chooseView_UC3.Name = "chooseView_UC3";
             this.chooseView_UC3.Size = new System.Drawing.Size(156, 157);
             this.chooseView_UC3.TabIndex = 11;
@@ -84,7 +84,7 @@
             // chooseView_UC2
             // 
             this.chooseView_UC2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(59)))), ((int)(((byte)(90)))));
-            this.chooseView_UC2.Location = new System.Drawing.Point(634, 209);
+            this.chooseView_UC2.Location = new System.Drawing.Point(613, 209);
             this.chooseView_UC2.Name = "chooseView_UC2";
             this.chooseView_UC2.Size = new System.Drawing.Size(156, 157);
             this.chooseView_UC2.TabIndex = 10;
@@ -92,7 +92,7 @@
             // chooseView_UC1
             // 
             this.chooseView_UC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(59)))), ((int)(((byte)(90)))));
-            this.chooseView_UC1.Location = new System.Drawing.Point(386, 209);
+            this.chooseView_UC1.Location = new System.Drawing.Point(365, 209);
             this.chooseView_UC1.Name = "chooseView_UC1";
             this.chooseView_UC1.Size = new System.Drawing.Size(156, 157);
             this.chooseView_UC1.TabIndex = 9;
