@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.pictureBoxLogout_UC1 = new ViewsProjecteFinal.PictureBoxLogout_UC();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblMajorValue = new System.Windows.Forms.Label();
             this.lblMinorValue = new System.Windows.Forms.Label();
             this.buttonBack_UC1 = new ViewsProjecteFinal.ButtonBack_UC();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.lblTitolView = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // pictureBoxLogout_UC1
@@ -44,17 +45,11 @@
             this.pictureBoxLogout_UC1.Size = new System.Drawing.Size(50, 50);
             this.pictureBoxLogout_UC1.TabIndex = 0;
             // 
-            // reportViewer1
-            // 
-            this.reportViewer1.Location = new System.Drawing.Point(398, 128);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(547, 333);
-            this.reportViewer1.TabIndex = 1;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(613, 468);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(613, 524);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 13);
             this.label1.TabIndex = 2;
@@ -63,7 +58,8 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(613, 493);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Location = new System.Drawing.Point(613, 549);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 13);
             this.label2.TabIndex = 3;
@@ -72,7 +68,8 @@
             // lblMajorValue
             // 
             this.lblMajorValue.AutoSize = true;
-            this.lblMajorValue.Location = new System.Drawing.Point(685, 468);
+            this.lblMajorValue.BackColor = System.Drawing.Color.Transparent;
+            this.lblMajorValue.Location = new System.Drawing.Point(685, 524);
             this.lblMajorValue.Name = "lblMajorValue";
             this.lblMajorValue.Size = new System.Drawing.Size(10, 13);
             this.lblMajorValue.TabIndex = 4;
@@ -81,7 +78,8 @@
             // lblMinorValue
             // 
             this.lblMinorValue.AutoSize = true;
-            this.lblMinorValue.Location = new System.Drawing.Point(685, 493);
+            this.lblMinorValue.BackColor = System.Drawing.Color.Transparent;
+            this.lblMinorValue.Location = new System.Drawing.Point(685, 549);
             this.lblMinorValue.Name = "lblMinorValue";
             this.lblMinorValue.Size = new System.Drawing.Size(10, 13);
             this.lblMinorValue.TabIndex = 5;
@@ -89,22 +87,42 @@
             // 
             // buttonBack_UC1
             // 
-            this.buttonBack_UC1.Location = new System.Drawing.Point(595, 521);
+            this.buttonBack_UC1.Location = new System.Drawing.Point(618, 588);
             this.buttonBack_UC1.Name = "buttonBack_UC1";
-            this.buttonBack_UC1.Size = new System.Drawing.Size(124, 37);
+            this.buttonBack_UC1.Size = new System.Drawing.Size(70, 21);
             this.buttonBack_UC1.TabIndex = 6;
+            // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Location = new System.Drawing.Point(252, 128);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.Size = new System.Drawing.Size(851, 367);
+            this.reportViewer1.TabIndex = 7;
+            // 
+            // lblTitolView
+            // 
+            this.lblTitolView.AutoSize = true;
+            this.lblTitolView.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitolView.Font = new System.Drawing.Font("Palatino Linotype", 40F);
+            this.lblTitolView.Location = new System.Drawing.Point(500, 30);
+            this.lblTitolView.Name = "lblTitolView";
+            this.lblTitolView.Size = new System.Drawing.Size(355, 73);
+            this.lblTitolView.TabIndex = 65;
+            this.lblTitolView.Text = "Detail Orders";
             // 
             // View_DetallEstadistica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::ViewsProjecteFinal.Properties.Resources.fonsViews;
             this.ClientSize = new System.Drawing.Size(1354, 733);
+            this.Controls.Add(this.lblTitolView);
+            this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.buttonBack_UC1);
             this.Controls.Add(this.lblMinorValue);
             this.Controls.Add(this.lblMajorValue);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.pictureBoxLogout_UC1);
             this.Name = "View_DetallEstadistica";
             this.Text = "View_DetallEstadistica";
@@ -117,11 +135,12 @@
         #endregion
 
         private PictureBoxLogout_UC pictureBoxLogout_UC1;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblMajorValue;
         private System.Windows.Forms.Label lblMinorValue;
         private ButtonBack_UC buttonBack_UC1;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.Label lblTitolView;
     }
 }

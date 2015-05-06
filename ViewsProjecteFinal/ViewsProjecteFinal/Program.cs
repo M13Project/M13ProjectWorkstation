@@ -16,7 +16,7 @@ namespace ViewsProjecteFinal
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new View_ConsultarProductes());
+            Application.Run(new MainViewAdmin());
         }
     }
 }

@@ -35,6 +35,7 @@
             this.txtName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.lblTitolView = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // pictureBoxLogout_UC1
@@ -46,30 +47,32 @@
             // 
             // buttonBack_UC1
             // 
-            this.buttonBack_UC1.Location = new System.Drawing.Point(631, 315);
+            this.buttonBack_UC1.Location = new System.Drawing.Point(628, 342);
             this.buttonBack_UC1.Name = "buttonBack_UC1";
-            this.buttonBack_UC1.Size = new System.Drawing.Size(124, 37);
+            this.buttonBack_UC1.Size = new System.Drawing.Size(70, 21);
             this.buttonBack_UC1.TabIndex = 52;
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(654, 275);
+            this.btnUpdate.Location = new System.Drawing.Point(612, 282);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.Size = new System.Drawing.Size(102, 31);
             this.btnUpdate.TabIndex = 51;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
             // 
             // txtDiscount
             // 
-            this.txtDiscount.Location = new System.Drawing.Point(663, 206);
+            this.txtDiscount.BackColor = System.Drawing.Color.LightCyan;
+            this.txtDiscount.Location = new System.Drawing.Point(663, 213);
             this.txtDiscount.Name = "txtDiscount";
             this.txtDiscount.Size = new System.Drawing.Size(29, 20);
             this.txtDiscount.TabIndex = 50;
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(663, 165);
+            this.txtName.BackColor = System.Drawing.Color.LightCyan;
+            this.txtName.Location = new System.Drawing.Point(663, 172);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(92, 20);
             this.txtName.TabIndex = 49;
@@ -77,7 +80,8 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(576, 209);
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Location = new System.Drawing.Point(576, 216);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 13);
             this.label3.TabIndex = 48;
@@ -86,17 +90,31 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(576, 168);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Location = new System.Drawing.Point(576, 175);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 47;
             this.label2.Text = "Name:";
             // 
+            // lblTitolView
+            // 
+            this.lblTitolView.AutoSize = true;
+            this.lblTitolView.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitolView.Font = new System.Drawing.Font("Palatino Linotype", 40F);
+            this.lblTitolView.Location = new System.Drawing.Point(456, 39);
+            this.lblTitolView.Name = "lblTitolView";
+            this.lblTitolView.Size = new System.Drawing.Size(443, 73);
+            this.lblTitolView.TabIndex = 68;
+            this.lblTitolView.Text = "Modify Category";
+            // 
             // View_ModificarCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::ViewsProjecteFinal.Properties.Resources.fonsViews;
             this.ClientSize = new System.Drawing.Size(1354, 733);
+            this.Controls.Add(this.lblTitolView);
             this.Controls.Add(this.pictureBoxLogout_UC1);
             this.Controls.Add(this.buttonBack_UC1);
             this.Controls.Add(this.btnUpdate);
@@ -120,5 +138,6 @@
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblTitolView;
     }
 }

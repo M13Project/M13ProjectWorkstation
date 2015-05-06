@@ -15,6 +15,7 @@ namespace ViewsProjecteFinal
         public View_DetallEstadistica()
         {
             InitializeComponent();
+            this.lblTitolView.ForeColor = Color.FromArgb(26, 183, 234);
         }
 
         private void View_DetallEstadistica_Load(object sender, EventArgs e)
