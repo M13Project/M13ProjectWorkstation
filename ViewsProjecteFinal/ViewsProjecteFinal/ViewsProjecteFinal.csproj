@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7872ACC8-CA5F-4D71-9CC4-10885FF48E57}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ViewsProjecteFinal</RootNamespace>
+    <AssemblyName>ViewsProjecteFinal</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ButtonBack_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ButtonBack_UC.Designer.cs">
+      <DependentUpon>ButtonBack_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChooseView_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChooseView_UC.Designer.cs">
+      <DependentUpon>ChooseView_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PictureBoxLogout_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PictureBoxLogout_UC.Designer.cs">
+      <DependentUpon>PictureBoxLogout_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="View_AfegirAgent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View_AfegirAgent.Designer.cs">
+      <DependentUpon>View_AfegirAgent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_AfegirCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View_AfegirCategoria.Designer.cs">
+      <DependentUpon>View_AfegirCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_AfegirProducte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View_AfegirProducte.Designer.cs">
+      <DependentUpon>View_AfegirProducte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_ConsultarAgents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View_ConsultarAgents.Designer.cs">
+      <DependentUpon>View_ConsultarAgents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View_Login.Designer.cs">
+      <DependentUpon>View_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeaderView_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HeaderView_UC.Designer.cs">
+      <DependentUpon>HeaderView_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainViewAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainViewAdmin.Designer.cs">
+      <DependentUpon>MainViewAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainViewAgent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainViewAgent.Designer.cs">
+      <DependentUpon>MainViewAgent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View_ConsultarCategories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View_ConsultarCategories.Designer.cs">
+      <DependentUpon>View_ConsultarCategories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_ConsultarClients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View_ConsultarClients.Designer.cs">
+      <DependentUpon>View_ConsultarClients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_ConsultarClientsAgent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View_ConsultarClientsAgent.Designer.cs">
+      <DependentUpon>View_ConsultarClientsAgent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_ConsultarComandes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View_ConsultarComandes.Designer.cs">
+      <DependentUpon>View_ConsultarComandes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_ConsultarEstadistiques.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View_ConsultarEstadistiques.Designer.cs">
+      <DependentUpon>View_ConsultarEstadistiques.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_ConsultarProductes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View_ConsultarProductes.Designer.cs">
+      <DependentUpon>View_ConsultarProductes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_ConsultarProductesAgent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View_ConsultarProductesAgent.Designer.cs">
+      <DependentUpon>View_ConsultarProductesAgent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_DetallComanda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View_DetallComanda.Designer.cs">
+      <DependentUpon>View_DetallComanda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_DetallComandaAgent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View_DetallComandaAgent.Designer.cs">
+      <DependentUpon>View_DetallComandaAgent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_DetallEstadistica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View_DetallEstadistica.Designer.cs">
+      <DependentUpon>View_DetallEstadistica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_ModificarAgent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View_ModificarAgent.Designer.cs">
+      <DependentUpon>View_ModificarAgent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_ModificarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View_ModificarCategoria.Designer.cs">
+      <DependentUpon>View_ModificarCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_ModificarPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View_ModificarPerfil.Designer.cs">
+      <DependentUpon>View_ModificarPerfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_ModificarProducte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View_ModificarProducte.Designer.cs">
+      <DependentUpon>View_ModificarProducte.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ButtonBack_UC.resx">
+      <DependentUpon>ButtonBack_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChooseView_UC.resx">
+      <DependentUpon>ChooseView_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PictureBoxLogout_UC.resx">
+      <DependentUpon>PictureBoxLogout_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_AfegirAgent.resx">
+      <DependentUpon>View_AfegirAgent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_AfegirCategoria.resx">
+      <DependentUpon>View_AfegirCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_AfegirProducte.resx">
+      <DependentUpon>View_AfegirProducte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_ConsultarAgents.resx">
+      <DependentUpon>View_ConsultarAgents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_Login.resx">
+      <DependentUpon>View_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeaderView_UC.resx">
+      <DependentUpon>HeaderView_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainViewAdmin.resx">
+      <DependentUpon>MainViewAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainViewAgent.resx">
+      <DependentUpon>MainViewAgent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_ConsultarCategories.resx">
+      <DependentUpon>View_ConsultarCategories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_ConsultarClients.resx">
+      <DependentUpon>View_ConsultarClients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_ConsultarClientsAgent.resx">
+      <DependentUpon>View_ConsultarClientsAgent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_ConsultarComandes.resx">
+      <DependentUpon>View_ConsultarComandes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_ConsultarEstadistiques.resx">
+      <DependentUpon>View_ConsultarEstadistiques.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_ConsultarProductes.resx">
+      <DependentUpon>View_ConsultarProductes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_ConsultarProductesAgent.resx">
+      <DependentUpon>View_ConsultarProductesAgent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_DetallComanda.resx">
+      <DependentUpon>View_DetallComanda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_DetallComandaAgent.resx">
+      <DependentUpon>View_DetallComandaAgent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_DetallEstadistica.resx">
+      <DependentUpon>View_DetallEstadistica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_ModificarAgent.resx">
+      <DependentUpon>View_ModificarAgent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_ModificarCategoria.resx">
+      <DependentUpon>View_ModificarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_ModificarPerfil.resx">
+      <DependentUpon>View_ModificarPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_ModificarProducte.resx">
+      <DependentUpon>View_ModificarProducte.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttonLogin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fonsLogin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fonsViews.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
