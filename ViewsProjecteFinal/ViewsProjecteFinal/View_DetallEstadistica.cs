@@ -16,6 +16,10 @@ namespace ViewsProjecteFinal
         {
             InitializeComponent();
             this.lblTitolView.ForeColor = Color.FromArgb(26, 183, 234);
+            this.label1.ForeColor = Color.FromArgb(7, 59, 90);
+            this.label2.ForeColor = Color.FromArgb(7, 59, 90);
+            this.lblMajorValue.ForeColor = Color.FromArgb(7, 59, 90);
+            this.lblMinorValue.ForeColor = Color.FromArgb(7, 59, 90);
         }
 
         private void View_DetallEstadistica_Load(object sender, EventArgs e)

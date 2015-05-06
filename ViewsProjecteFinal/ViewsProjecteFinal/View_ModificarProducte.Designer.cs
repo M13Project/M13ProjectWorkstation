@@ -77,6 +77,7 @@
             // 
             // txtHabilitat
             // 
+            this.txtHabilitat.BackColor = System.Drawing.Color.LightCyan;
             this.txtHabilitat.Location = new System.Drawing.Point(576, 275);
             this.txtHabilitat.Name = "txtHabilitat";
             this.txtHabilitat.Size = new System.Drawing.Size(30, 20);
@@ -84,6 +85,7 @@
             // 
             // txtDescompte
             // 
+            this.txtDescompte.BackColor = System.Drawing.Color.LightCyan;
             this.txtDescompte.Location = new System.Drawing.Point(576, 239);
             this.txtDescompte.Name = "txtDescompte";
             this.txtDescompte.Size = new System.Drawing.Size(30, 20);
@@ -91,6 +93,7 @@
             // 
             // txtPreu
             // 
+            this.txtPreu.BackColor = System.Drawing.Color.LightCyan;
             this.txtPreu.Location = new System.Drawing.Point(576, 198);
             this.txtPreu.Name = "txtPreu";
             this.txtPreu.Size = new System.Drawing.Size(50, 20);
@@ -98,6 +101,7 @@
             // 
             // txtName
             // 
+            this.txtName.BackColor = System.Drawing.Color.LightCyan;
             this.txtName.Location = new System.Drawing.Point(576, 157);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(92, 20);
@@ -106,6 +110,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Location = new System.Drawing.Point(489, 278);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(48, 13);
@@ -115,6 +120,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Location = new System.Drawing.Point(489, 201);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(32, 13);
@@ -124,6 +130,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(489, 160);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
@@ -133,6 +140,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(489, 242);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 13);

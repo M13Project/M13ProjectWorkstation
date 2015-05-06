@@ -19,6 +19,9 @@ namespace ViewsProjecteFinal
             this.btnMostClients.BackColor = Color.FromArgb(26, 183, 234);
             this.btnMostOrders.BackColor = Color.FromArgb(26, 183, 234);
             this.btnMostSold.BackColor = Color.FromArgb(26, 183, 234);
+            this.btnMostSold.ForeColor = Color.FromArgb(7, 59, 90);
+            this.btnMostOrders.ForeColor = Color.FromArgb(7, 59, 90);
+            this.btnMostClients.ForeColor = Color.FromArgb(7, 59, 90);
         }
     }
 }

@@ -19,6 +19,10 @@ namespace ViewsProjecteFinal
             this.btnAdd.BackColor = Color.FromArgb(26, 183, 234);
             this.btnDelete.BackColor = Color.FromArgb(26, 183, 234);
             this.btnModify.BackColor = Color.FromArgb(26, 183, 234);
+            this.btnModify.ForeColor = Color.FromArgb(7, 59, 90);
+            this.btnDelete.ForeColor = Color.FromArgb(7, 59, 90);
+            this.lblSelect.ForeColor = Color.FromArgb(7, 59, 90);
+            this.btnAdd.ForeColor = Color.FromArgb(7, 59, 90);
         }
     }
 }

@@ -16,7 +16,7 @@ namespace ViewsProjecteFinal
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainViewAgent());
+            Application.Run(new View_AfegirCategoria());
         }
     }
 }

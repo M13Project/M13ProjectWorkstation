@@ -40,7 +40,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(624, 270);
+            this.btnAdd.Location = new System.Drawing.Point(630, 270);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(102, 31);
             this.btnAdd.TabIndex = 44;
@@ -66,6 +66,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Location = new System.Drawing.Point(600, 215);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 13);
@@ -75,6 +76,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(600, 172);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
@@ -101,7 +103,7 @@
             // 
             // buttonBack_UC1
             // 
-            this.buttonBack_UC1.Location = new System.Drawing.Point(642, 317);
+            this.buttonBack_UC1.Location = new System.Drawing.Point(648, 317);
             this.buttonBack_UC1.Name = "buttonBack_UC1";
             this.buttonBack_UC1.Size = new System.Drawing.Size(70, 21);
             this.buttonBack_UC1.TabIndex = 45;
