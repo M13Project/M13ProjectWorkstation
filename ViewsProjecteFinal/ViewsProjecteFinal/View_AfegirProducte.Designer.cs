@@ -60,6 +60,7 @@
             // 
             // btnAdd
             // 
+            this.btnAdd.Font = new System.Drawing.Font("Palatino Linotype", 10F);
             this.btnAdd.Location = new System.Drawing.Point(622, 340);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(102, 31);
@@ -103,9 +104,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(510, 294);
+            this.label4.Font = new System.Drawing.Font("Palatino Linotype", 10F);
+            this.label4.Location = new System.Drawing.Point(508, 291);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 13);
+            this.label4.Size = new System.Drawing.Size(69, 19);
             this.label4.TabIndex = 27;
             this.label4.Text = "Habilitat:";
             // 
@@ -113,9 +115,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(510, 217);
+            this.label3.Font = new System.Drawing.Font("Palatino Linotype", 10F);
+            this.label3.Location = new System.Drawing.Point(508, 214);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 13);
+            this.label3.Size = new System.Drawing.Size(43, 19);
             this.label3.TabIndex = 26;
             this.label3.Text = "Preu:";
             // 
@@ -123,9 +126,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(510, 176);
+            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 10F);
+            this.label2.Location = new System.Drawing.Point(508, 173);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.Size = new System.Drawing.Size(50, 19);
             this.label2.TabIndex = 25;
             this.label2.Text = "Name:";
             // 
@@ -133,9 +137,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(510, 258);
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 10F);
+            this.label1.Location = new System.Drawing.Point(508, 255);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 13);
+            this.label1.Size = new System.Drawing.Size(81, 19);
             this.label1.TabIndex = 24;
             this.label1.Text = "Descompte:";
             // 
@@ -163,7 +168,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ViewsProjecteFinal.Properties.Resources.fonsViews;
-            this.ClientSize = new System.Drawing.Size(1362, 741);
+            this.ClientSize = new System.Drawing.Size(1354, 733);
             this.Controls.Add(this.lblTitolView);
             this.Controls.Add(this.pboxProfilePicture);
             this.Controls.Add(this.pictureBoxLogout_UC1);

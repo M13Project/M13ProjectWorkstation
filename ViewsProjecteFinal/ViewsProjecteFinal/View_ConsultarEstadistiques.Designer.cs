@@ -38,7 +38,7 @@
             // 
             // btnMostClients
             // 
-            this.btnMostClients.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMostClients.Font = new System.Drawing.Font("Palatino Linotype", 15.75F);
             this.btnMostClients.Location = new System.Drawing.Point(397, 168);
             this.btnMostClients.Name = "btnMostClients";
             this.btnMostClients.Size = new System.Drawing.Size(565, 36);
@@ -48,7 +48,7 @@
             // 
             // btnMostOrders
             // 
-            this.btnMostOrders.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMostOrders.Font = new System.Drawing.Font("Palatino Linotype", 15.75F);
             this.btnMostOrders.Location = new System.Drawing.Point(397, 265);
             this.btnMostOrders.Name = "btnMostOrders";
             this.btnMostOrders.Size = new System.Drawing.Size(565, 36);
@@ -58,7 +58,7 @@
             // 
             // btnMostSold
             // 
-            this.btnMostSold.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMostSold.Font = new System.Drawing.Font("Palatino Linotype", 15.75F);
             this.btnMostSold.Location = new System.Drawing.Point(397, 359);
             this.btnMostSold.Name = "btnMostSold";
             this.btnMostSold.Size = new System.Drawing.Size(565, 36);
@@ -96,7 +96,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ViewsProjecteFinal.Properties.Resources.fonsViews;
-            this.ClientSize = new System.Drawing.Size(1362, 741);
+            this.ClientSize = new System.Drawing.Size(1354, 733);
             this.Controls.Add(this.lblTitolView);
             this.Controls.Add(this.buttonBack_UC1);
             this.Controls.Add(this.pictureBoxLogout_UC1);

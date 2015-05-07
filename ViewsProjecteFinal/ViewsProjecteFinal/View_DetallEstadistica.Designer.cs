@@ -49,9 +49,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(613, 524);
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 10F);
+            this.label1.Location = new System.Drawing.Point(590, 524);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 13);
+            this.label1.Size = new System.Drawing.Size(89, 19);
             this.label1.TabIndex = 2;
             this.label1.Text = "Major Value:";
             // 
@@ -59,9 +60,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(613, 549);
+            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 10F);
+            this.label2.Location = new System.Drawing.Point(588, 549);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 13);
+            this.label2.Size = new System.Drawing.Size(91, 19);
             this.label2.TabIndex = 3;
             this.label2.Text = "Minor Value:";
             // 
@@ -69,9 +71,10 @@
             // 
             this.lblMajorValue.AutoSize = true;
             this.lblMajorValue.BackColor = System.Drawing.Color.Transparent;
+            this.lblMajorValue.Font = new System.Drawing.Font("Palatino Linotype", 10F);
             this.lblMajorValue.Location = new System.Drawing.Point(685, 524);
             this.lblMajorValue.Name = "lblMajorValue";
-            this.lblMajorValue.Size = new System.Drawing.Size(10, 13);
+            this.lblMajorValue.Size = new System.Drawing.Size(14, 19);
             this.lblMajorValue.TabIndex = 4;
             this.lblMajorValue.Text = "-";
             // 
@@ -79,9 +82,10 @@
             // 
             this.lblMinorValue.AutoSize = true;
             this.lblMinorValue.BackColor = System.Drawing.Color.Transparent;
+            this.lblMinorValue.Font = new System.Drawing.Font("Palatino Linotype", 10F);
             this.lblMinorValue.Location = new System.Drawing.Point(685, 549);
             this.lblMinorValue.Name = "lblMinorValue";
-            this.lblMinorValue.Size = new System.Drawing.Size(10, 13);
+            this.lblMinorValue.Size = new System.Drawing.Size(14, 19);
             this.lblMinorValue.TabIndex = 5;
             this.lblMinorValue.Text = "-";
             // 

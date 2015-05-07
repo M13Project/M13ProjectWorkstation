@@ -56,25 +56,27 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(540, 531);
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 10F);
+            this.label1.Location = new System.Drawing.Point(532, 534);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
+            this.label1.Size = new System.Drawing.Size(48, 19);
             this.label1.TabIndex = 9;
             this.label1.Text = "Select:";
             // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.LightCyan;
-            this.textBox1.Location = new System.Drawing.Point(586, 528);
+            this.textBox1.Location = new System.Drawing.Point(586, 534);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(195, 20);
             this.textBox1.TabIndex = 10;
             // 
             // btnShowDetail
             // 
+            this.btnShowDetail.Font = new System.Drawing.Font("Palatino Linotype", 10F);
             this.btnShowDetail.Location = new System.Drawing.Point(787, 525);
             this.btnShowDetail.Name = "btnShowDetail";
-            this.btnShowDetail.Size = new System.Drawing.Size(75, 23);
+            this.btnShowDetail.Size = new System.Drawing.Size(97, 37);
             this.btnShowDetail.TabIndex = 11;
             this.btnShowDetail.Text = "Show Detail";
             this.btnShowDetail.UseVisualStyleBackColor = true;
@@ -103,7 +105,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ViewsProjecteFinal.Properties.Resources.fonsViews;
-            this.ClientSize = new System.Drawing.Size(1362, 741);
+            this.ClientSize = new System.Drawing.Size(1354, 733);
             this.Controls.Add(this.lblTitolView);
             this.Controls.Add(this.gridView);
             this.Controls.Add(this.btnShowDetail);

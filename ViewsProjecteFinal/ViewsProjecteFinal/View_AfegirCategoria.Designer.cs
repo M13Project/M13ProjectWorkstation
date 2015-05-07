@@ -50,7 +50,7 @@
             // txtDiscount
             // 
             this.txtDiscount.BackColor = System.Drawing.Color.LightCyan;
-            this.txtDiscount.Location = new System.Drawing.Point(662, 212);
+            this.txtDiscount.Location = new System.Drawing.Point(683, 212);
             this.txtDiscount.Name = "txtDiscount";
             this.txtDiscount.Size = new System.Drawing.Size(29, 20);
             this.txtDiscount.TabIndex = 41;
@@ -58,7 +58,7 @@
             // txtName
             // 
             this.txtName.BackColor = System.Drawing.Color.LightCyan;
-            this.txtName.Location = new System.Drawing.Point(662, 169);
+            this.txtName.Location = new System.Drawing.Point(683, 169);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(92, 20);
             this.txtName.TabIndex = 40;
@@ -67,9 +67,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(600, 215);
+            this.label3.Font = new System.Drawing.Font("Palatino Linotype", 10F);
+            this.label3.Location = new System.Drawing.Point(599, 212);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 13);
+            this.label3.Size = new System.Drawing.Size(71, 19);
             this.label3.TabIndex = 38;
             this.label3.Text = "Discount:";
             // 
@@ -77,9 +78,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(600, 172);
+            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 10F);
+            this.label2.Location = new System.Drawing.Point(599, 169);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.Size = new System.Drawing.Size(50, 19);
             this.label2.TabIndex = 37;
             this.label2.Text = "Name:";
             // 
@@ -113,7 +115,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ViewsProjecteFinal.Properties.Resources.fonsViews;
-            this.ClientSize = new System.Drawing.Size(1362, 741);
+            this.ClientSize = new System.Drawing.Size(1354, 733);
             this.Controls.Add(this.lblTitolView);
             this.Controls.Add(this.pictureBoxLogout_UC1);
             this.Controls.Add(this.buttonBack_UC1);

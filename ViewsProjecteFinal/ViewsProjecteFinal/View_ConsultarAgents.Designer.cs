@@ -50,6 +50,7 @@
             // 
             // btnAdd
             // 
+            this.btnAdd.Font = new System.Drawing.Font("Palatino Linotype", 10F);
             this.btnAdd.Location = new System.Drawing.Point(452, 545);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(102, 31);
@@ -59,6 +60,7 @@
             // 
             // btnModify
             // 
+            this.btnModify.Font = new System.Drawing.Font("Palatino Linotype", 10F);
             this.btnModify.Location = new System.Drawing.Point(706, 545);
             this.btnModify.Name = "btnModify";
             this.btnModify.Size = new System.Drawing.Size(102, 31);
@@ -70,9 +72,10 @@
             // 
             this.lblSelect.AutoSize = true;
             this.lblSelect.BackColor = System.Drawing.Color.Transparent;
-            this.lblSelect.Location = new System.Drawing.Point(453, 599);
+            this.lblSelect.Font = new System.Drawing.Font("Palatino Linotype", 10F);
+            this.lblSelect.Location = new System.Drawing.Point(443, 596);
             this.lblSelect.Name = "lblSelect";
-            this.lblSelect.Size = new System.Drawing.Size(40, 13);
+            this.lblSelect.Size = new System.Drawing.Size(48, 19);
             this.lblSelect.TabIndex = 5;
             this.lblSelect.Text = "Select:";
             // 
@@ -86,6 +89,7 @@
             // 
             // btnDelete
             // 
+            this.btnDelete.Font = new System.Drawing.Font("Palatino Linotype", 10F);
             this.btnDelete.Location = new System.Drawing.Point(814, 545);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(102, 31);
@@ -123,7 +127,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ViewsProjecteFinal.Properties.Resources.fonsViews;
-            this.ClientSize = new System.Drawing.Size(1362, 741);
+            this.ClientSize = new System.Drawing.Size(1354, 733);
             this.Controls.Add(this.lblTitolView);
             this.Controls.Add(this.pictureBoxLogout_UC1);
             this.Controls.Add(this.buttonBack_UC1);
