@@ -1,0 +1,272 @@
+﻿<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <edmx:DataServices m:DataServiceVersion="1.0" m:MaxDataServiceVersion="3.0" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
+    <Schema Namespace="m13_projectModel" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <EntityType Name="Administrador">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="AnysExp" Type="Edm.Int32" />
+        <NavigationProperty Name="Usuari" Relationship="m13_projectModel.fk_AdmUsu" ToRole="Usuari" FromRole="Administrador" />
+      </EntityType>
+      <EntityType Name="Categoria">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" p6:StoreGeneratedPattern="Identity" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="Nom" Type="Edm.String" Nullable="false" MaxLength="80" FixedLength="false" Unicode="false" />
+        <Property Name="Descompte" Type="Edm.Double" />
+        <NavigationProperty Name="Producte" Relationship="m13_projectModel.fk_ProCat" ToRole="Producte" FromRole="Categoria" />
+      </EntityType>
+      <EntityType Name="CategoriaLog">
+        <Key>
+          <PropertyRef Name="Id" />
+          <PropertyRef Name="Op" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Op" Type="Edm.String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+        <Property Name="LastUpdate" Type="Edm.DateTime" Precision="3" />
+      </EntityType>
+      <EntityType Name="Client">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Dni" Type="Edm.String" Nullable="false" MaxLength="9" FixedLength="true" Unicode="false" />
+        <Property Name="Nom" Type="Edm.String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        <Property Name="Cognom" Type="Edm.String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        <Property Name="Edat" Type="Edm.Int32" />
+        <Property Name="ImageClient" Type="Edm.String" MaxLength="300" FixedLength="false" Unicode="false" />
+        <Property Name="DataProperaVisita" Type="Edm.DateTime" Precision="0" />
+        <Property Name="ComercialId" Type="Edm.Int32" Nullable="false" />
+        <NavigationProperty Name="Comercial" Relationship="m13_projectModel.fk_CliCom" ToRole="Comercial" FromRole="Client" />
+        <NavigationProperty Name="Comanda" Relationship="m13_projectModel.fk_ComCli" ToRole="Comanda" FromRole="Client" />
+        <NavigationProperty Name="Localitzacio" Relationship="m13_projectModel.fk_LocCli" ToRole="Localitzacio" FromRole="Client" />
+      </EntityType>
+      <EntityType Name="Comanda">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Lliurada" Type="Edm.Boolean" Nullable="false" />
+        <Property Name="Data" Type="Edm.DateTime" Nullable="false" Precision="0" />
+        <Property Name="ClientId" Type="Edm.Int32" Nullable="false" />
+        <NavigationProperty Name="Client" Relationship="m13_projectModel.fk_ComCli" ToRole="Client" FromRole="Comanda" />
+        <NavigationProperty Name="Comanda_Producte" Relationship="m13_projectModel.fk_ComProCom" ToRole="Comanda_Producte" FromRole="Comanda" />
+      </EntityType>
+      <EntityType Name="Comanda_Producte">
+        <Key>
+          <PropertyRef Name="ComandaId" />
+          <PropertyRef Name="ProducteId" />
+        </Key>
+        <Property Name="ComandaId" Type="Edm.Int32" Nullable="false" />
+        <Property Name="ProducteId" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Quantitat" Type="Edm.Int32" Nullable="false" />
+        <NavigationProperty Name="Comanda" Relationship="m13_projectModel.fk_ComProCom" ToRole="Comanda" FromRole="Comanda_Producte" />
+        <NavigationProperty Name="Producte" Relationship="m13_projectModel.fk_ComProPro" ToRole="Producte" FromRole="Comanda_Producte" />
+      </EntityType>
+      <EntityType Name="Comercial">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="AnyInici" Type="Edm.DateTime" Precision="0" />
+        <Property Name="ZonaTreball" Type="Edm.String" MaxLength="70" FixedLength="false" Unicode="false" />
+        <Property Name="Habilitat" Type="Edm.Boolean" Nullable="false" />
+        <NavigationProperty Name="Client" Relationship="m13_projectModel.fk_CliCom" ToRole="Client" FromRole="Comercial" />
+        <NavigationProperty Name="Usuari" Relationship="m13_projectModel.fk_ComUsu" ToRole="Usuari" FromRole="Comercial" />
+      </EntityType>
+      <EntityType Name="Localitzacio">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="CodiPostal" Type="Edm.Int32" />
+        <Property Name="Direccio" Type="Edm.String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+        <Property Name="Latitud" Type="Edm.Double" />
+        <Property Name="Longitud" Type="Edm.Double" />
+        <NavigationProperty Name="Client" Relationship="m13_projectModel.fk_LocCli" ToRole="Client" FromRole="Localitzacio" />
+      </EntityType>
+      <EntityType Name="Producte">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" p6:StoreGeneratedPattern="Identity" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="Nom" Type="Edm.String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        <Property Name="Preu" Type="Edm.Double" Nullable="false" />
+        <Property Name="Descompte" Type="Edm.Double" />
+        <Property Name="Imatge" Type="Edm.String" MaxLength="300" FixedLength="false" Unicode="false" />
+        <Property Name="Habilitat" Type="Edm.Boolean" Nullable="false" />
+        <Property Name="CategoriaId" Type="Edm.Int32" Nullable="false" />
+        <NavigationProperty Name="Categoria" Relationship="m13_projectModel.fk_ProCat" ToRole="Categoria" FromRole="Producte" />
+        <NavigationProperty Name="Comanda_Producte" Relationship="m13_projectModel.fk_ComProPro" ToRole="Comanda_Producte" FromRole="Producte" />
+      </EntityType>
+      <EntityType Name="ProducteLog">
+        <Key>
+          <PropertyRef Name="Id" />
+          <PropertyRef Name="Op" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Op" Type="Edm.String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+        <Property Name="LastUpdate" Type="Edm.DateTime" Precision="3" />
+      </EntityType>
+      <EntityType Name="Usuari">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" p6:StoreGeneratedPattern="Identity" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="Dni" Type="Edm.String" Nullable="false" MaxLength="9" FixedLength="false" Unicode="false" />
+        <Property Name="Nom" Type="Edm.String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        <Property Name="Cognom" Type="Edm.String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        <Property Name="Usuari1" Type="Edm.String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+        <Property Name="Contrasenya" Type="Edm.String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+        <Property Name="Imatge" Type="Edm.String" MaxLength="300" FixedLength="false" Unicode="false" />
+        <NavigationProperty Name="Administrador" Relationship="m13_projectModel.fk_AdmUsu" ToRole="Administrador" FromRole="Usuari" />
+        <NavigationProperty Name="Comercial" Relationship="m13_projectModel.fk_ComUsu" ToRole="Comercial" FromRole="Usuari" />
+      </EntityType>
+      <Association Name="fk_AdmUsu">
+        <End Type="m13_projectModel.Usuari" Role="Usuari" Multiplicity="1" />
+        <End Type="m13_projectModel.Administrador" Role="Administrador" Multiplicity="0..1" />
+        <ReferentialConstraint>
+          <Principal Role="Usuari">
+            <PropertyRef Name="Id" />
+          </Principal>
+          <Dependent Role="Administrador">
+            <PropertyRef Name="Id" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="fk_ProCat">
+        <End Type="m13_projectModel.Categoria" Role="Categoria" Multiplicity="1" />
+        <End Type="m13_projectModel.Producte" Role="Producte" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="Categoria">
+            <PropertyRef Name="Id" />
+          </Principal>
+          <Dependent Role="Producte">
+            <PropertyRef Name="CategoriaId" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="fk_CliCom">
+        <End Type="m13_projectModel.Comercial" Role="Comercial" Multiplicity="1" />
+        <End Type="m13_projectModel.Client" Role="Client" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="Comercial">
+            <PropertyRef Name="Id" />
+          </Principal>
+          <Dependent Role="Client">
+            <PropertyRef Name="ComercialId" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="fk_ComCli">
+        <End Type="m13_projectModel.Client" Role="Client" Multiplicity="1" />
+        <End Type="m13_projectModel.Comanda" Role="Comanda" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="Client">
+            <PropertyRef Name="Id" />
+          </Principal>
+          <Dependent Role="Comanda">
+            <PropertyRef Name="ClientId" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="fk_LocCli">
+        <End Type="m13_projectModel.Client" Role="Client" Multiplicity="1" />
+        <End Type="m13_projectModel.Localitzacio" Role="Localitzacio" Multiplicity="0..1" />
+        <ReferentialConstraint>
+          <Principal Role="Client">
+            <PropertyRef Name="Id" />
+          </Principal>
+          <Dependent Role="Localitzacio">
+            <PropertyRef Name="Id" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="fk_ComProCom">
+        <End Type="m13_projectModel.Comanda" Role="Comanda" Multiplicity="1" />
+        <End Type="m13_projectModel.Comanda_Producte" Role="Comanda_Producte" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="Comanda">
+            <PropertyRef Name="Id" />
+          </Principal>
+          <Dependent Role="Comanda_Producte">
+            <PropertyRef Name="ComandaId" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="fk_ComProPro">
+        <End Type="m13_projectModel.Producte" Role="Producte" Multiplicity="1" />
+        <End Type="m13_projectModel.Comanda_Producte" Role="Comanda_Producte" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="Producte">
+            <PropertyRef Name="Id" />
+          </Principal>
+          <Dependent Role="Comanda_Producte">
+            <PropertyRef Name="ProducteId" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="fk_ComUsu">
+        <End Type="m13_projectModel.Usuari" Role="Usuari" Multiplicity="1" />
+        <End Type="m13_projectModel.Comercial" Role="Comercial" Multiplicity="0..1" />
+        <ReferentialConstraint>
+          <Principal Role="Usuari">
+            <PropertyRef Name="Id" />
+          </Principal>
+          <Dependent Role="Comercial">
+            <PropertyRef Name="Id" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+    </Schema>
+    <Schema Namespace="WebService" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <EntityContainer Name="m13_projectEntities" m:IsDefaultEntityContainer="true">
+        <EntitySet Name="Administrador" EntityType="m13_projectModel.Administrador" />
+        <EntitySet Name="Categoria" EntityType="m13_projectModel.Categoria" />
+        <EntitySet Name="CategoriaLog" EntityType="m13_projectModel.CategoriaLog" />
+        <EntitySet Name="Client" EntityType="m13_projectModel.Client" />
+        <EntitySet Name="Comanda" EntityType="m13_projectModel.Comanda" />
+        <EntitySet Name="Comanda_Producte" EntityType="m13_projectModel.Comanda_Producte" />
+        <EntitySet Name="Comercial" EntityType="m13_projectModel.Comercial" />
+        <EntitySet Name="Localitzacio" EntityType="m13_projectModel.Localitzacio" />
+        <EntitySet Name="Producte" EntityType="m13_projectModel.Producte" />
+        <EntitySet Name="ProducteLog" EntityType="m13_projectModel.ProducteLog" />
+        <EntitySet Name="Usuari" EntityType="m13_projectModel.Usuari" />
+        <AssociationSet Name="fk_AdmUsu" Association="m13_projectModel.fk_AdmUsu">
+          <End Role="Administrador" EntitySet="Administrador" />
+          <End Role="Usuari" EntitySet="Usuari" />
+        </AssociationSet>
+        <AssociationSet Name="fk_ProCat" Association="m13_projectModel.fk_ProCat">
+          <End Role="Categoria" EntitySet="Categoria" />
+          <End Role="Producte" EntitySet="Producte" />
+        </AssociationSet>
+        <AssociationSet Name="fk_CliCom" Association="m13_projectModel.fk_CliCom">
+          <End Role="Client" EntitySet="Client" />
+          <End Role="Comercial" EntitySet="Comercial" />
+        </AssociationSet>
+        <AssociationSet Name="fk_ComCli" Association="m13_projectModel.fk_ComCli">
+          <End Role="Client" EntitySet="Client" />
+          <End Role="Comanda" EntitySet="Comanda" />
+        </AssociationSet>
+        <AssociationSet Name="fk_LocCli" Association="m13_projectModel.fk_LocCli">
+          <End Role="Client" EntitySet="Client" />
+          <End Role="Localitzacio" EntitySet="Localitzacio" />
+        </AssociationSet>
+        <AssociationSet Name="fk_ComProCom" Association="m13_projectModel.fk_ComProCom">
+          <End Role="Comanda" EntitySet="Comanda" />
+          <End Role="Comanda_Producte" EntitySet="Comanda_Producte" />
+        </AssociationSet>
+        <AssociationSet Name="fk_ComProPro" Association="m13_projectModel.fk_ComProPro">
+          <End Role="Comanda_Producte" EntitySet="Comanda_Producte" />
+          <End Role="Producte" EntitySet="Producte" />
+        </AssociationSet>
+        <AssociationSet Name="fk_ComUsu" Association="m13_projectModel.fk_ComUsu">
+          <End Role="Comercial" EntitySet="Comercial" />
+          <End Role="Usuari" EntitySet="Usuari" />
+        </AssociationSet>
+      </EntityContainer>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>

@@ -12,7 +12,7 @@ namespace ViewsProjecteFinal
 {
     public partial class View_ModificarAgent : Form
     {
-        public View_ModificarAgent()
+        public View_ModificarAgent(String id)
         {
             InitializeComponent();
             this.lblTitolView.ForeColor = Color.FromArgb(26, 183, 234);
@@ -22,6 +22,8 @@ namespace ViewsProjecteFinal
             this.label3.ForeColor = Color.FromArgb(7, 59, 90);
             this.label4.ForeColor = Color.FromArgb(7, 59, 90);
             this.btnUpdate.ForeColor = Color.FromArgb(7, 59, 90);
+
+            this.txtName.Text = id;
         }
     }
 }
