@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ViewsProjecteFinal.CustomClasses;
 
 namespace ViewsProjecteFinal
 {
@@ -25,8 +26,17 @@ namespace ViewsProjecteFinal
 
         private void MainView_Load(object sender, EventArgs e)
         {
-            //chooseView_UC_CAgents.BackColor = System.Drawing.Color.FromArgb(7, 59, 90);
-            
+            changeViewSelectionLabel();   
+        }
+
+        private void changeViewSelectionLabel()
+        {
+            chooseView_UC1.changeLabelName(EnglishStringValues.SELECTION_1);
+            chooseView_UC2.changeLabelName(EnglishStringValues.SELECTION_2);
+            chooseView_UC3.changeLabelName(EnglishStringValues.SELECTION_3);
+            chooseView_UC4.changeLabelName(EnglishStringValues.SELECTION_4);
+            chooseView_UC5.changeLabelName(EnglishStringValues.SELECTION_5);
+            chooseView_UC6.changeLabelName(EnglishStringValues.SELECTION_6);
         }
     }
 }
