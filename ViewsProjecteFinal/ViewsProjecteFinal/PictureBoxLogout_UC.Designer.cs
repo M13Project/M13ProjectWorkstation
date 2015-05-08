@@ -34,9 +34,12 @@
             // 
             // pboxLogout
             // 
+            this.pboxLogout.Image = global::ViewsProjecteFinal.Properties.Resources.logout_image;
+            this.pboxLogout.InitialImage = null;
             this.pboxLogout.Location = new System.Drawing.Point(0, 0);
             this.pboxLogout.Name = "pboxLogout";
             this.pboxLogout.Size = new System.Drawing.Size(50, 50);
+            this.pboxLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pboxLogout.TabIndex = 0;
             this.pboxLogout.TabStop = false;
             // 

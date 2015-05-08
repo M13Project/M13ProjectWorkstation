@@ -15,8 +15,8 @@ namespace ViewsProjecteFinal
         static void Main()
         {
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new View_ConsultarAgents());
+            Application.SetCompatibleTextRenderingDefault(false);                        
+            Application.Run(new MainViewAdmin(1));
         }
     }
 }

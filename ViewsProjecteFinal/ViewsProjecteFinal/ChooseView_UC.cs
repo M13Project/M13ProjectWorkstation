@@ -19,5 +19,13 @@ namespace ViewsProjecteFinal
             this.BackColor = Color.FromArgb(7, 59, 90);
             this.lblOption.ForeColor = Color.FromArgb(7, 59, 90);
         }
+
+        public void changeLabelName(string newLabelName) {
+            lblOption.Text = newLabelName;
+        }
+
+        public void changeImage(Image newImage) {
+            pboxOption.Image = newImage;
+        }
     }
 }

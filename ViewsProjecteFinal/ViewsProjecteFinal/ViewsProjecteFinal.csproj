@@ -73,6 +73,9 @@
     <Compile Include="ChooseView_UC.Designer.cs">
       <DependentUpon>ChooseView_UC.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomClasses\EnglishStringValues.cs" />
+    <Compile Include="CustomClasses\LoginController.cs" />
+    <Compile Include="CustomClasses\PersistanceManager.cs" />
     <Compile Include="PictureBoxLogout_UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -84,7 +87,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Service References\WebServiceReference\Reference.cs">
+    <Compile Include="Service References\ServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.datasvcmap</DependentUpon>
@@ -304,6 +307,7 @@
       <DependentUpon>View_ModificarProducte.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\ViewsProjecteFinal.ServiceReference.m13_projectEntities.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -313,7 +317,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Service References\WebServiceReference\service.edmx" />
+    <None Include="Service References\ServiceReference\service.edmx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -331,15 +335,18 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <ServiceReferenceMetadataStorage Include="Service References\WebServiceReference\">
+    <ServiceReferenceMetadataStorage Include="Service References\ServiceReference\">
       <Type>datasvcmap</Type>
     </ServiceReferenceMetadataStorage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\WebServiceReference\Reference.datasvcmap">
+    <None Include="Service References\ServiceReference\Reference.datasvcmap">
       <Generator>DataServicesCoreClientGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout_image.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
