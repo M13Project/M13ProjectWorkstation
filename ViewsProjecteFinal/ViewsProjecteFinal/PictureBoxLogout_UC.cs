@@ -15,6 +15,7 @@ namespace ViewsProjecteFinal
         public PictureBoxLogout_UC()
         {
             InitializeComponent();
+
         }
     }
 }
