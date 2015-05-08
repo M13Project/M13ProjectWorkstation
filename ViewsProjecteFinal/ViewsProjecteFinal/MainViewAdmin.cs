@@ -19,6 +19,8 @@ namespace ViewsProjecteFinal
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
             this.adminId = adminId;
+            this.lblTitolView.ForeColor = Color.FromArgb(26, 183, 234);
+            
         }
 
         private void MainView_Load(object sender, EventArgs e)

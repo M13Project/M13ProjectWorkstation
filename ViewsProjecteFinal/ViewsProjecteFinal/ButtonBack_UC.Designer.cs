@@ -33,9 +33,10 @@
             // 
             // btnBack
             // 
+            this.btnBack.Font = new System.Drawing.Font("Palatino Linotype", 8.25F);
             this.btnBack.Location = new System.Drawing.Point(0, 0);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(123, 37);
+            this.btnBack.Size = new System.Drawing.Size(70, 21);
             this.btnBack.TabIndex = 0;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
@@ -46,7 +47,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnBack);
             this.Name = "ButtonBack_UC";
-            this.Size = new System.Drawing.Size(124, 37);
+            this.Size = new System.Drawing.Size(70, 21);
             this.ResumeLayout(false);
 
         }

@@ -15,6 +15,11 @@ namespace ViewsProjecteFinal
         public View_ModificarCategoria()
         {
             InitializeComponent();
+            this.lblTitolView.ForeColor = Color.FromArgb(26, 183, 234);
+            this.btnUpdate.BackColor = Color.FromArgb(26, 183, 234);
+            this.label2.ForeColor = Color.FromArgb(7, 59, 90);
+            this.label3.ForeColor = Color.FromArgb(7, 59, 90);
+            this.btnUpdate.ForeColor = Color.FromArgb(7, 59, 90);
         }
     }
 }

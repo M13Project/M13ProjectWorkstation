@@ -39,20 +39,22 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBoxLogout_UC1 = new ViewsProjecteFinal.PictureBoxLogout_UC();
+            this.lblTitolView = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonBack_UC1
             // 
-            this.buttonBack_UC1.Location = new System.Drawing.Point(624, 373);
+            this.buttonBack_UC1.Location = new System.Drawing.Point(663, 381);
             this.buttonBack_UC1.Name = "buttonBack_UC1";
-            this.buttonBack_UC1.Size = new System.Drawing.Size(124, 37);
+            this.buttonBack_UC1.Size = new System.Drawing.Size(70, 21);
             this.buttonBack_UC1.TabIndex = 22;
             // 
             // btnAdd
             // 
+            this.btnAdd.Font = new System.Drawing.Font("Palatino Linotype", 10F);
             this.btnAdd.Location = new System.Drawing.Point(646, 326);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.Size = new System.Drawing.Size(102, 31);
             this.btnAdd.TabIndex = 21;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -92,36 +94,44 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(569, 290);
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Palatino Linotype", 10F);
+            this.label4.Location = new System.Drawing.Point(568, 287);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 13);
+            this.label4.Size = new System.Drawing.Size(76, 19);
             this.label4.TabIndex = 16;
             this.label4.Text = "Username:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(569, 213);
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Palatino Linotype", 10F);
+            this.label3.Location = new System.Drawing.Point(568, 210);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 13);
+            this.label3.Size = new System.Drawing.Size(70, 19);
             this.label3.TabIndex = 15;
             this.label3.Text = "Surname:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(569, 172);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 10F);
+            this.label2.Location = new System.Drawing.Point(568, 169);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.Size = new System.Drawing.Size(50, 19);
             this.label2.TabIndex = 14;
             this.label2.Text = "Name:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(569, 254);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 10F);
+            this.label1.Location = new System.Drawing.Point(568, 251);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 13);
+            this.label1.Size = new System.Drawing.Size(41, 19);
             this.label1.TabIndex = 13;
             this.label1.Text = "DNI:";
             // 
@@ -132,11 +142,24 @@
             this.pictureBoxLogout_UC1.Size = new System.Drawing.Size(50, 50);
             this.pictureBoxLogout_UC1.TabIndex = 23;
             // 
+            // lblTitolView
+            // 
+            this.lblTitolView.AutoSize = true;
+            this.lblTitolView.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitolView.Font = new System.Drawing.Font("Palatino Linotype", 40F);
+            this.lblTitolView.Location = new System.Drawing.Point(559, 39);
+            this.lblTitolView.Name = "lblTitolView";
+            this.lblTitolView.Size = new System.Drawing.Size(308, 73);
+            this.lblTitolView.TabIndex = 24;
+            this.lblTitolView.Text = "New Agent";
+            // 
             // View_AfegirAgent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1362, 741);
+            this.BackgroundImage = global::ViewsProjecteFinal.Properties.Resources.fonsViews;
+            this.ClientSize = new System.Drawing.Size(1354, 733);
+            this.Controls.Add(this.lblTitolView);
             this.Controls.Add(this.pictureBoxLogout_UC1);
             this.Controls.Add(this.buttonBack_UC1);
             this.Controls.Add(this.btnAdd);
@@ -168,5 +191,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private PictureBoxLogout_UC pictureBoxLogout_UC1;
+        private System.Windows.Forms.Label lblTitolView;
     }
 }

@@ -45,6 +45,7 @@
             // lblOption
             // 
             this.lblOption.BackColor = System.Drawing.Color.LightCyan;
+            this.lblOption.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOption.Location = new System.Drawing.Point(3, 115);
             this.lblOption.Name = "lblOption";
             this.lblOption.Size = new System.Drawing.Size(150, 38);

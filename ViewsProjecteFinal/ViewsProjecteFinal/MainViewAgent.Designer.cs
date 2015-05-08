@@ -33,6 +33,7 @@
             this.chooseView_UC2 = new ViewsProjecteFinal.ChooseView_UC();
             this.chooseView_UC3 = new ViewsProjecteFinal.ChooseView_UC();
             this.chooseView_UC4 = new ViewsProjecteFinal.ChooseView_UC();
+            this.lblTitolView = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // pictureBoxLogout_UC1
@@ -74,12 +75,24 @@
             this.chooseView_UC4.Size = new System.Drawing.Size(156, 157);
             this.chooseView_UC4.TabIndex = 9;
             // 
+            // lblTitolView
+            // 
+            this.lblTitolView.AutoSize = true;
+            this.lblTitolView.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitolView.Font = new System.Drawing.Font("Palatino Linotype", 40F);
+            this.lblTitolView.Location = new System.Drawing.Point(616, 39);
+            this.lblTitolView.Name = "lblTitolView";
+            this.lblTitolView.Size = new System.Drawing.Size(157, 73);
+            this.lblTitolView.TabIndex = 16;
+            this.lblTitolView.Text = "Main";
+            // 
             // MainViewAgent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ViewsProjecteFinal.Properties.Resources.fonsViews;
             this.ClientSize = new System.Drawing.Size(1362, 741);
+            this.Controls.Add(this.lblTitolView);
             this.Controls.Add(this.chooseView_UC4);
             this.Controls.Add(this.chooseView_UC3);
             this.Controls.Add(this.chooseView_UC2);
@@ -88,6 +101,7 @@
             this.Name = "MainViewAgent";
             this.Text = "MainViewAgent";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -98,5 +112,6 @@
         private ChooseView_UC chooseView_UC2;
         private ChooseView_UC chooseView_UC3;
         private ChooseView_UC chooseView_UC4;
+        private System.Windows.Forms.Label lblTitolView;
     }
 }
