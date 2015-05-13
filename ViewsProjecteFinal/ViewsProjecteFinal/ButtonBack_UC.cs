@@ -12,6 +12,14 @@ namespace ViewsProjecteFinal
 {
     public partial class ButtonBack_UC : UserControl
     {
+        
+        public ButtonBack_UC(Form f)
+        {
+            InitializeComponent();
+            this.btnBack.BackColor = Color.FromArgb(26, 183, 234);
+            this.btnBack.ForeColor = Color.FromArgb(7, 59, 90);
+
+        }
         public ButtonBack_UC()
         {
             InitializeComponent();
@@ -21,7 +29,8 @@ namespace ViewsProjecteFinal
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-
+            this.Parent.Hide();
         }
+
     }
 }

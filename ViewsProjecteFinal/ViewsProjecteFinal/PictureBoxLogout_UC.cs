@@ -15,7 +15,14 @@ namespace ViewsProjecteFinal
         public PictureBoxLogout_UC()
         {
             InitializeComponent();
+            
+        }
 
+        private void onClickLogout(object sender, EventArgs e)
+        {
+            Form logout = new View_Login();
+            Parent.Hide();
+            logout.Show();
         }
     }
 }

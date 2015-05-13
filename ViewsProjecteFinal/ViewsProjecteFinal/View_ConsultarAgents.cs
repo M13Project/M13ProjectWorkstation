@@ -28,30 +28,58 @@ namespace ViewsProjecteFinal
             this.lblSelect.ForeColor = Color.FromArgb(7, 59, 90);
             this.btnAdd.ForeColor = Color.FromArgb(7, 59, 90);
 
-            m13_projectEntities entities = new m13_projectEntities(new Uri(webServiceDomain)); 
+            m13_projectEntities entities = new m13_projectEntities(new Uri(webServiceDomain));
+            
+
+            /**/
+            //IQueryable<Usuari> query = from usuari in entities.Usuari select usuari;
+            //foreach (Usuari usda in query)
+            //{
+            //    entities.LoadProperty(usda, "Comercial");
+
+            //}
+            //var query = from asd in entities.Usuari
+            //            join comdsa in entities.Comercial on asd.Id equals comdsa.Id
+            //            select new { Name = asd.Nom, Zona = comdsa.ZonaTreball };
+            /**/
+
+
+            //var query = from usuari in entities.Usuari
+            //            join com in entities.Comercial on usuari.Id equals com.Id into prodGroup
+            //            select new
+            //            {
+            //                Comercial = from prod2 in prodGroup select prod2
+
+            //            };
+
+            //foreach (var productGroup in query)
+            //{
+            //    Console.WriteLine(productGroup.Comercial);
+            //}
             this.gridView.DataSource = entities.Comercial.ToList();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Form afegirAgent = new View_AfegirAgent();
-            afegirAgent.Show();
+            Methods.back(this, afegirAgent);
+
+        }
+
+
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void btnModify_Click(object sender, EventArgs e)
         {
             String id;
             id = this.txtSelect.Text;
-            
-            this.Hide();
-            Form modificarAgent = new View_ModificarAgent(id);
-            modificarAgent.Show();
-        }
 
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-
+            Form modificarCategoria = new View_ModificarCategoria(id);
+            Methods.back(this, modificarCategoria);
         }
     }
 }
