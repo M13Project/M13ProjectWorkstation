@@ -24,5 +24,10 @@ namespace ViewsProjecteFinal
             this.lblSelect.ForeColor = Color.FromArgb(7, 59, 90);
             this.btnAdd.ForeColor = Color.FromArgb(7, 59, 90);
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

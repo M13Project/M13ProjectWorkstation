@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace ViewsProjecteFinal
 {
+    
     public partial class View_ModificarAgent : Form
     {
         public View_ModificarAgent(String id)
         {
             InitializeComponent();
+
             this.lblTitolView.ForeColor = Color.FromArgb(26, 183, 234);
             this.btnUpdate.BackColor = Color.FromArgb(26, 183, 234);
             this.label1.ForeColor = Color.FromArgb(7, 59, 90);

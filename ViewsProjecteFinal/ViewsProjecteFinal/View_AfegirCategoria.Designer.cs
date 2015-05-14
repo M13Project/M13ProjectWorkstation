@@ -40,6 +40,7 @@
             // 
             // btnAdd
             // 
+            this.btnAdd.Font = new System.Drawing.Font("Palatino Linotype", 10F);
             this.btnAdd.Location = new System.Drawing.Point(630, 270);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(102, 31);

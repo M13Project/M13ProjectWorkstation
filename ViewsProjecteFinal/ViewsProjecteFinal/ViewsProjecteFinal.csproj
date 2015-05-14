@@ -76,6 +76,7 @@
     <Compile Include="CustomClasses\EnglishStringValues.cs" />
     <Compile Include="CustomClasses\LoginController.cs" />
     <Compile Include="CustomClasses\PersistanceManager.cs" />
+    <Compile Include="Methods.cs" />
     <Compile Include="PictureBoxLogout_UC.cs">
       <SubType>UserControl</SubType>
     </Compile>

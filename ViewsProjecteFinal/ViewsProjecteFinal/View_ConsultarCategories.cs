@@ -24,5 +24,21 @@ namespace ViewsProjecteFinal
             this.lblSelect.ForeColor = Color.FromArgb(7, 59, 90);
             this.btnAdd.ForeColor = Color.FromArgb(7, 59, 90);
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            Form afegirCategoria = new View_AfegirCategoria();
+            Methods.back(this, afegirCategoria);
+        }
+
+        private void btnModify_Click(object sender, EventArgs e)
+        {
+            String id;
+            id = this.txtSelect.Text;
+
+            Form modificarCategoria = new View_ModificarCategoria(id);
+            Methods.back(this, modificarCategoria);
+        }
+
     }
 }

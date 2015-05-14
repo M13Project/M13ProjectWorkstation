@@ -42,6 +42,7 @@
             this.pboxLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pboxLogout.TabIndex = 0;
             this.pboxLogout.TabStop = false;
+            this.pboxLogout.Click += new System.EventHandler(this.onClickLogout);
             // 
             // PictureBoxLogout_UC
             // 

@@ -39,12 +39,14 @@ namespace ViewsProjecteFinal
                 {
                     //Activate main screen that agent will see
                     MainViewAgent mainViewAgent = new MainViewAgent(userId);
+                    this.Hide();
                     mainViewAgent.Show();
                 }
                 else 
                 {
                     //Activate main screen that administrator will see
                     MainViewAdmin mainViewAdmin = new MainViewAdmin(-userId);
+                    this.Hide();
                     mainViewAdmin.Show();
                 }    
             }
