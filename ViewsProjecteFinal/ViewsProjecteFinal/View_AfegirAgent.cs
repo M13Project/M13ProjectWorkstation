@@ -8,13 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ViewsProjecteFinal.ServiceReference;
+using ViewsProjecteFinal.CustomClasses;
 
 namespace ViewsProjecteFinal
 {
     public partial class View_AfegirAgent : Form
     {
 
-        String webServiceDomain = "http://localhost:52220/M13ProjectWcfDataService.svc/";        
+        String webServiceDomain = "http://localhost:52220/M13ProjectWcfDataService.svc/";
+        PersistanceManager pm = new PersistanceManager();
 
         public View_AfegirAgent()
         {
@@ -43,6 +45,12 @@ namespace ViewsProjecteFinal
             us.Usuari1 = txtUsername.ToString();
             us.Contrasenya = txtPassword.ToString();
             us.Comercial = com;
+
+            pm.InsertAgent(com);
+            pm.InsertUser(us);
+
+
+            
 
         }
     }
