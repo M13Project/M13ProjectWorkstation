@@ -80,6 +80,7 @@
             this.btnShowDetail.TabIndex = 11;
             this.btnShowDetail.Text = "Show Detail";
             this.btnShowDetail.UseVisualStyleBackColor = true;
+            this.btnShowDetail.Click += new System.EventHandler(this.btnShowDetail_Click);
             // 
             // gridView
             // 

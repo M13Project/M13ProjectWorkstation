@@ -38,7 +38,7 @@ namespace ViewsProjecteFinal
                 if (userId > 0)
                 {
                     //Activate main screen that agent will see
-                    MainViewAgent mainViewAgent = new MainViewAgent(userId);
+                    MainViewAgent mainViewAgent = new MainViewAgent(userId);                    
                     this.Hide();
                     mainViewAgent.Show();
                 }
@@ -49,7 +49,7 @@ namespace ViewsProjecteFinal
                     this.Hide();
                     mainViewAdmin.Show();
                 }    
-            }
+            }            
         }
 
         private void txtUsername_EnterFocus(object sender, EventArgs e)

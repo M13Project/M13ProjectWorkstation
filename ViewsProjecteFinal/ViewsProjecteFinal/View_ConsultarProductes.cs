@@ -27,7 +27,17 @@ namespace ViewsProjecteFinal
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            Form afegirProducte = new View_AfegirProducte();
+            Methods.back(this, afegirProducte);
+        }
 
+        private void btnModify_Click(object sender, EventArgs e)
+        {
+            String id;
+            id = this.txtSelect.Text;
+
+            Form modificarProducte = new View_ModificarProducte(id);
+            Methods.back(this, modificarProducte);
         }
     }
 }

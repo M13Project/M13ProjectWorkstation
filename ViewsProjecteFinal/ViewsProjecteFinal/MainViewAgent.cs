@@ -20,6 +20,10 @@ namespace ViewsProjecteFinal
             InitializeComponent();
             this.lblTitolView.ForeColor = Color.FromArgb(26, 183, 234);
             this.agentId = agentId;
+            chooseView_UC1.changeLabelName(EnglishStringValues.SELECTION_AC_1);
+            chooseView_UC2.changeLabelName(EnglishStringValues.SELECTION_AC_2);
+            chooseView_UC3.changeLabelName(EnglishStringValues.SELECTION_AC_3);
+            chooseView_UC4.changeLabelName(EnglishStringValues.SELECTION_AC_4);
         }        
     }
 }
