@@ -12,7 +12,7 @@ namespace ViewsProjecteFinal
 {
     public partial class View_ModificarProducte : Form
     {
-        public View_ModificarProducte()
+        public View_ModificarProducte(String id)
         {
             InitializeComponent();
             this.lblTitolView.ForeColor = Color.FromArgb(26, 183, 234);

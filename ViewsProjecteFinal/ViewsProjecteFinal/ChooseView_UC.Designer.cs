@@ -41,6 +41,7 @@
             this.pboxOption.Size = new System.Drawing.Size(150, 109);
             this.pboxOption.TabIndex = 0;
             this.pboxOption.TabStop = false;
+            this.pboxOption.Click += new System.EventHandler(this.pboxOption_Click);
             // 
             // lblOption
             // 
@@ -52,14 +53,15 @@
             this.lblOption.TabIndex = 1;
             this.lblOption.Text = "option";
             this.lblOption.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblOption.Click += new System.EventHandler(this.lblOption_Click);
             // 
             // ChooseView_UC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.Controls.Add(this.lblOption);
             this.Controls.Add(this.pboxOption);
+            this.Controls.Add(this.lblOption);
             this.Name = "ChooseView_UC";
             this.Size = new System.Drawing.Size(156, 157);
             ((System.ComponentModel.ISupportInitialize)(this.pboxOption)).EndInit();

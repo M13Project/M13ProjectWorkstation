@@ -13,20 +13,19 @@ namespace ViewsProjecteFinal
 {
     public partial class MainViewAdmin : Form
     {
-        private int adminId;
+        private static int adminId;
 
-        public MainViewAdmin(int adminId)
+        public MainViewAdmin(int adminIdMain)
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
-            this.adminId = adminId;
+            adminId = adminIdMain;
             this.lblTitolView.ForeColor = Color.FromArgb(26, 183, 234);
-            
         }
 
         private void MainView_Load(object sender, EventArgs e)
         {
-            changeViewSelectionLabel();   
+            changeViewSelectionLabel();
         }
 
         private void changeViewSelectionLabel()

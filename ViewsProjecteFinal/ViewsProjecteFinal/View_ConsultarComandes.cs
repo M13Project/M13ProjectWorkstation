@@ -20,5 +20,11 @@ namespace ViewsProjecteFinal
             this.btnShowDetail.ForeColor = Color.FromArgb(7, 59, 90);
             this.label1.ForeColor = Color.FromArgb(7, 59, 90);
         }
+
+        private void btnShowDetail_Click(object sender, EventArgs e)
+        {
+            Form showDetail = new View_DetallComanda();
+            Methods.back(this, showDetail);
+        }
     }
 }

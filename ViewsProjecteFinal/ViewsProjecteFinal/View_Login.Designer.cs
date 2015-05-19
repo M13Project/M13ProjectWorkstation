@@ -45,7 +45,7 @@
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtPassword.Size = new System.Drawing.Size(447, 52);
-            this.txtPassword.TabIndex = 1;
+            this.txtPassword.TabIndex = 2;
             this.txtPassword.Text = "Password";
             this.txtPassword.Enter += new System.EventHandler(this.txtPassword_EnterFocus);
             // 
@@ -57,7 +57,7 @@
             this.txtUsername.Location = new System.Drawing.Point(462, 288);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(447, 52);
-            this.txtUsername.TabIndex = 2;
+            this.txtUsername.TabIndex = 1;
             this.txtUsername.Text = "Username";
             this.txtUsername.Enter += new System.EventHandler(this.txtUsername_EnterFocus);
             // 

@@ -17,5 +17,10 @@ namespace ViewsProjecteFinal.CustomClasses
         public static readonly string SELECTION_4 = "Consult orders";
         public static readonly string SELECTION_5 = "Consult categories";
         public static readonly string SELECTION_6 = "Consult statistics";
+
+        public static readonly string SELECTION_AC_1 = "Modify profile";
+        public static readonly string SELECTION_AC_2 = "Consult clients";
+        public static readonly string SELECTION_AC_3 = "Consult prodcuts";
+        public static readonly string SELECTION_AC_4 = "Consult orders";
     }
 }

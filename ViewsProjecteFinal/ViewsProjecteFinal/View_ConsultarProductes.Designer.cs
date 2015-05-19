@@ -32,7 +32,7 @@
             this.lblSelect = new System.Windows.Forms.Label();
             this.buttonBack_UC1 = new ViewsProjecteFinal.ButtonBack_UC();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSelect = new System.Windows.Forms.TextBox();
             this.btnModify = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.gridView = new System.Windows.Forms.DataGridView();
@@ -75,13 +75,13 @@
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txtSelect
             // 
-            this.textBox1.BackColor = System.Drawing.Color.LightCyan;
-            this.textBox1.Location = new System.Drawing.Point(493, 579);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(197, 20);
-            this.textBox1.TabIndex = 55;
+            this.txtSelect.BackColor = System.Drawing.Color.LightCyan;
+            this.txtSelect.Location = new System.Drawing.Point(493, 579);
+            this.txtSelect.Name = "txtSelect";
+            this.txtSelect.Size = new System.Drawing.Size(197, 20);
+            this.txtSelect.TabIndex = 55;
             // 
             // btnModify
             // 
@@ -92,6 +92,7 @@
             this.btnModify.TabIndex = 54;
             this.btnModify.Text = "Modify";
             this.btnModify.UseVisualStyleBackColor = true;
+            this.btnModify.Click += new System.EventHandler(this.btnModify_Click);
             // 
             // btnAdd
             // 
@@ -133,7 +134,7 @@
             this.Controls.Add(this.lblSelect);
             this.Controls.Add(this.buttonBack_UC1);
             this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtSelect);
             this.Controls.Add(this.btnModify);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.gridView);
@@ -152,7 +153,7 @@
         private System.Windows.Forms.Label lblSelect;
         private ButtonBack_UC buttonBack_UC1;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSelect;
         private System.Windows.Forms.Button btnModify;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.DataGridView gridView;
