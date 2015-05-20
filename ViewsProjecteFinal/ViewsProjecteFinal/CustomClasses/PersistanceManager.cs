@@ -124,6 +124,11 @@ namespace ViewsProjecteFinal.CustomClasses
             var com = from comandes in remoteDataContext.Comanda where comandes.Client.Id == client.Id select comandes;
             return com;
         }
+        public IQueryable<Comanda_Producte> AllProducteinComanda(Comanda c)
+        {
+            var linies = from comanda_producte in remoteDataContext.Comanda_Producte where comanda_producte.ComandaId == c.Id select comanda_producte;
+                return linies;
+        }
         public IQueryable<Client> ClientsdelComercial(Comercial c)
         {
             var cli = from clients in remoteDataContext.Client where clients.Comercial.Id == c.Id select clients;
@@ -182,8 +187,28 @@ namespace ViewsProjecteFinal.CustomClasses
             remoteDataContext.UpdateObject(usuari);
             remoteDataContext.SaveChanges();
         }
+        public void DeleteComanda(Comanda c)
+        {
+            IQueryable<Comanda_Producte> comanda_producte = AllProducteinComanda(c);
+            foreach (Comanda_Producte c_P in comanda_producte)
+            {
+                DeleteComanda_Producte(c_P);
+            }
+            remoteDataContext.DeleteObject(c);
+            remoteDataContext.SaveChanges();
+        }
+        public void DeleteComanda_Producte(Comanda_Producte cp)
+        {
+            remoteDataContext.DeleteObject(cp);
+            remoteDataContext.SaveChanges();
+        }
         public void DeleteClient(Client c)
         {
+            IQueryable<Comanda> comandes= ComandesdelClient(c);
+            foreach (Comanda comanda in comandes)
+            {
+                DeleteComanda(comanda);
+            }
             remoteDataContext.DeleteObject(c);
             remoteDataContext.SaveChanges();
         }
@@ -204,17 +229,24 @@ namespace ViewsProjecteFinal.CustomClasses
                 //UpdateProducte(p);
 
             }
-            remoteDataContext.SaveChanges();
             //Delete Categoria
             remoteDataContext.DeleteObject(c);
             remoteDataContext.SaveChanges();
         }
         public void DeleteComercial(Comercial c)
         {
+            //Change or Delete all clients of comercial
+            IQueryable<Client> client = AllClient();
+            foreach (Client cli in client)
+            {
+                DeleteClient(cli);
+            }
+
             remoteDataContext.DeleteObject(c.Usuari);
             remoteDataContext.DeleteObject(c);
             remoteDataContext.SaveChanges();
         }
+        
 
 
 
