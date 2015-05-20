@@ -28,7 +28,12 @@ namespace ViewsProjecteFinal.CustomClasses
         {
             try
             {
-            remoteDataContext.AddToComercial(comercial);
+                
+
+            //remoteDataContext.AddToComercial(comercial);
+            remoteDataContext.AddObject("Comercial" , comercial);
+                
+            remoteDataContext.SaveChanges();
             } catch (Exception e){
                 MessageBox.Show("No s'ha pogut inserir: " + e);
             } finally{
