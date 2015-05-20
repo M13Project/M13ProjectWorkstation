@@ -40,6 +40,7 @@ namespace ViewsProjecteFinal.CustomClasses
             try
             {
             remoteDataContext.AddToUsuari(usuari);
+            remoteDataContext.SaveChanges();
             } catch (Exception e){
                 MessageBox.Show("No s'ha pogut inserir: " + e);
             } finally{
@@ -51,6 +52,7 @@ namespace ViewsProjecteFinal.CustomClasses
             try
             {
             remoteDataContext.AddToCategoria(categoria);
+            remoteDataContext.SaveChanges();
             } catch (Exception e){
                 MessageBox.Show("No s'ha pogut inserir: " + e);
             } finally{
@@ -62,6 +64,7 @@ namespace ViewsProjecteFinal.CustomClasses
             try 
             {
             remoteDataContext.AddToProducte(producte);
+            remoteDataContext.SaveChanges();
         }
             catch (Exception e)
             {
@@ -121,6 +124,11 @@ namespace ViewsProjecteFinal.CustomClasses
             var cli = from clients in remoteDataContext.Client where clients.Comercial.Id == c.Id select clients;
             return cli;
         }
+        public IQueryable<Producte> ProductesdeCategoria(Categoria c)
+        {
+            var pro = from productes in remoteDataContext.Producte where productes.CategoriaId == c.Id select productes;
+            return pro;
+        }
         
         
         public void UpdateAgent(Comercial comercial)
@@ -177,6 +185,7 @@ namespace ViewsProjecteFinal.CustomClasses
         }
         public void DeleteCategoria(Categoria c)
         {
+            IQueryable<Producte> productes;
             remoteDataContext.DeleteObject(c);
         }
 
