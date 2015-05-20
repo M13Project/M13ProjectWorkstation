@@ -23,5 +23,9 @@ namespace ViewsProjecteFinal.CustomClasses
             }            
             return extractedUser;
         }
+        public void consultCategories() {
+            String webServiceDomain = "http://localhost:52220/M13ProjectWcfDataService.svc/";
+            m13_projectEntities entities = new m13_projectEntities(new Uri(webServiceDomain));
+        }
     }
 }

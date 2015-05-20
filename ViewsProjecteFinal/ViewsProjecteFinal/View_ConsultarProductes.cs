@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ViewsProjecteFinal.ServiceReference;
 
 namespace ViewsProjecteFinal
 {
     public partial class View_ConsultarProductes : Form
     {
+        String webServiceDomain = "http://localhost:52220/M13ProjectWcfDataService.svc/";
         public View_ConsultarProductes()
         {
             InitializeComponent();
@@ -23,6 +25,25 @@ namespace ViewsProjecteFinal
             this.btnDelete.ForeColor = Color.FromArgb(7, 59, 90);
             this.lblSelect.ForeColor = Color.FromArgb(7, 59, 90);
             this.btnAdd.ForeColor = Color.FromArgb(7, 59, 90);
+
+            m13_projectEntities entities = new m13_projectEntities(new Uri(webServiceDomain));
+            var query = from asd in entities.Producte
+                         select new
+                         {
+                             asd.Id,
+                             asd.Nom,
+                             asd.Preu,
+                             asd.Descompte,
+                             asd.Habilitat,
+                             Categoria = asd.Categoria.Nom
+                         };
+
+            foreach (var productGroup in query)
+            {
+                Console.WriteLine(productGroup.Categoria);
+
+            }
+            this.gridView.DataSource = query.ToList();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)

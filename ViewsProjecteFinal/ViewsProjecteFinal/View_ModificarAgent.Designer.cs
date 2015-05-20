@@ -40,6 +40,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblTitolView = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtStartYear = new System.Windows.Forms.TextBox();
+            this.txtWorkZone = new System.Windows.Forms.TextBox();
+            this.cboxHabilitat = new System.Windows.Forms.CheckBox();
+            this.label8 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBoxLogout_UC1
@@ -51,7 +61,7 @@
             // 
             // buttonBack_UC1
             // 
-            this.buttonBack_UC1.Location = new System.Drawing.Point(644, 348);
+            this.buttonBack_UC1.Location = new System.Drawing.Point(645, 388);
             this.buttonBack_UC1.Name = "buttonBack_UC1";
             this.buttonBack_UC1.Size = new System.Drawing.Size(70, 21);
             this.buttonBack_UC1.TabIndex = 33;
@@ -59,7 +69,7 @@
             // btnUpdate
             // 
             this.btnUpdate.Font = new System.Drawing.Font("Palatino Linotype", 10F);
-            this.btnUpdate.Location = new System.Drawing.Point(627, 301);
+            this.btnUpdate.Location = new System.Drawing.Point(628, 341);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(102, 31);
             this.btnUpdate.TabIndex = 32;
@@ -69,7 +79,7 @@
             // txtUsername
             // 
             this.txtUsername.BackColor = System.Drawing.Color.LightCyan;
-            this.txtUsername.Location = new System.Drawing.Point(651, 262);
+            this.txtUsername.Location = new System.Drawing.Point(389, 251);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(123, 20);
             this.txtUsername.TabIndex = 31;
@@ -77,7 +87,7 @@
             // txtDNI
             // 
             this.txtDNI.BackColor = System.Drawing.Color.LightCyan;
-            this.txtDNI.Location = new System.Drawing.Point(651, 226);
+            this.txtDNI.Location = new System.Drawing.Point(389, 215);
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(65, 20);
             this.txtDNI.TabIndex = 30;
@@ -85,7 +95,7 @@
             // txtSurname
             // 
             this.txtSurname.BackColor = System.Drawing.Color.LightCyan;
-            this.txtSurname.Location = new System.Drawing.Point(651, 185);
+            this.txtSurname.Location = new System.Drawing.Point(389, 174);
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.Size = new System.Drawing.Size(169, 20);
             this.txtSurname.TabIndex = 29;
@@ -93,7 +103,7 @@
             // txtName
             // 
             this.txtName.BackColor = System.Drawing.Color.LightCyan;
-            this.txtName.Location = new System.Drawing.Point(651, 144);
+            this.txtName.Location = new System.Drawing.Point(389, 133);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(92, 20);
             this.txtName.TabIndex = 28;
@@ -103,7 +113,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Palatino Linotype", 10F);
-            this.label4.Location = new System.Drawing.Point(563, 262);
+            this.label4.Location = new System.Drawing.Point(301, 251);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 19);
             this.label4.TabIndex = 27;
@@ -114,7 +124,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Palatino Linotype", 10F);
-            this.label3.Location = new System.Drawing.Point(563, 185);
+            this.label3.Location = new System.Drawing.Point(301, 174);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 19);
             this.label3.TabIndex = 26;
@@ -125,7 +135,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 10F);
-            this.label2.Location = new System.Drawing.Point(563, 144);
+            this.label2.Location = new System.Drawing.Point(301, 133);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 19);
             this.label2.TabIndex = 25;
@@ -136,7 +146,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 10F);
-            this.label1.Location = new System.Drawing.Point(563, 226);
+            this.label1.Location = new System.Drawing.Point(301, 215);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 19);
             this.label1.TabIndex = 24;
@@ -153,12 +163,110 @@
             this.lblTitolView.TabIndex = 66;
             this.lblTitolView.Text = "Modify Agent";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(860, 125);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(174, 175);
+            this.pictureBox1.TabIndex = 73;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Palatino Linotype", 10F);
+            this.label7.Location = new System.Drawing.Point(603, 215);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(85, 19);
+            this.label7.TabIndex = 72;
+            this.label7.Text = "Work Zone:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Palatino Linotype", 10F);
+            this.label6.Location = new System.Drawing.Point(603, 174);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(79, 19);
+            this.label6.TabIndex = 71;
+            this.label6.Text = "Start Year :";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Palatino Linotype", 10F);
+            this.label5.Location = new System.Drawing.Point(603, 134);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(75, 19);
+            this.label5.TabIndex = 70;
+            this.label5.Text = "Password:";
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.BackColor = System.Drawing.Color.LightCyan;
+            this.txtPassword.Location = new System.Drawing.Point(698, 133);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(123, 20);
+            this.txtPassword.TabIndex = 69;
+            // 
+            // txtStartYear
+            // 
+            this.txtStartYear.BackColor = System.Drawing.Color.LightCyan;
+            this.txtStartYear.Location = new System.Drawing.Point(698, 173);
+            this.txtStartYear.Name = "txtStartYear";
+            this.txtStartYear.PasswordChar = '*';
+            this.txtStartYear.Size = new System.Drawing.Size(73, 20);
+            this.txtStartYear.TabIndex = 68;
+            // 
+            // txtWorkZone
+            // 
+            this.txtWorkZone.BackColor = System.Drawing.Color.LightCyan;
+            this.txtWorkZone.Location = new System.Drawing.Point(698, 214);
+            this.txtWorkZone.Name = "txtWorkZone";
+            this.txtWorkZone.PasswordChar = '*';
+            this.txtWorkZone.Size = new System.Drawing.Size(123, 20);
+            this.txtWorkZone.TabIndex = 67;
+            // 
+            // cboxHabilitat
+            // 
+            this.cboxHabilitat.AutoSize = true;
+            this.cboxHabilitat.BackColor = System.Drawing.Color.Transparent;
+            this.cboxHabilitat.Location = new System.Drawing.Point(700, 257);
+            this.cboxHabilitat.Name = "cboxHabilitat";
+            this.cboxHabilitat.Size = new System.Drawing.Size(15, 14);
+            this.cboxHabilitat.TabIndex = 77;
+            this.cboxHabilitat.UseVisualStyleBackColor = false;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Palatino Linotype", 10F);
+            this.label8.Location = new System.Drawing.Point(601, 254);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(69, 19);
+            this.label8.TabIndex = 76;
+            this.label8.Text = "Habilitat:";
+            // 
             // View_ModificarAgent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ViewsProjecteFinal.Properties.Resources.fonsViews;
             this.ClientSize = new System.Drawing.Size(1354, 733);
+            this.Controls.Add(this.cboxHabilitat);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtStartYear);
+            this.Controls.Add(this.txtWorkZone);
             this.Controls.Add(this.lblTitolView);
             this.Controls.Add(this.pictureBoxLogout_UC1);
             this.Controls.Add(this.buttonBack_UC1);
@@ -173,6 +281,7 @@
             this.Controls.Add(this.label1);
             this.Name = "View_ModificarAgent";
             this.Text = "View_ModificarAgent";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -192,5 +301,14 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblTitolView;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtStartYear;
+        private System.Windows.Forms.TextBox txtWorkZone;
+        private System.Windows.Forms.CheckBox cboxHabilitat;
+        private System.Windows.Forms.Label label8;
     }
 }

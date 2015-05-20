@@ -32,7 +32,6 @@
             this.pictureBoxLogout_UC1 = new ViewsProjecteFinal.PictureBoxLogout_UC();
             this.buttonBack_UC1 = new ViewsProjecteFinal.ButtonBack_UC();
             this.btnUpdate = new System.Windows.Forms.Button();
-            this.txtHabilitat = new System.Windows.Forms.TextBox();
             this.txtDescompte = new System.Windows.Forms.TextBox();
             this.txtPreu = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
@@ -41,6 +40,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblTitolView = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cboxHabilitat = new System.Windows.Forms.CheckBox();
+            this.cmbboxCategoria = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pboxProfilePicture)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,7 +50,7 @@
             // 
             this.pboxProfilePicture.Location = new System.Drawing.Point(733, 157);
             this.pboxProfilePicture.Name = "pboxProfilePicture";
-            this.pboxProfilePicture.Size = new System.Drawing.Size(121, 138);
+            this.pboxProfilePicture.Size = new System.Drawing.Size(151, 178);
             this.pboxProfilePicture.TabIndex = 47;
             this.pboxProfilePicture.TabStop = false;
             // 
@@ -61,7 +63,7 @@
             // 
             // buttonBack_UC1
             // 
-            this.buttonBack_UC1.Location = new System.Drawing.Point(615, 387);
+            this.buttonBack_UC1.Location = new System.Drawing.Point(614, 431);
             this.buttonBack_UC1.Name = "buttonBack_UC1";
             this.buttonBack_UC1.Size = new System.Drawing.Size(70, 21);
             this.buttonBack_UC1.TabIndex = 45;
@@ -69,25 +71,17 @@
             // btnUpdate
             // 
             this.btnUpdate.Font = new System.Drawing.Font("Palatino Linotype", 10F);
-            this.btnUpdate.Location = new System.Drawing.Point(599, 331);
+            this.btnUpdate.Location = new System.Drawing.Point(598, 375);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(102, 31);
             this.btnUpdate.TabIndex = 44;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
             // 
-            // txtHabilitat
-            // 
-            this.txtHabilitat.BackColor = System.Drawing.Color.LightCyan;
-            this.txtHabilitat.Location = new System.Drawing.Point(576, 275);
-            this.txtHabilitat.Name = "txtHabilitat";
-            this.txtHabilitat.Size = new System.Drawing.Size(30, 20);
-            this.txtHabilitat.TabIndex = 43;
-            // 
             // txtDescompte
             // 
             this.txtDescompte.BackColor = System.Drawing.Color.LightCyan;
-            this.txtDescompte.Location = new System.Drawing.Point(576, 239);
+            this.txtDescompte.Location = new System.Drawing.Point(576, 237);
             this.txtDescompte.Name = "txtDescompte";
             this.txtDescompte.Size = new System.Drawing.Size(30, 20);
             this.txtDescompte.TabIndex = 42;
@@ -146,7 +140,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 10F);
-            this.label1.Location = new System.Drawing.Point(488, 239);
+            this.label1.Location = new System.Drawing.Point(488, 237);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 19);
             this.label1.TabIndex = 36;
@@ -163,18 +157,50 @@
             this.lblTitolView.TabIndex = 72;
             this.lblTitolView.Text = "Modify Product";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Palatino Linotype", 10F);
+            this.label5.Location = new System.Drawing.Point(488, 316);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(74, 19);
+            this.label5.TabIndex = 73;
+            this.label5.Text = "Categoria:";
+            // 
+            // cboxHabilitat
+            // 
+            this.cboxHabilitat.AutoSize = true;
+            this.cboxHabilitat.BackColor = System.Drawing.Color.Transparent;
+            this.cboxHabilitat.Location = new System.Drawing.Point(576, 280);
+            this.cboxHabilitat.Name = "cboxHabilitat";
+            this.cboxHabilitat.Size = new System.Drawing.Size(15, 14);
+            this.cboxHabilitat.TabIndex = 75;
+            this.cboxHabilitat.UseVisualStyleBackColor = false;
+            // 
+            // cmbboxCategoria
+            // 
+            this.cmbboxCategoria.BackColor = System.Drawing.Color.LightCyan;
+            this.cmbboxCategoria.FormattingEnabled = true;
+            this.cmbboxCategoria.Location = new System.Drawing.Point(576, 316);
+            this.cmbboxCategoria.Name = "cmbboxCategoria";
+            this.cmbboxCategoria.Size = new System.Drawing.Size(121, 21);
+            this.cmbboxCategoria.TabIndex = 76;
+            // 
             // View_ModificarProducte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ViewsProjecteFinal.Properties.Resources.fonsViews;
             this.ClientSize = new System.Drawing.Size(1354, 733);
+            this.Controls.Add(this.cmbboxCategoria);
+            this.Controls.Add(this.cboxHabilitat);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.lblTitolView);
             this.Controls.Add(this.pboxProfilePicture);
             this.Controls.Add(this.pictureBoxLogout_UC1);
             this.Controls.Add(this.buttonBack_UC1);
             this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.txtHabilitat);
             this.Controls.Add(this.txtDescompte);
             this.Controls.Add(this.txtPreu);
             this.Controls.Add(this.txtName);
@@ -196,7 +222,6 @@
         private PictureBoxLogout_UC pictureBoxLogout_UC1;
         private ButtonBack_UC buttonBack_UC1;
         private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.TextBox txtHabilitat;
         private System.Windows.Forms.TextBox txtDescompte;
         private System.Windows.Forms.TextBox txtPreu;
         private System.Windows.Forms.TextBox txtName;
@@ -205,5 +230,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblTitolView;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.CheckBox cboxHabilitat;
+        private System.Windows.Forms.ComboBox cmbboxCategoria;
     }
 }

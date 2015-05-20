@@ -31,7 +31,7 @@
             this.buttonBack_UC1 = new ViewsProjecteFinal.ButtonBack_UC();
             this.pictureBoxLogout_UC1 = new ViewsProjecteFinal.PictureBoxLogout_UC();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSelect = new System.Windows.Forms.TextBox();
             this.btnShowDetail = new System.Windows.Forms.Button();
             this.gridView = new System.Windows.Forms.DataGridView();
             this.lblTitolView = new System.Windows.Forms.Label();
@@ -63,13 +63,13 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Select:";
             // 
-            // textBox1
+            // txtSelect
             // 
-            this.textBox1.BackColor = System.Drawing.Color.LightCyan;
-            this.textBox1.Location = new System.Drawing.Point(586, 534);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(195, 20);
-            this.textBox1.TabIndex = 10;
+            this.txtSelect.BackColor = System.Drawing.Color.LightCyan;
+            this.txtSelect.Location = new System.Drawing.Point(586, 534);
+            this.txtSelect.Name = "txtSelect";
+            this.txtSelect.Size = new System.Drawing.Size(195, 20);
+            this.txtSelect.TabIndex = 10;
             // 
             // btnShowDetail
             // 
@@ -84,6 +84,8 @@
             // 
             // gridView
             // 
+            this.gridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridView.BackgroundColor = System.Drawing.Color.LightCyan;
             this.gridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridView.Location = new System.Drawing.Point(256, 147);
             this.gridView.Name = "gridView";
@@ -110,7 +112,7 @@
             this.Controls.Add(this.lblTitolView);
             this.Controls.Add(this.gridView);
             this.Controls.Add(this.btnShowDetail);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtSelect);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonBack_UC1);
             this.Controls.Add(this.pictureBoxLogout_UC1);
@@ -127,7 +129,7 @@
         private ButtonBack_UC buttonBack_UC1;
         private PictureBoxLogout_UC pictureBoxLogout_UC1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSelect;
         private System.Windows.Forms.Button btnShowDetail;
         private System.Windows.Forms.DataGridView gridView;
         private System.Windows.Forms.Label lblTitolView;

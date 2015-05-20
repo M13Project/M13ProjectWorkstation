@@ -19,6 +19,7 @@ namespace ViewsProjecteFinal
         {
             InitializeComponent();
             lc = new LoginController();
+            this.AcceptButton = btnSignIn;
         }
 
         private void View_Login_Load(object sender, EventArgs e)
@@ -60,6 +61,6 @@ namespace ViewsProjecteFinal
         private void txtPassword_EnterFocus(object sender, EventArgs e)
         {
             txtPassword.Text = "";
-        }
+        }        
     }
 }

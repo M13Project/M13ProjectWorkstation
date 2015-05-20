@@ -31,32 +31,27 @@ namespace ViewsProjecteFinal
             m13_projectEntities entities = new m13_projectEntities(new Uri(webServiceDomain));
             
 
-            /**/
-            //IQueryable<Usuari> query = from usuari in entities.Usuari select usuari;
-            //foreach (Usuari usda in query)
-            //{
-            //    entities.LoadProperty(usda, "Comercial");
+            var query = from asd in entities.Comercial
+                         select new
+                         {
+                             asd.Usuari.Id,
+                             asd.Usuari.Nom,
+                             asd.Usuari.Cognom,
+                             asd.Usuari.Dni,
+                             asd.Usuari.Contrasenya,
+                             asd.AnyInici, 
+                             ZonaT = asd.ZonaTreball,
+                             asd.Habilitat
+                         };
 
-            //}
-            //var query = from asd in entities.Usuari
-            //            join comdsa in entities.Comercial on asd.Id equals comdsa.Id
-            //            select new { Name = asd.Nom, Zona = comdsa.ZonaTreball };
-            /**/
+            foreach (var productGroup in query)
+            {
+                Console.WriteLine(productGroup.AnyInici);
+                Console.WriteLine(productGroup.ZonaT);
+                Console.WriteLine(productGroup.Habilitat);
 
-
-            //var query = from usuari in entities.Usuari
-            //            join com in entities.Comercial on usuari.Id equals com.Id into prodGroup
-            //            select new
-            //            {
-            //                Comercial = from prod2 in prodGroup select prod2
-
-            //            };
-
-            //foreach (var productGroup in query)
-            //{
-            //    Console.WriteLine(productGroup.Comercial);
-            //}
-            this.gridView.DataSource = entities.Comercial.ToList();
+            }
+            this.gridView.DataSource = query.ToList();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -78,8 +73,8 @@ namespace ViewsProjecteFinal
             String id;
             id = this.txtSelect.Text;
 
-            Form modificarCategoria = new View_ModificarCategoria(id);
-            Methods.back(this, modificarCategoria);
+            Form modificarAgent = new View_ModificarAgent(id);
+            Methods.back(this, modificarAgent);
         }
     }
 }

@@ -44,6 +44,7 @@
             // 
             // gridView
             // 
+            this.gridView.BackgroundColor = System.Drawing.Color.LightCyan;
             this.gridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridView.Location = new System.Drawing.Point(256, 160);
             this.gridView.Name = "gridView";
@@ -78,6 +79,8 @@
             this.Controls.Add(this.gridView);
             this.Controls.Add(this.buttonBack_UC1);
             this.Controls.Add(this.pictureBoxLogout_UC1);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "View_ConsultarClientsAgent";
             this.Text = "View_ConsultarClientsAgent";
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();

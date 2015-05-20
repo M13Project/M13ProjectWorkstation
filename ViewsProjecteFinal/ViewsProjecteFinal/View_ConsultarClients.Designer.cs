@@ -51,6 +51,7 @@
             // 
             // gridView
             // 
+            this.gridView.BackgroundColor = System.Drawing.Color.LightCyan;
             this.gridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridView.Location = new System.Drawing.Point(256, 151);
             this.gridView.Name = "gridView";

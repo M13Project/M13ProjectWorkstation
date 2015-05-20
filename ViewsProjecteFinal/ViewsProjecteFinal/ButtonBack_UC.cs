@@ -29,7 +29,7 @@ namespace ViewsProjecteFinal
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            this.Parent.Hide(); 
+            Form.ActiveForm.Close();
         }
 
     }

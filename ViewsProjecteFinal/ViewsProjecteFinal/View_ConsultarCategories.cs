@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ViewsProjecteFinal.ServiceReference;
 
 namespace ViewsProjecteFinal
 {
     public partial class View_ConsultarCategories : Form
     {
+        String webServiceDomain = "http://localhost:52220/M13ProjectWcfDataService.svc/";
         public View_ConsultarCategories()
         {
             InitializeComponent();
@@ -23,6 +25,10 @@ namespace ViewsProjecteFinal
             this.btnDelete.ForeColor = Color.FromArgb(7, 59, 90);
             this.lblSelect.ForeColor = Color.FromArgb(7, 59, 90);
             this.btnAdd.ForeColor = Color.FromArgb(7, 59, 90);
+
+            m13_projectEntities entities = new m13_projectEntities(new Uri(webServiceDomain));
+
+            this.gridView.DataSource = entities.Categoria.ToList();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
