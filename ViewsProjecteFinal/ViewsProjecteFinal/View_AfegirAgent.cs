@@ -36,20 +36,25 @@ namespace ViewsProjecteFinal
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            Comercial com = new Comercial();
-            String a = txtStartYear.ToString() + " 00:00:00";
-            com.AnyInici = DateTime.Parse(a);
-            com.ZonaTreball = txtWorkZone.ToString();
+            
             Usuari us = new Usuari();
             us.Nom = txtName.ToString();
             us.Cognom = txtSurname.ToString();
             us.Dni = txtDNI.ToString();
             us.Usuari1 = txtUsername.ToString();
             us.Contrasenya = txtPassword.ToString();
-            us.Comercial = com;
+            //us. = com;
 
-            pm.InsertAgent(com);
+            Comercial com = new Comercial();
+            //string date = "01/08/2008";
+            //DateTime dt = Convert.ToDateTime(date);
+            //com.AnyInici = dt;
+            com.Habilitat = true;
+            com.ZonaTreball = txtWorkZone.ToString();
+            com.Id = us.Id;
+
             pm.InsertUser(us);
+            pm.InsertAgent(com);
         }
 
         private void txtStartYear_Enter(object sender, EventArgs e)

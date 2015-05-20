@@ -336,6 +336,9 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\logout_image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
     <ServiceReferenceMetadataStorage Include="Service References\ServiceReference\">
       <Type>datasvcmap</Type>
     </ServiceReferenceMetadataStorage>
@@ -345,9 +348,6 @@
       <Generator>DataServicesCoreClientGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\logout_image.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

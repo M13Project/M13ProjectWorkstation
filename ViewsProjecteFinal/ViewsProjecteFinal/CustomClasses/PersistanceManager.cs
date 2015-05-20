@@ -10,10 +10,10 @@ namespace ViewsProjecteFinal.CustomClasses
 {
     class PersistanceManager
     {
-        private m13_projectEntities remoteDataContext;
+        private m13_projectEntities1 remoteDataContext;
 
         public PersistanceManager() {
-            remoteDataContext = new m13_projectEntities(new Uri("http://localhost:52220/M13ProjectWcfDataService.svc/"));
+            remoteDataContext = new m13_projectEntities1(new Uri("http://localhost:52220/M13ProjectWcfDataService.svc/"));
         }
 
         public Usuari getUserWithUsernameAndPassword(string username, string password) {            
@@ -28,16 +28,9 @@ namespace ViewsProjecteFinal.CustomClasses
         {
             try
             {
-                
-
-            //remoteDataContext.AddToComercial(comercial);
-            remoteDataContext.AddObject("Comercial" , comercial);
-                
-            remoteDataContext.SaveChanges();
+                remoteDataContext.AddToComercial(comercial);
             } catch (Exception e){
                 MessageBox.Show("No s'ha pogut inserir: " + e);
-            } finally{
-                MessageBox.Show("S'ha inserit correctament.");
         }
          }
         public void InsertUser(Usuari usuari)
@@ -45,11 +38,8 @@ namespace ViewsProjecteFinal.CustomClasses
             try
             {
             remoteDataContext.AddToUsuari(usuari);
-            remoteDataContext.SaveChanges();
             } catch (Exception e){
                 MessageBox.Show("No s'ha pogut inserir: " + e);
-            } finally{
-                MessageBox.Show("S'ha inserit correctament.");
         }
         }
         public void InsertCategoria(Categoria categoria)
@@ -57,11 +47,8 @@ namespace ViewsProjecteFinal.CustomClasses
             try
             {
             remoteDataContext.AddToCategoria(categoria);
-            remoteDataContext.SaveChanges();
             } catch (Exception e){
                 MessageBox.Show("No s'ha pogut inserir: " + e);
-            } finally{
-                MessageBox.Show("S'ha inserit correctament.");
             }
         }
         public void InsertProduct(Producte producte)
@@ -246,7 +233,7 @@ namespace ViewsProjecteFinal.CustomClasses
             remoteDataContext.DeleteObject(c);
             remoteDataContext.SaveChanges();
         }
-        
+
 
 
 

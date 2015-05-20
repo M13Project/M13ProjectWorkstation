@@ -25,6 +25,14 @@ namespace ViewsProjecteFinal
             this.label3.ForeColor = Color.FromArgb(7, 59, 90);
             this.label4.ForeColor = Color.FromArgb(7, 59, 90);
             this.btnAdd.ForeColor = Color.FromArgb(7, 59, 90);
+
+            
+        //        System.Object[] ItemObject = new System.Object[];
+        //    for (int i = 0; i <= 9; i++)
+        //    {
+        //        ItemObject[i] = "Item" + i;
+        //    }
+        //        cmbboxCategoria.Items.AddRange(ItemObject);
         }
 
         private void btnAddProducte_Click(object sender, EventArgs e)
