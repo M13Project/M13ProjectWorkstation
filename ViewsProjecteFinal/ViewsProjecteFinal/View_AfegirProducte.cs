@@ -33,7 +33,7 @@ namespace ViewsProjecteFinal
         //        ItemObject[i] = "Item" + i;
         //    }
         //        cmbboxCategoria.Items.AddRange(ItemObject);
-        //}
+        }
 
         private void btnAddProducte_Click(object sender, EventArgs e)
         {

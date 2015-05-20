@@ -28,20 +28,16 @@ namespace ViewsProjecteFinal.CustomClasses
         {
             try
             {
-                remoteDataContext.AddObject("Comercial", comercial);
-                remoteDataContext.SaveChanges();
-                MessageBox.Show("S'ha inserit correctament.");
+                remoteDataContext.AddToComercial(comercial);
             } catch (Exception e){
                 MessageBox.Show("No s'ha pogut inserir: " + e);
-            } 
+            }
          }
         public void InsertUser(Usuari usuari)
         {
             try
             {
-            remoteDataContext.AddObject("Usuari", usuari);
-            remoteDataContext.SaveChanges();
-            MessageBox.Show("S'ha inserit correctament.");
+            remoteDataContext.AddToUsuari(usuari);
             } catch (Exception e){
                 MessageBox.Show("No s'ha pogut inserir: " + e);
             }
@@ -51,8 +47,6 @@ namespace ViewsProjecteFinal.CustomClasses
             try
             {
             remoteDataContext.AddToCategoria(categoria);
-            remoteDataContext.SaveChanges();
-            MessageBox.Show("S'ha inserit correctament.");
             } catch (Exception e){
                 MessageBox.Show("No s'ha pogut inserir: " + e);
             }
@@ -62,6 +56,7 @@ namespace ViewsProjecteFinal.CustomClasses
             try 
             {
             remoteDataContext.AddToProducte(producte);
+            remoteDataContext.SaveChanges();
             }
             catch (Exception e)
             {
@@ -83,9 +78,15 @@ namespace ViewsProjecteFinal.CustomClasses
                 MessageBox.Show("S'ha inserit correctament.");
             }
         }
-        public void AllAgents()
+        public IQueryable<Usuari> AllUsuari()
         {
-          
+            var u = from usuari in remoteDataContext.Usuari select usuari;
+            return u;
+        }
+        public IQueryable<Comercial> AllComercial()
+        {
+            var c = from comercial in remoteDataContext.Comercial select comercial;
+            return c;
         }
         public IQueryable<Categoria> AllCategoria()
         {
@@ -110,6 +111,17 @@ namespace ViewsProjecteFinal.CustomClasses
             var com = from comandes in remoteDataContext.Comanda where comandes.Client.Id == client.Id select comandes;
             return com;
         }
+        public IQueryable<Client> ClientsdelComercial(Comercial c)
+        {
+            var cli = from clients in remoteDataContext.Client where clients.Comercial.Id == c.Id select clients;
+            return cli;
+        }
+        public IQueryable<Producte> ProductesdeCategoria(Categoria c)
+        {
+            var pro = from productes in remoteDataContext.Producte where productes.CategoriaId == c.Id select productes;
+            return pro;
+        }
+        
         
         public void UpdateAgent(Comercial comercial)
         {
@@ -155,6 +167,43 @@ namespace ViewsProjecteFinal.CustomClasses
         public void UpdatePerfil(Usuari usuari)
         {
             remoteDataContext.UpdateObject(usuari);
+            remoteDataContext.SaveChanges();
         }
+        public void DeleteClient(Client c)
+        {
+            remoteDataContext.DeleteObject(c);
+            remoteDataContext.SaveChanges();
+        }
+        public void DeleteProducte(Producte p){
+            remoteDataContext.DeleteObject(p);
+            remoteDataContext.SaveChanges();
+        }
+        public void DeleteCategoria(Categoria c/*, Categoria NovaC*/)
+        {
+            //Eliminar Productes de la categoria
+            IQueryable<Producte> productes = ProductesdeCategoria(c);
+            foreach(Producte p in productes  ){
+                
+                DeleteProducte(p);
+                //Change categoria dels Productes
+                // p.CategoriaId = NovaC.Id;
+                //p.Categoria = NovaC;
+                //UpdateProducte(p);
+
+        }
+            remoteDataContext.SaveChanges();
+            //Delete Categoria
+            remoteDataContext.DeleteObject(c);
+            remoteDataContext.SaveChanges();
+        }
+        public void DeleteComercial(Comercial c)
+        {
+            remoteDataContext.DeleteObject(c.Usuari);
+            remoteDataContext.DeleteObject(c);
+            remoteDataContext.SaveChanges();
+        }
+
+
+
     }
 }
