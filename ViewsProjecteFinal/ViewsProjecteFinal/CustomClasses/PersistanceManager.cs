@@ -23,5 +23,63 @@ namespace ViewsProjecteFinal.CustomClasses
             }            
             return extractedUser;
         }
+        public void InsertAgent(Comercial comercial)
+        {
+            remoteDataContext.AddToComercial(comercial);
+        }
+        public void InsertUser(Usuari usuari)
+        {
+            remoteDataContext.AddToUsuari(usuari);
+        }
+        public void InsertCategoria(Categoria categoria)
+        {
+            remoteDataContext.AddToCategoria(categoria);
+        }
+        public void InsertProduct(Producte producte)
+        {
+            remoteDataContext.AddToProducte(producte);
+        }
+        public void InsertToClients(Client client)
+        {
+            remoteDataContext.AddToClient(client);
+        }
+        public void AllAgents()
+        {
+          
+        }
+        public void AllCategoria()
+        {
+
+        }
+        public void AllClient()
+        {
+
+        }
+        public void AllComandes()
+        {
+
+        }
+        public void UpdateAgent(Comercial comercial)
+        {
+            remoteDataContext.UpdateObject(comercial);
+        }
+        public void UpdateUser(Usuari usuari)
+        {
+            remoteDataContext.UpdateObject(usuari);
+        }
+        public void UpdateCategoria(Categoria categoria)
+        {
+            remoteDataContext.UpdateObject(categoria);
+
+        }
+        public void UpdateProducte(Producte producte)
+        {
+            remoteDataContext.UpdateObject(producte);
+        }
+        public void UpdatePerfil()
+        {
+
+        }
+
     }
 }

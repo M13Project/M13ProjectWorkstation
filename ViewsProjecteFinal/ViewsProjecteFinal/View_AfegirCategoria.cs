@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ViewsProjecteFinal.CustomClasses;
+using ViewsProjecteFinal.ServiceReference;
 
 namespace ViewsProjecteFinal
 {
     public partial class View_AfegirCategoria : Form
     {
+        PersistanceManager pm = new PersistanceManager();
         public View_AfegirCategoria()
         {
             InitializeComponent();
@@ -20,6 +23,15 @@ namespace ViewsProjecteFinal
             this.label2.ForeColor = Color.FromArgb(7, 59, 90);
             this.label3.ForeColor = Color.FromArgb(7, 59, 90);
             this.btnAdd.ForeColor = Color.FromArgb(7, 59, 90);
+        }
+
+        private void btnAddCategoria_Click(object sender, EventArgs e)
+        {
+            Categoria categoria = new Categoria();
+            categoria.Nom = txtName.Text.ToString();
+            categoria.Descompte = Double.Parse(txtDiscount.Text.ToString());
+            pm.InsertCategoria(categoria);
+
         }
     }
 }
