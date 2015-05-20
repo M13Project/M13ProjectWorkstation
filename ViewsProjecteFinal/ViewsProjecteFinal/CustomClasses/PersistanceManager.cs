@@ -193,22 +193,29 @@ namespace ViewsProjecteFinal.CustomClasses
         }
         public void DeleteCategoria(Categoria c/*, Categoria NovaC*/)
         {
+            //Eliminar Productes de la categoria
             IQueryable<Producte> productes = ProductesdeCategoria(c);
             foreach(Producte p in productes  ){
-
+                
                 DeleteProducte(p);
-                //Change Categoria
-                // p.CategoriaId;
-                //p.Categoria;
+                //Change categoria dels Productes
+                // p.CategoriaId = NovaC.Id;
+                //p.Categoria = NovaC;
                 //UpdateProducte(p);
 
             }
+            remoteDataContext.SaveChanges();
+            //Delete Categoria
             remoteDataContext.DeleteObject(c);
+            remoteDataContext.SaveChanges();
         }
-        public void DeleteComercial()
+        public void DeleteComercial(Comercial c)
         {
-
+            remoteDataContext.DeleteObject(c.Usuari);
+            remoteDataContext.DeleteObject(c);
+            remoteDataContext.SaveChanges();
         }
+
 
 
     }
