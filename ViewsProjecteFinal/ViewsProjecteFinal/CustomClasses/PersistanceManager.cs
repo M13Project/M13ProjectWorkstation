@@ -175,18 +175,34 @@ namespace ViewsProjecteFinal.CustomClasses
         public void UpdatePerfil(Usuari usuari)
         {
             remoteDataContext.UpdateObject(usuari);
+            remoteDataContext.SaveChanges();
         }
         public void DeleteClient(Client c)
         {
             remoteDataContext.DeleteObject(c);
+            remoteDataContext.SaveChanges();
         }
         public void DeleteProducte(Producte p){
             remoteDataContext.DeleteObject(p);
+            remoteDataContext.SaveChanges();
         }
-        public void DeleteCategoria(Categoria c)
+        public void DeleteCategoria(Categoria c/*, Categoria NovaC*/)
         {
-            IQueryable<Producte> productes;
+            IQueryable<Producte> productes = ProductesdeCategoria(c);
+            foreach(Producte p in productes  ){
+
+                DeleteProducte(p);
+                //Change Categoria
+                // p.CategoriaId;
+                //p.Categoria;
+                //UpdateProducte(p);
+
+            }
             remoteDataContext.DeleteObject(c);
+        }
+        public void DeleteComercial()
+        {
+
         }
 
 
