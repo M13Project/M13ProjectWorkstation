@@ -47,18 +47,30 @@ namespace ViewsProjecteFinal.CustomClasses
         {
           
         }
-        public void AllCategoria()
+        public IQueryable<Categoria> AllCategoria()
         {
+            var cat = from categoria in remoteDataContext.Categoria select categoria;
+            return cat ;
 
         }
-        public void AllClient()
+        public IQueryable<Client> AllClient()
         {
 
-        }
-        public void AllComandes()
-        {
+            var cli =  from client in remoteDataContext.Client select client;
+            return cli;
 
         }
+        public IQueryable<Comanda> AllComandes()
+        {
+            var com = from comandes in remoteDataContext.Comanda select comandes;
+            return com;
+        }
+        public IQueryable<Comanda> ComandesdelClient(Client client)
+        {
+            var com = from comandes in remoteDataContext.Comanda where comandes.Client.Id == client.Id select comandes;
+            return com;
+        }
+        
         public void UpdateAgent(Comercial comercial)
         {
             remoteDataContext.UpdateObject(comercial);
