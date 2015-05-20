@@ -76,9 +76,9 @@ namespace ViewsProjecteFinal.CustomClasses
         {
             remoteDataContext.UpdateObject(producte);
         }
-        public void UpdatePerfil()
+        public void UpdatePerfil(Usuari usuari)
         {
-
+            remoteDataContext.UpdateObject(usuari);
         }
 
     }
