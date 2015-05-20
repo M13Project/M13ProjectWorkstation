@@ -33,7 +33,8 @@ namespace ViewsProjecteFinal
             producte.Nom = txtName.Text.ToString();
             producte.Preu = Double.Parse(txtPreu.Text.ToString());
             producte.Descompte = Double.Parse(txtDescompte.Text.ToString());
-            producte.Habilitat = bool.Parse( txtHabilitat.Text.ToString());
+            producte.Habilitat = bool.Parse( cboxHabilitat.Text.ToString());
+            producte.Categoria.Nom = cmbboxCategoria.Text.ToString();
             pm.InsertProduct(producte);
         }
     }

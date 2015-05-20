@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ViewsProjecteFinal.ServiceReference;
+using System.Windows.Forms;
 
 namespace ViewsProjecteFinal.CustomClasses
 {
@@ -25,23 +26,62 @@ namespace ViewsProjecteFinal.CustomClasses
         }
         public void InsertAgent(Comercial comercial)
         {
-            remoteDataContext.AddToComercial(comercial);
-        }
+            try
+            {
+                remoteDataContext.AddToComercial(comercial);
+            } catch (Exception e){
+                MessageBox.Show("No s'ha pogut inserir: " + e);
+            } finally{
+                MessageBox.Show("S'ha inserit correctament.");
+            }
+         }
         public void InsertUser(Usuari usuari)
         {
+            try
+            {
             remoteDataContext.AddToUsuari(usuari);
+            } catch (Exception e){
+                MessageBox.Show("No s'ha pogut inserir: " + e);
+            } finally{
+                MessageBox.Show("S'ha inserit correctament.");
+            }
         }
         public void InsertCategoria(Categoria categoria)
         {
+            try
+            {
             remoteDataContext.AddToCategoria(categoria);
+            } catch (Exception e){
+                MessageBox.Show("No s'ha pogut inserir: " + e);
+            } finally{
+                MessageBox.Show("S'ha inserit correctament.");
+            }
         }
         public void InsertProduct(Producte producte)
         {
+            try 
+            {
             remoteDataContext.AddToProducte(producte);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("No s'ha pogut inserir: " + e);
+            }
+            finally
+            {
+                MessageBox.Show("S'ha inserit correctament.");
+            }
         }
         public void InsertToClients(Client client)
         {
-            remoteDataContext.AddToClient(client);
+            try
+            {
+                remoteDataContext.AddToClient(client);
+            } catch (Exception e){
+                MessageBox.Show("No s'ha pogut inserir: " + e);
+            } finally{
+                MessageBox.Show("S'ha inserit correctament.");
+            }
         }
         public void AllAgents()
         {
@@ -61,25 +101,48 @@ namespace ViewsProjecteFinal.CustomClasses
         }
         public void UpdateAgent(Comercial comercial)
         {
+            try
+            {
             remoteDataContext.UpdateObject(comercial);
+            } catch (Exception e){
+                MessageBox.Show("No s'ha pogut inserir: " + e);
+            } finally{
+                MessageBox.Show("S'ha inserit correctament.");
+            }
         }
         public void UpdateUser(Usuari usuari)
         {
+            try{
             remoteDataContext.UpdateObject(usuari);
+            } catch (Exception e){
+                MessageBox.Show("No s'ha pogut inserir: " + e);
+            } finally{
+                MessageBox.Show("S'ha inserit correctament.");
+            }
         }
         public void UpdateCategoria(Categoria categoria)
         {
+            try{
             remoteDataContext.UpdateObject(categoria);
-
+            } catch (Exception e){
+                MessageBox.Show("No s'ha pogut inserir: " + e);
+            } finally{
+                MessageBox.Show("S'ha inserit correctament.");
+            }
         }
         public void UpdateProducte(Producte producte)
         {
+            try{
             remoteDataContext.UpdateObject(producte);
+            } catch (Exception e){
+                MessageBox.Show("No s'ha pogut inserir: " + e);
+            } finally{
+                MessageBox.Show("S'ha inserit correctament.");
+            }
         }
         public void UpdatePerfil()
         {
 
         }
-
     }
 }
