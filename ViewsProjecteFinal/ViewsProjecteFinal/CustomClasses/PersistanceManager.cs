@@ -93,5 +93,6 @@ namespace ViewsProjecteFinal.CustomClasses
             remoteDataContext.UpdateObject(usuari);
         }
 
+
     }
 }
