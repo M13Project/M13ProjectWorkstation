@@ -47,6 +47,7 @@
             this.pictureBoxLogout_UC1 = new ViewsProjecteFinal.PictureBoxLogout_UC();
             this.buttonBack_UC1 = new ViewsProjecteFinal.ButtonBack_UC();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblHelp = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,7 +57,7 @@
             this.btnAdd.Location = new System.Drawing.Point(656, 393);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(102, 31);
-            this.btnAdd.TabIndex = 21;
+            this.btnAdd.TabIndex = 24;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -153,18 +154,18 @@
             this.txtWorkZone.BackColor = System.Drawing.Color.LightCyan;
             this.txtWorkZone.Location = new System.Drawing.Point(728, 276);
             this.txtWorkZone.Name = "txtWorkZone";
-            this.txtWorkZone.PasswordChar = '*';
             this.txtWorkZone.Size = new System.Drawing.Size(123, 20);
-            this.txtWorkZone.TabIndex = 25;
+            this.txtWorkZone.TabIndex = 23;
             // 
             // txtStartYear
             // 
             this.txtStartYear.BackColor = System.Drawing.Color.LightCyan;
             this.txtStartYear.Location = new System.Drawing.Point(728, 229);
             this.txtStartYear.Name = "txtStartYear";
-            this.txtStartYear.PasswordChar = '*';
             this.txtStartYear.Size = new System.Drawing.Size(73, 20);
-            this.txtStartYear.TabIndex = 27;
+            this.txtStartYear.TabIndex = 22;
+            this.txtStartYear.Enter += new System.EventHandler(this.txtStartYear_Enter);
+            this.txtStartYear.Leave += new System.EventHandler(this.txtStartYear_Leave);
             // 
             // txtPassword
             // 
@@ -173,7 +174,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(123, 20);
-            this.txtPassword.TabIndex = 28;
+            this.txtPassword.TabIndex = 21;
             // 
             // label5
             // 
@@ -220,7 +221,7 @@
             this.buttonBack_UC1.Location = new System.Drawing.Point(673, 448);
             this.buttonBack_UC1.Name = "buttonBack_UC1";
             this.buttonBack_UC1.Size = new System.Drawing.Size(70, 21);
-            this.buttonBack_UC1.TabIndex = 22;
+            this.buttonBack_UC1.TabIndex = 25;
             // 
             // pictureBox1
             // 
@@ -230,12 +231,21 @@
             this.pictureBox1.TabIndex = 32;
             this.pictureBox1.TabStop = false;
             // 
+            // lblHelp
+            // 
+            this.lblHelp.AutoSize = true;
+            this.lblHelp.Location = new System.Drawing.Point(745, 252);
+            this.lblHelp.Name = "lblHelp";
+            this.lblHelp.Size = new System.Drawing.Size(0, 13);
+            this.lblHelp.TabIndex = 33;
+            // 
             // View_AfegirAgent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ViewsProjecteFinal.Properties.Resources.fonsViews;
             this.ClientSize = new System.Drawing.Size(1354, 733);
+            this.Controls.Add(this.lblHelp);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -284,5 +294,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblHelp;
     }
 }

@@ -10,13 +10,14 @@ using System.Windows.Forms;
 using ViewsProjecteFinal.ServiceReference;
 using ViewsProjecteFinal.CustomClasses;
 
+
 namespace ViewsProjecteFinal
 {
     public partial class View_AfegirAgent : Form
     {
 
-        String webServiceDomain = "http://localhost:52220/M13ProjectWcfDataService.svc/";
         PersistanceManager pm = new PersistanceManager();
+        MonthCalendar mc = new MonthCalendar();
 
         public View_AfegirAgent()
         {
@@ -36,7 +37,8 @@ namespace ViewsProjecteFinal
         private void btnAdd_Click(object sender, EventArgs e)
         {
             Comercial com = new Comercial();
-            //com.AnyInici = txtStartYear;
+            String a = txtStartYear.ToString() + " 00:00:00";
+            com.AnyInici = DateTime.Parse(a);
             com.ZonaTreball = txtWorkZone.ToString();
             Usuari us = new Usuari();
             us.Nom = txtName.ToString();
@@ -48,10 +50,19 @@ namespace ViewsProjecteFinal
 
             pm.InsertAgent(com);
             pm.InsertUser(us);
+        }
 
+        private void txtStartYear_Enter(object sender, EventArgs e)
+        {
+            lblHelp.Text = "yyyy-mm-dd";
+            lblHelp.ForeColor = Color.White;
+            lblHelp.BackColor = Color.DarkGreen;
+        }
 
-            
-
+        private void txtStartYear_Leave(object sender, EventArgs e)
+        {
+            lblHelp.Text = "";
+            lblHelp.BackColor = Color.Transparent;
         }
     }
 }
