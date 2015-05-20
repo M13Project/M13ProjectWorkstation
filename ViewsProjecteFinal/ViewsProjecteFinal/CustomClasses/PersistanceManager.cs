@@ -29,6 +29,9 @@ namespace ViewsProjecteFinal.CustomClasses
             try
             {
                 remoteDataContext.AddToComercial(comercial);
+                remoteDataContext.SaveChanges();
+                MessageBox.Show("S'ha inserit correctament.");
+
             } catch (Exception e){
                 MessageBox.Show("No s'ha pogut inserir: " + e);
         }
@@ -38,6 +41,8 @@ namespace ViewsProjecteFinal.CustomClasses
             try
             {
             remoteDataContext.AddToUsuari(usuari);
+            remoteDataContext.SaveChanges();
+            MessageBox.Show("S'ha inserit correctament.");
             } catch (Exception e){
                 MessageBox.Show("No s'ha pogut inserir: " + e);
         }
@@ -47,6 +52,7 @@ namespace ViewsProjecteFinal.CustomClasses
             try
             {
             remoteDataContext.AddToCategoria(categoria);
+            MessageBox.Show("S'ha inserit correctament.");
             } catch (Exception e){
                 MessageBox.Show("No s'ha pogut inserir: " + e);
             }
@@ -57,26 +63,37 @@ namespace ViewsProjecteFinal.CustomClasses
             {
             remoteDataContext.AddToProducte(producte);
             remoteDataContext.SaveChanges();
+            MessageBox.Show("S'ha inserit correctament.");
         }
             catch (Exception e)
             {
                 MessageBox.Show("No s'ha pogut inserir: " + e);
             }
-            finally
-            {
-                MessageBox.Show("S'ha inserit correctament.");
-            }
+            
         }
         public void InsertToClients(Client client)
         {
             try
             {
             remoteDataContext.AddToClient(client);
+            remoteDataContext.SaveChanges();
+            MessageBox.Show("S'ha inserit correctament.");
             } catch (Exception e){
                 MessageBox.Show("No s'ha pogut inserir: " + e);
-            } finally{
-                MessageBox.Show("S'ha inserit correctament.");
+            } 
         }
+        public void InsertComanda_Producte(Comanda_Producte comanda_producte)
+        {
+            try
+            {
+                remoteDataContext.AddToComanda_Producte(comanda_producte);
+                remoteDataContext.SaveChanges();
+                MessageBox.Show("S'ha inserit correctament.");
+                            }
+            catch (Exception e)
+            {
+                MessageBox.Show("No s'ha pogut inserir: " + e);
+            }
         }
         public IQueryable<Usuari> AllUsuari()
         {
@@ -133,46 +150,67 @@ namespace ViewsProjecteFinal.CustomClasses
             try
             {
             remoteDataContext.UpdateObject(comercial);
+            remoteDataContext.SaveChanges();
+            MessageBox.Show("S'ha actualitzar correctament.");
             } catch (Exception e){
-                MessageBox.Show("No s'ha pogut inserir: " + e);
-            } finally{
-                MessageBox.Show("S'ha inserit correctament.");
-        }
+                MessageBox.Show("No s'ha actualitzar inserir: " + e);
+            } 
         }
         public void UpdateUser(Usuari usuari)
         {
             try{
             remoteDataContext.UpdateObject(usuari);
+            remoteDataContext.SaveChanges();
+            MessageBox.Show("S'ha actualitzar correctament.");
             } catch (Exception e){
-                MessageBox.Show("No s'ha pogut inserir: " + e);
-            } finally{
-                MessageBox.Show("S'ha inserit correctament.");
+                MessageBox.Show("No s'ha pogut actualitzar: " + e);
+            } 
+        }
+        public void UpdateClient(Client client)
+        {
+            try
+            {
+                remoteDataContext.UpdateObject(client);
+                remoteDataContext.SaveChanges();
+                MessageBox.Show("S'ha actualitzar correctament.");
             }
+            catch (Exception e)
+            {
+                MessageBox.Show("No s'ha pogut actualitzar: " + e);
+            }
+
+
         }
         public void UpdateCategoria(Categoria categoria)
         {
             try{
             remoteDataContext.UpdateObject(categoria);
+            remoteDataContext.SaveChanges();
+            MessageBox.Show("S'ha actualitzar correctament.");
             } catch (Exception e){
-                MessageBox.Show("No s'ha pogut inserir: " + e);
-            } finally{
-                MessageBox.Show("S'ha inserit correctament.");
-            }
+                MessageBox.Show("No s'ha pogut actualitzar: " + e);
+            } 
         }
         public void UpdateProducte(Producte producte)
         {
             try{
             remoteDataContext.UpdateObject(producte);
+            remoteDataContext.SaveChanges();
+            MessageBox.Show("S'ha actualitzar correctament.");
             } catch (Exception e){
-                MessageBox.Show("No s'ha pogut inserir: " + e);
-            } finally{
-                MessageBox.Show("S'ha inserit correctament.");
-            }
+                MessageBox.Show("No s'ha pogut actualitzar: " + e);
+            } 
         }
         public void UpdatePerfil(Usuari usuari)
         {
+            try
+            {
             remoteDataContext.UpdateObject(usuari);
             remoteDataContext.SaveChanges();
+            MessageBox.Show("S'ha actualitzar correctament.");
+            } catch (Exception e){
+                MessageBox.Show("No s'ha pogut actualitzar: " + e);
+            } 
         }
         public void DeleteComanda(Comanda c)
         {
@@ -220,21 +258,24 @@ namespace ViewsProjecteFinal.CustomClasses
             remoteDataContext.DeleteObject(c);
             remoteDataContext.SaveChanges();
         }
-        public void DeleteComercial(Comercial c)
+        public void DeleteComercial(Comercial c /*, Comercial NouComercial*/)
         {
             //Change or Delete all clients of comercial
             IQueryable<Client> client = AllClient();
             foreach (Client cli in client)
             {
                 DeleteClient(cli);
+                // Change 
+                //cli.Comercial = NouComercial;
+                //cli.ComercialId = NouComercia.Id;
+                //UpdateClient(cli);
+                    
             }
 
             remoteDataContext.DeleteObject(c.Usuari);
             remoteDataContext.DeleteObject(c);
             remoteDataContext.SaveChanges();
         }
-
-
 
 
     }
