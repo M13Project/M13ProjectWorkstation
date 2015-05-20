@@ -22,7 +22,7 @@ namespace ViewsProjecteFinal
             this.btnShowDetail.ForeColor = Color.FromArgb(7, 59, 90);
             this.label1.ForeColor = Color.FromArgb(7, 59, 90);
 
-            m13_projectEntities entities = new m13_projectEntities(new Uri(webServiceDomain));
+            m13_projectEntities1 entities = new m13_projectEntities1(new Uri(webServiceDomain));
             this.gridView.DataSource = entities.Comanda.ToList();
         }
 

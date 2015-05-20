@@ -29,6 +29,7 @@
       </EntityType>
       <EntityType Name="Client">
         <Key>
+          <PropertyRef Name="ComercialId" />
           <PropertyRef Name="Id" />
         </Key>
         <Property Name="Id" Type="Edm.Int32" Nullable="false" />
@@ -45,23 +46,27 @@
       </EntityType>
       <EntityType Name="Comanda">
         <Key>
+          <PropertyRef Name="ComercialId" />
           <PropertyRef Name="Id" />
         </Key>
         <Property Name="Id" Type="Edm.Int32" Nullable="false" />
         <Property Name="Lliurada" Type="Edm.Boolean" Nullable="false" />
         <Property Name="Data" Type="Edm.DateTime" Nullable="false" Precision="0" />
         <Property Name="ClientId" Type="Edm.Int32" Nullable="false" />
+        <Property Name="ComercialId" Type="Edm.Int32" Nullable="false" />
         <NavigationProperty Name="Client" Relationship="m13_projectModel.fk_ComCli" ToRole="Client" FromRole="Comanda" />
         <NavigationProperty Name="Comanda_Producte" Relationship="m13_projectModel.fk_ComProCom" ToRole="Comanda_Producte" FromRole="Comanda" />
       </EntityType>
       <EntityType Name="Comanda_Producte">
         <Key>
-          <PropertyRef Name="ComandaId" />
-          <PropertyRef Name="ProducteId" />
+          <PropertyRef Name="ComercialId" />
+          <PropertyRef Name="Id" />
         </Key>
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
         <Property Name="ComandaId" Type="Edm.Int32" Nullable="false" />
         <Property Name="ProducteId" Type="Edm.Int32" Nullable="false" />
         <Property Name="Quantitat" Type="Edm.Int32" Nullable="false" />
+        <Property Name="ComercialId" Type="Edm.Int32" Nullable="false" />
         <NavigationProperty Name="Comanda" Relationship="m13_projectModel.fk_ComProCom" ToRole="Comanda" FromRole="Comanda_Producte" />
         <NavigationProperty Name="Producte" Relationship="m13_projectModel.fk_ComProPro" ToRole="Producte" FromRole="Comanda_Producte" />
       </EntityType>
@@ -78,13 +83,17 @@
       </EntityType>
       <EntityType Name="Localitzacio">
         <Key>
+          <PropertyRef Name="ComercialId" />
           <PropertyRef Name="Id" />
         </Key>
         <Property Name="Id" Type="Edm.Int32" Nullable="false" />
-        <Property Name="CodiPostal" Type="Edm.Int32" />
+        <Property Name="CodiPostal" Type="Edm.String" MaxLength="10" FixedLength="false" Unicode="false" />
         <Property Name="Direccio" Type="Edm.String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+        <Property Name="Poblacio" Type="Edm.String" MaxLength="100" FixedLength="false" Unicode="false" />
         <Property Name="Latitud" Type="Edm.Double" />
         <Property Name="Longitud" Type="Edm.Double" />
+        <Property Name="ClientId" Type="Edm.Int32" Nullable="false" />
+        <Property Name="ComercialId" Type="Edm.Int32" Nullable="false" />
         <NavigationProperty Name="Client" Relationship="m13_projectModel.fk_LocCli" ToRole="Client" FromRole="Localitzacio" />
       </EntityType>
       <EntityType Name="Producte">
@@ -165,22 +174,26 @@
         <End Type="m13_projectModel.Comanda" Role="Comanda" Multiplicity="*" />
         <ReferentialConstraint>
           <Principal Role="Client">
+            <PropertyRef Name="ComercialId" />
             <PropertyRef Name="Id" />
           </Principal>
           <Dependent Role="Comanda">
             <PropertyRef Name="ClientId" />
+            <PropertyRef Name="ComercialId" />
           </Dependent>
         </ReferentialConstraint>
       </Association>
       <Association Name="fk_LocCli">
         <End Type="m13_projectModel.Client" Role="Client" Multiplicity="1" />
-        <End Type="m13_projectModel.Localitzacio" Role="Localitzacio" Multiplicity="0..1" />
+        <End Type="m13_projectModel.Localitzacio" Role="Localitzacio" Multiplicity="*" />
         <ReferentialConstraint>
           <Principal Role="Client">
+            <PropertyRef Name="ComercialId" />
             <PropertyRef Name="Id" />
           </Principal>
           <Dependent Role="Localitzacio">
-            <PropertyRef Name="Id" />
+            <PropertyRef Name="ClientId" />
+            <PropertyRef Name="ComercialId" />
           </Dependent>
         </ReferentialConstraint>
       </Association>
@@ -189,10 +202,12 @@
         <End Type="m13_projectModel.Comanda_Producte" Role="Comanda_Producte" Multiplicity="*" />
         <ReferentialConstraint>
           <Principal Role="Comanda">
+            <PropertyRef Name="ComercialId" />
             <PropertyRef Name="Id" />
           </Principal>
           <Dependent Role="Comanda_Producte">
             <PropertyRef Name="ComandaId" />
+            <PropertyRef Name="ComercialId" />
           </Dependent>
         </ReferentialConstraint>
       </Association>
@@ -222,7 +237,7 @@
       </Association>
     </Schema>
     <Schema Namespace="WebService" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-      <EntityContainer Name="m13_projectEntities" m:IsDefaultEntityContainer="true">
+      <EntityContainer Name="m13_projectEntities1" m:IsDefaultEntityContainer="true">
         <EntitySet Name="Administrador" EntityType="m13_projectModel.Administrador" />
         <EntitySet Name="Categoria" EntityType="m13_projectModel.Categoria" />
         <EntitySet Name="CategoriaLog" EntityType="m13_projectModel.CategoriaLog" />

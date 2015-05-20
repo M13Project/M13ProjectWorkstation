@@ -11,7 +11,7 @@ namespace ViewsProjecteFinal
     {
         public static void back(Form f, Form f2) {
             f.Hide();
-
+ 
             f2.ShowDialog();
 
             f.Show(); 

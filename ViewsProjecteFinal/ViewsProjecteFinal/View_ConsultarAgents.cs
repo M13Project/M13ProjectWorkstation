@@ -28,7 +28,7 @@ namespace ViewsProjecteFinal
             this.lblSelect.ForeColor = Color.FromArgb(7, 59, 90);
             this.btnAdd.ForeColor = Color.FromArgb(7, 59, 90);
 
-            m13_projectEntities entities = new m13_projectEntities(new Uri(webServiceDomain));
+            m13_projectEntities1 entities = new m13_projectEntities1(new Uri(webServiceDomain));
             
 
             var query = from asd in entities.Comercial

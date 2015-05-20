@@ -19,7 +19,7 @@ namespace ViewsProjecteFinal
             InitializeComponent();
             this.lblTitolView.ForeColor = Color.FromArgb(26, 183, 234);
 
-            m13_projectEntities entities = new m13_projectEntities(new Uri(webServiceDomain));
+            m13_projectEntities1 entities = new m13_projectEntities1(new Uri(webServiceDomain));
 
 
             var query = from asd in entities.Comanda_Producte

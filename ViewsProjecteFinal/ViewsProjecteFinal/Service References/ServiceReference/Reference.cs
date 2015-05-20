@@ -9,20 +9,20 @@
 //------------------------------------------------------------------------------
 
 // Original file name:
-// Generation date: 06/05/2015 17:07:32
+// Generation date: 20/05/2015 19:52:41
 namespace ViewsProjecteFinal.ServiceReference
 {
     
     /// <summary>
-    /// There are no comments for m13_projectEntities in the schema.
+    /// There are no comments for m13_projectEntities1 in the schema.
     /// </summary>
-    public partial class m13_projectEntities : global::System.Data.Services.Client.DataServiceContext
+    public partial class m13_projectEntities1 : global::System.Data.Services.Client.DataServiceContext
     {
         /// <summary>
-        /// Initialize a new m13_projectEntities object.
+        /// Initialize a new m13_projectEntities1 object.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public m13_projectEntities(global::System.Uri serviceRoot) : 
+        public m13_projectEntities1(global::System.Uri serviceRoot) : 
                 base(serviceRoot, global::System.Data.Services.Common.DataServiceProtocolVersion.V3)
         {
             this.ResolveName = new global::System.Func<global::System.Type, string>(this.ResolveNameFromType);
@@ -359,149 +359,158 @@ namespace ViewsProjecteFinal.ServiceReference
                 "opertyRef Name=\"Op\" /></Key><Property Name=\"Id\" Type=\"Edm.Int32\" Nullable=\"false" +
                 "\" /><Property Name=\"Op\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"1\" FixedLe" +
                 "ngth=\"true\" Unicode=\"true\" /><Property Name=\"LastUpdate\" Type=\"Edm.DateTime\" Pre" +
-                "cision=\"3\" /></EntityType><EntityType Name=\"Client\"><Key><PropertyRef Name=\"Id\" " +
-                "/></Key><Property Name=\"Id\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"" +
-                "Dni\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"9\" FixedLength=\"true\" Unicode" +
-                "=\"false\" /><Property Name=\"Nom\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"50" +
-                "\" FixedLength=\"false\" Unicode=\"false\" /><Property Name=\"Cognom\" Type=\"Edm.String" +
-                "\" Nullable=\"false\" MaxLength=\"50\" FixedLength=\"false\" Unicode=\"false\" /><Propert" +
-                "y Name=\"Edat\" Type=\"Edm.Int32\" /><Property Name=\"ImageClient\" Type=\"Edm.String\" " +
-                "MaxLength=\"300\" FixedLength=\"false\" Unicode=\"false\" /><Property Name=\"DataProper" +
-                "aVisita\" Type=\"Edm.DateTime\" Precision=\"0\" /><Property Name=\"ComercialId\" Type=\"" +
-                "Edm.Int32\" Nullable=\"false\" /><NavigationProperty Name=\"Comercial\" Relationship=" +
-                "\"m13_projectModel.fk_CliCom\" ToRole=\"Comercial\" FromRole=\"Client\" /><NavigationP" +
-                "roperty Name=\"Comanda\" Relationship=\"m13_projectModel.fk_ComCli\" ToRole=\"Comanda" +
-                "\" FromRole=\"Client\" /><NavigationProperty Name=\"Localitzacio\" Relationship=\"m13_" +
-                "projectModel.fk_LocCli\" ToRole=\"Localitzacio\" FromRole=\"Client\" /></EntityType><" +
-                "EntityType Name=\"Comanda\"><Key><PropertyRef Name=\"Id\" /></Key><Property Name=\"Id" +
-                "\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"Lliurada\" Type=\"Edm.Boolea" +
-                "n\" Nullable=\"false\" /><Property Name=\"Data\" Type=\"Edm.DateTime\" Nullable=\"false\"" +
-                " Precision=\"0\" /><Property Name=\"ClientId\" Type=\"Edm.Int32\" Nullable=\"false\" /><" +
-                "NavigationProperty Name=\"Client\" Relationship=\"m13_projectModel.fk_ComCli\" ToRol" +
-                "e=\"Client\" FromRole=\"Comanda\" /><NavigationProperty Name=\"Comanda_Producte\" Rela" +
-                "tionship=\"m13_projectModel.fk_ComProCom\" ToRole=\"Comanda_Producte\" FromRole=\"Com" +
-                "anda\" /></EntityType><EntityType Name=\"Comanda_Producte\"><Key><PropertyRef Name=" +
-                "\"ComandaId\" /><PropertyRef Name=\"ProducteId\" /></Key><Property Name=\"ComandaId\" " +
-                "Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"ProducteId\" Type=\"Edm.Int32\"" +
-                " Nullable=\"false\" /><Property Name=\"Quantitat\" Type=\"Edm.Int32\" Nullable=\"false\"" +
-                " /><NavigationProperty Name=\"Comanda\" Relationship=\"m13_projectModel.fk_ComProCo" +
-                "m\" ToRole=\"Comanda\" FromRole=\"Comanda_Producte\" /><NavigationProperty Name=\"Prod" +
-                "ucte\" Relationship=\"m13_projectModel.fk_ComProPro\" ToRole=\"Producte\" FromRole=\"C" +
-                "omanda_Producte\" /></EntityType><EntityType Name=\"Comercial\"><Key><PropertyRef N" +
-                "ame=\"Id\" /></Key><Property Name=\"Id\" Type=\"Edm.Int32\" Nullable=\"false\" /><Proper" +
-                "ty Name=\"AnyInici\" Type=\"Edm.DateTime\" Precision=\"0\" /><Property Name=\"ZonaTreba" +
-                "ll\" Type=\"Edm.String\" MaxLength=\"70\" FixedLength=\"false\" Unicode=\"false\" /><Prop" +
-                "erty Name=\"Habilitat\" Type=\"Edm.Boolean\" Nullable=\"false\" /><NavigationProperty " +
-                "Name=\"Client\" Relationship=\"m13_projectModel.fk_CliCom\" ToRole=\"Client\" FromRole" +
-                "=\"Comercial\" /><NavigationProperty Name=\"Usuari\" Relationship=\"m13_projectModel." +
-                "fk_ComUsu\" ToRole=\"Usuari\" FromRole=\"Comercial\" /></EntityType><EntityType Name=" +
-                "\"Localitzacio\"><Key><PropertyRef Name=\"Id\" /></Key><Property Name=\"Id\" Type=\"Edm" +
-                ".Int32\" Nullable=\"false\" /><Property Name=\"CodiPostal\" Type=\"Edm.Int32\" /><Prope" +
-                "rty Name=\"Direccio\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"300\" FixedLeng" +
-                "th=\"false\" Unicode=\"false\" /><Property Name=\"Latitud\" Type=\"Edm.Double\" /><Prope" +
-                "rty Name=\"Longitud\" Type=\"Edm.Double\" /><NavigationProperty Name=\"Client\" Relati" +
-                "onship=\"m13_projectModel.fk_LocCli\" ToRole=\"Client\" FromRole=\"Localitzacio\" /></" +
-                "EntityType><EntityType Name=\"Producte\"><Key><PropertyRef Name=\"Id\" /></Key><Prop" +
-                "erty Name=\"Id\" Type=\"Edm.Int32\" Nullable=\"false\" p6:StoreGeneratedPattern=\"Ident" +
-                "ity\" xmlns:p6=\"http://schemas.microsoft.com/ado/2009/02/edm/annotation\" /><Prope" +
-                "rty Name=\"Nom\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"50\" FixedLength=\"fa" +
-                "lse\" Unicode=\"false\" /><Property Name=\"Preu\" Type=\"Edm.Double\" Nullable=\"false\" " +
-                "/><Property Name=\"Descompte\" Type=\"Edm.Double\" /><Property Name=\"Imatge\" Type=\"E" +
-                "dm.String\" MaxLength=\"300\" FixedLength=\"false\" Unicode=\"false\" /><Property Name=" +
-                "\"Habilitat\" Type=\"Edm.Boolean\" Nullable=\"false\" /><Property Name=\"CategoriaId\" T" +
-                "ype=\"Edm.Int32\" Nullable=\"false\" /><NavigationProperty Name=\"Categoria\" Relation" +
-                "ship=\"m13_projectModel.fk_ProCat\" ToRole=\"Categoria\" FromRole=\"Producte\" /><Navi" +
-                "gationProperty Name=\"Comanda_Producte\" Relationship=\"m13_projectModel.fk_ComProP" +
-                "ro\" ToRole=\"Comanda_Producte\" FromRole=\"Producte\" /></EntityType><EntityType Nam" +
-                "e=\"ProducteLog\"><Key><PropertyRef Name=\"Id\" /><PropertyRef Name=\"Op\" /></Key><Pr" +
-                "operty Name=\"Id\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"Op\" Type=\"E" +
-                "dm.String\" Nullable=\"false\" MaxLength=\"1\" FixedLength=\"true\" Unicode=\"true\" /><P" +
-                "roperty Name=\"LastUpdate\" Type=\"Edm.DateTime\" Precision=\"3\" /></EntityType><Enti" +
-                "tyType Name=\"Usuari\"><Key><PropertyRef Name=\"Id\" /></Key><Property Name=\"Id\" Typ" +
-                "e=\"Edm.Int32\" Nullable=\"false\" p6:StoreGeneratedPattern=\"Identity\" xmlns:p6=\"htt" +
-                "p://schemas.microsoft.com/ado/2009/02/edm/annotation\" /><Property Name=\"Dni\" Typ" +
-                "e=\"Edm.String\" Nullable=\"false\" MaxLength=\"9\" FixedLength=\"false\" Unicode=\"false" +
-                "\" /><Property Name=\"Nom\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"50\" Fixed" +
-                "Length=\"false\" Unicode=\"false\" /><Property Name=\"Cognom\" Type=\"Edm.String\" Nulla" +
-                "ble=\"false\" MaxLength=\"50\" FixedLength=\"false\" Unicode=\"false\" /><Property Name=" +
-                "\"Usuari1\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"300\" FixedLength=\"false\"" +
-                " Unicode=\"false\" /><Property Name=\"Contrasenya\" Type=\"Edm.String\" Nullable=\"fals" +
-                "e\" MaxLength=\"300\" FixedLength=\"false\" Unicode=\"false\" /><Property Name=\"Imatge\"" +
-                " Type=\"Edm.String\" MaxLength=\"300\" FixedLength=\"false\" Unicode=\"false\" /><Naviga" +
-                "tionProperty Name=\"Administrador\" Relationship=\"m13_projectModel.fk_AdmUsu\" ToRo" +
-                "le=\"Administrador\" FromRole=\"Usuari\" /><NavigationProperty Name=\"Comercial\" Rela" +
-                "tionship=\"m13_projectModel.fk_ComUsu\" ToRole=\"Comercial\" FromRole=\"Usuari\" /></E" +
-                "ntityType><Association Name=\"fk_AdmUsu\"><End Type=\"m13_projectModel.Usuari\" Role" +
-                "=\"Usuari\" Multiplicity=\"1\" /><End Type=\"m13_projectModel.Administrador\" Role=\"Ad" +
-                "ministrador\" Multiplicity=\"0..1\" /><ReferentialConstraint><Principal Role=\"Usuar" +
-                "i\"><PropertyRef Name=\"Id\" /></Principal><Dependent Role=\"Ad";
+                "cision=\"3\" /></EntityType><EntityType Name=\"Client\"><Key><PropertyRef Name=\"Come" +
+                "rcialId\" /><PropertyRef Name=\"Id\" /></Key><Property Name=\"Id\" Type=\"Edm.Int32\" N" +
+                "ullable=\"false\" /><Property Name=\"Dni\" Type=\"Edm.String\" Nullable=\"false\" MaxLen" +
+                "gth=\"9\" FixedLength=\"true\" Unicode=\"false\" /><Property Name=\"Nom\" Type=\"Edm.Stri" +
+                "ng\" Nullable=\"false\" MaxLength=\"50\" FixedLength=\"false\" Unicode=\"false\" /><Prope" +
+                "rty Name=\"Cognom\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"50\" FixedLength=" +
+                "\"false\" Unicode=\"false\" /><Property Name=\"Edat\" Type=\"Edm.Int32\" /><Property Nam" +
+                "e=\"ImageClient\" Type=\"Edm.String\" MaxLength=\"300\" FixedLength=\"false\" Unicode=\"f" +
+                "alse\" /><Property Name=\"DataProperaVisita\" Type=\"Edm.DateTime\" Precision=\"0\" /><" +
+                "Property Name=\"ComercialId\" Type=\"Edm.Int32\" Nullable=\"false\" /><NavigationPrope" +
+                "rty Name=\"Comercial\" Relationship=\"m13_projectModel.fk_CliCom\" ToRole=\"Comercial" +
+                "\" FromRole=\"Client\" /><NavigationProperty Name=\"Comanda\" Relationship=\"m13_proje" +
+                "ctModel.fk_ComCli\" ToRole=\"Comanda\" FromRole=\"Client\" /><NavigationProperty Name" +
+                "=\"Localitzacio\" Relationship=\"m13_projectModel.fk_LocCli\" ToRole=\"Localitzacio\" " +
+                "FromRole=\"Client\" /></EntityType><EntityType Name=\"Comanda\"><Key><PropertyRef Na" +
+                "me=\"ComercialId\" /><PropertyRef Name=\"Id\" /></Key><Property Name=\"Id\" Type=\"Edm." +
+                "Int32\" Nullable=\"false\" /><Property Name=\"Lliurada\" Type=\"Edm.Boolean\" Nullable=" +
+                "\"false\" /><Property Name=\"Data\" Type=\"Edm.DateTime\" Nullable=\"false\" Precision=\"" +
+                "0\" /><Property Name=\"ClientId\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Nam" +
+                "e=\"ComercialId\" Type=\"Edm.Int32\" Nullable=\"false\" /><NavigationProperty Name=\"Cl" +
+                "ient\" Relationship=\"m13_projectModel.fk_ComCli\" ToRole=\"Client\" FromRole=\"Comand" +
+                "a\" /><NavigationProperty Name=\"Comanda_Producte\" Relationship=\"m13_projectModel." +
+                "fk_ComProCom\" ToRole=\"Comanda_Producte\" FromRole=\"Comanda\" /></EntityType><Entit" +
+                "yType Name=\"Comanda_Producte\"><Key><PropertyRef Name=\"ComercialId\" /><PropertyRe" +
+                "f Name=\"Id\" /></Key><Property Name=\"Id\" Type=\"Edm.Int32\" Nullable=\"false\" /><Pro" +
+                "perty Name=\"ComandaId\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"Produ" +
+                "cteId\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"Quantitat\" Type=\"Edm." +
+                "Int32\" Nullable=\"false\" /><Property Name=\"ComercialId\" Type=\"Edm.Int32\" Nullable" +
+                "=\"false\" /><NavigationProperty Name=\"Comanda\" Relationship=\"m13_projectModel.fk_" +
+                "ComProCom\" ToRole=\"Comanda\" FromRole=\"Comanda_Producte\" /><NavigationProperty Na" +
+                "me=\"Producte\" Relationship=\"m13_projectModel.fk_ComProPro\" ToRole=\"Producte\" Fro" +
+                "mRole=\"Comanda_Producte\" /></EntityType><EntityType Name=\"Comercial\"><Key><Prope" +
+                "rtyRef Name=\"Id\" /></Key><Property Name=\"Id\" Type=\"Edm.Int32\" Nullable=\"false\" /" +
+                "><Property Name=\"AnyInici\" Type=\"Edm.DateTime\" Precision=\"0\" /><Property Name=\"Z" +
+                "onaTreball\" Type=\"Edm.String\" MaxLength=\"70\" FixedLength=\"false\" Unicode=\"false\"" +
+                " /><Property Name=\"Habilitat\" Type=\"Edm.Boolean\" Nullable=\"false\" /><NavigationP" +
+                "roperty Name=\"Client\" Relationship=\"m13_projectModel.fk_CliCom\" ToRole=\"Client\" " +
+                "FromRole=\"Comercial\" /><NavigationProperty Name=\"Usuari\" Relationship=\"m13_proje" +
+                "ctModel.fk_ComUsu\" ToRole=\"Usuari\" FromRole=\"Comercial\" /></EntityType><EntityTy" +
+                "pe Name=\"Localitzacio\"><Key><PropertyRef Name=\"ComercialId\" /><PropertyRef Name=" +
+                "\"Id\" /></Key><Property Name=\"Id\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property N" +
+                "ame=\"CodiPostal\" Type=\"Edm.String\" MaxLength=\"10\" FixedLength=\"false\" Unicode=\"f" +
+                "alse\" /><Property Name=\"Direccio\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"" +
+                "300\" FixedLength=\"false\" Unicode=\"false\" /><Property Name=\"Poblacio\" Type=\"Edm.S" +
+                "tring\" MaxLength=\"100\" FixedLength=\"false\" Unicode=\"false\" /><Property Name=\"Lat" +
+                "itud\" Type=\"Edm.Double\" /><Property Name=\"Longitud\" Type=\"Edm.Double\" /><Propert" +
+                "y Name=\"ClientId\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"ComercialI" +
+                "d\" Type=\"Edm.Int32\" Nullable=\"false\" /><NavigationProperty Name=\"Client\" Relatio" +
+                "nship=\"m13_projectModel.fk_LocCli\" ToRole=\"Client\" FromRole=\"Localitzacio\" /></E" +
+                "ntityType><EntityType Name=\"Producte\"><Key><PropertyRef Name=\"Id\" /></Key><Prope" +
+                "rty Name=\"Id\" Type=\"Edm.Int32\" Nullable=\"false\" p6:StoreGeneratedPattern=\"Identi" +
+                "ty\" xmlns:p6=\"http://schemas.microsoft.com/ado/2009/02/edm/annotation\" /><Proper" +
+                "ty Name=\"Nom\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"50\" FixedLength=\"fal" +
+                "se\" Unicode=\"false\" /><Property Name=\"Preu\" Type=\"Edm.Double\" Nullable=\"false\" /" +
+                "><Property Name=\"Descompte\" Type=\"Edm.Double\" /><Property Name=\"Imatge\" Type=\"Ed" +
+                "m.String\" MaxLength=\"300\" FixedLength=\"false\" Unicode=\"false\" /><Property Name=\"" +
+                "Habilitat\" Type=\"Edm.Boolean\" Nullable=\"false\" /><Property Name=\"CategoriaId\" Ty" +
+                "pe=\"Edm.Int32\" Nullable=\"false\" /><NavigationProperty Name=\"Categoria\" Relations" +
+                "hip=\"m13_projectModel.fk_ProCat\" ToRole=\"Categoria\" FromRole=\"Producte\" /><Navig" +
+                "ationProperty Name=\"Comanda_Producte\" Relationship=\"m13_projectModel.fk_ComProPr" +
+                "o\" ToRole=\"Comanda_Producte\" FromRole=\"Producte\" /></EntityType><EntityType Name" +
+                "=\"ProducteLog\"><Key><PropertyRef Name=\"Id\" /><PropertyRef Name=\"Op\" /></Key><Pro" +
+                "perty Name=\"Id\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"Op\" Type=\"Ed" +
+                "m.String\" Nullable=\"false\" MaxLength=\"1\" FixedLength=\"true\" Unicode=\"true\" /><Pr" +
+                "operty Name=\"LastUpdate\" Type=\"Edm.DateTime\" Precision=\"3\" /></EntityType><Entit" +
+                "yType Name=\"Usuari\"><Key><PropertyRef Name=\"Id\" /></Key><Property Name=\"Id\" Type" +
+                "=\"Edm.Int32\" Nullable=\"false\" p6:StoreGeneratedPattern=\"Identity\" xmlns:p6=\"http" +
+                "://schemas.microsoft.com/ado/2009/02/edm/annotation\" /><Property Name=\"Dni\" Type" +
+                "=\"Edm.String\" Nullable=\"false\" MaxLength=\"9\" FixedLength=\"false\" Unicode=\"false\"" +
+                " /><Property Name=\"Nom\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"50\" FixedL" +
+                "ength=\"false\" Unicode=\"false\" /><Property Name=\"Cognom\" Type=\"Edm.String\" Nullab" +
+                "le=\"false\" MaxLength=\"50\" FixedLength=\"false\" Unicode=\"false\" /><Property Name=\"" +
+                "Usuari1\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"300\" FixedLength=\"false\" " +
+                "Unicode=\"false\" /><Property Name=\"Contrasenya\" Type=\"Edm.String\" Nullable=\"false" +
+                "\" MaxLength=\"300\" FixedLength=\"false\" Unicode=\"false\" /><Property Name=\"Imatge\" " +
+                "Type=\"Edm.String\" MaxLength=\"300\" FixedLength=\"false\" Unico";
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart1 = "ministrador\"><PropertyRef Name=\"Id\" /></Dependent></ReferentialConstraint></Assoc" +
-                "iation><Association Name=\"fk_ProCat\"><End Type=\"m13_projectModel.Categoria\" Role" +
-                "=\"Categoria\" Multiplicity=\"1\" /><End Type=\"m13_projectModel.Producte\" Role=\"Prod" +
-                "ucte\" Multiplicity=\"*\" /><ReferentialConstraint><Principal Role=\"Categoria\"><Pro" +
-                "pertyRef Name=\"Id\" /></Principal><Dependent Role=\"Producte\"><PropertyRef Name=\"C" +
-                "ategoriaId\" /></Dependent></ReferentialConstraint></Association><Association Nam" +
-                "e=\"fk_CliCom\"><End Type=\"m13_projectModel.Comercial\" Role=\"Comercial\" Multiplici" +
-                "ty=\"1\" /><End Type=\"m13_projectModel.Client\" Role=\"Client\" Multiplicity=\"*\" /><R" +
-                "eferentialConstraint><Principal Role=\"Comercial\"><PropertyRef Name=\"Id\" /></Prin" +
-                "cipal><Dependent Role=\"Client\"><PropertyRef Name=\"ComercialId\" /></Dependent></R" +
-                "eferentialConstraint></Association><Association Name=\"fk_ComCli\"><End Type=\"m13_" +
-                "projectModel.Client\" Role=\"Client\" Multiplicity=\"1\" /><End Type=\"m13_projectMode" +
-                "l.Comanda\" Role=\"Comanda\" Multiplicity=\"*\" /><ReferentialConstraint><Principal R" +
-                "ole=\"Client\"><PropertyRef Name=\"Id\" /></Principal><Dependent Role=\"Comanda\"><Pro" +
-                "pertyRef Name=\"ClientId\" /></Dependent></ReferentialConstraint></Association><As" +
-                "sociation Name=\"fk_LocCli\"><End Type=\"m13_projectModel.Client\" Role=\"Client\" Mul" +
-                "tiplicity=\"1\" /><End Type=\"m13_projectModel.Localitzacio\" Role=\"Localitzacio\" Mu" +
-                "ltiplicity=\"0..1\" /><ReferentialConstraint><Principal Role=\"Client\"><PropertyRef" +
-                " Name=\"Id\" /></Principal><Dependent Role=\"Localitzacio\"><PropertyRef Name=\"Id\" /" +
-                "></Dependent></ReferentialConstraint></Association><Association Name=\"fk_ComProC" +
-                "om\"><End Type=\"m13_projectModel.Comanda\" Role=\"Comanda\" Multiplicity=\"1\" /><End " +
-                "Type=\"m13_projectModel.Comanda_Producte\" Role=\"Comanda_Producte\" Multiplicity=\"*" +
-                "\" /><ReferentialConstraint><Principal Role=\"Comanda\"><PropertyRef Name=\"Id\" /></" +
-                "Principal><Dependent Role=\"Comanda_Producte\"><PropertyRef Name=\"ComandaId\" /></D" +
-                "ependent></ReferentialConstraint></Association><Association Name=\"fk_ComProPro\">" +
-                "<End Type=\"m13_projectModel.Producte\" Role=\"Producte\" Multiplicity=\"1\" /><End Ty" +
-                "pe=\"m13_projectModel.Comanda_Producte\" Role=\"Comanda_Producte\" Multiplicity=\"*\" " +
-                "/><ReferentialConstraint><Principal Role=\"Producte\"><PropertyRef Name=\"Id\" /></P" +
-                "rincipal><Dependent Role=\"Comanda_Producte\"><PropertyRef Name=\"ProducteId\" /></D" +
-                "ependent></ReferentialConstraint></Association><Association Name=\"fk_ComUsu\"><En" +
-                "d Type=\"m13_projectModel.Usuari\" Role=\"Usuari\" Multiplicity=\"1\" /><End Type=\"m13" +
-                "_projectModel.Comercial\" Role=\"Comercial\" Multiplicity=\"0..1\" /><ReferentialCons" +
-                "traint><Principal Role=\"Usuari\"><PropertyRef Name=\"Id\" /></Principal><Dependent " +
-                "Role=\"Comercial\"><PropertyRef Name=\"Id\" /></Dependent></ReferentialConstraint></" +
-                "Association></Schema><Schema Namespace=\"WebService\" xmlns=\"http://schemas.micros" +
-                "oft.com/ado/2009/11/edm\"><EntityContainer Name=\"m13_projectEntities\" m:IsDefault" +
-                "EntityContainer=\"true\"><EntitySet Name=\"Administrador\" EntityType=\"m13_projectMo" +
-                "del.Administrador\" /><EntitySet Name=\"Categoria\" EntityType=\"m13_projectModel.Ca" +
-                "tegoria\" /><EntitySet Name=\"CategoriaLog\" EntityType=\"m13_projectModel.Categoria" +
-                "Log\" /><EntitySet Name=\"Client\" EntityType=\"m13_projectModel.Client\" /><EntitySe" +
-                "t Name=\"Comanda\" EntityType=\"m13_projectModel.Comanda\" /><EntitySet Name=\"Comand" +
-                "a_Producte\" EntityType=\"m13_projectModel.Comanda_Producte\" /><EntitySet Name=\"Co" +
-                "mercial\" EntityType=\"m13_projectModel.Comercial\" /><EntitySet Name=\"Localitzacio" +
-                "\" EntityType=\"m13_projectModel.Localitzacio\" /><EntitySet Name=\"Producte\" Entity" +
-                "Type=\"m13_projectModel.Producte\" /><EntitySet Name=\"ProducteLog\" EntityType=\"m13" +
-                "_projectModel.ProducteLog\" /><EntitySet Name=\"Usuari\" EntityType=\"m13_projectMod" +
-                "el.Usuari\" /><AssociationSet Name=\"fk_AdmUsu\" Association=\"m13_projectModel.fk_A" +
-                "dmUsu\"><End Role=\"Administrador\" EntitySet=\"Administrador\" /><End Role=\"Usuari\" " +
-                "EntitySet=\"Usuari\" /></AssociationSet><AssociationSet Name=\"fk_ProCat\" Associati" +
-                "on=\"m13_projectModel.fk_ProCat\"><End Role=\"Categoria\" EntitySet=\"Categoria\" /><E" +
-                "nd Role=\"Producte\" EntitySet=\"Producte\" /></AssociationSet><AssociationSet Name=" +
-                "\"fk_CliCom\" Association=\"m13_projectModel.fk_CliCom\"><End Role=\"Client\" EntitySe" +
-                "t=\"Client\" /><End Role=\"Comercial\" EntitySet=\"Comercial\" /></AssociationSet><Ass" +
-                "ociationSet Name=\"fk_ComCli\" Association=\"m13_projectModel.fk_ComCli\"><End Role=" +
-                "\"Client\" EntitySet=\"Client\" /><End Role=\"Comanda\" EntitySet=\"Comanda\" /></Associ" +
-                "ationSet><AssociationSet Name=\"fk_LocCli\" Association=\"m13_projectModel.fk_LocCl" +
-                "i\"><End Role=\"Client\" EntitySet=\"Client\" /><End Role=\"Localitzacio\" EntitySet=\"L" +
-                "ocalitzacio\" /></AssociationSet><AssociationSet Name=\"fk_ComProCom\" Association=" +
-                "\"m13_projectModel.fk_ComProCom\"><End Role=\"Comanda\" EntitySet=\"Comanda\" /><End R" +
-                "ole=\"Comanda_Producte\" EntitySet=\"Comanda_Producte\" /></AssociationSet><Associat" +
-                "ionSet Name=\"fk_ComProPro\" Association=\"m13_projectModel.fk_ComProPro\"><End Role" +
-                "=\"Comanda_Producte\" EntitySet=\"Comanda_Producte\" /><End Role=\"Producte\" EntitySe" +
-                "t=\"Producte\" /></AssociationSet><AssociationSet Name=\"fk_ComUsu\" Association=\"m1" +
-                "3_projectModel.fk_ComUsu\"><End Role=\"Comercial\" EntitySet=\"Comercial\" /><End Rol" +
-                "e=\"Usuari\" EntitySet=\"Usuari\" /></AssociationSet></EntityContainer></Schema></ed" +
-                "mx:DataServices></edmx:Edmx>";
+            private const string ModelPart1 = "de=\"false\" /><NavigationProperty Name=\"Administrador\" Relationship=\"m13_projectMo" +
+                "del.fk_AdmUsu\" ToRole=\"Administrador\" FromRole=\"Usuari\" /><NavigationProperty Na" +
+                "me=\"Comercial\" Relationship=\"m13_projectModel.fk_ComUsu\" ToRole=\"Comercial\" From" +
+                "Role=\"Usuari\" /></EntityType><Association Name=\"fk_AdmUsu\"><End Type=\"m13_projec" +
+                "tModel.Usuari\" Role=\"Usuari\" Multiplicity=\"1\" /><End Type=\"m13_projectModel.Admi" +
+                "nistrador\" Role=\"Administrador\" Multiplicity=\"0..1\" /><ReferentialConstraint><Pr" +
+                "incipal Role=\"Usuari\"><PropertyRef Name=\"Id\" /></Principal><Dependent Role=\"Admi" +
+                "nistrador\"><PropertyRef Name=\"Id\" /></Dependent></ReferentialConstraint></Associ" +
+                "ation><Association Name=\"fk_ProCat\"><End Type=\"m13_projectModel.Categoria\" Role=" +
+                "\"Categoria\" Multiplicity=\"1\" /><End Type=\"m13_projectModel.Producte\" Role=\"Produ" +
+                "cte\" Multiplicity=\"*\" /><ReferentialConstraint><Principal Role=\"Categoria\"><Prop" +
+                "ertyRef Name=\"Id\" /></Principal><Dependent Role=\"Producte\"><PropertyRef Name=\"Ca" +
+                "tegoriaId\" /></Dependent></ReferentialConstraint></Association><Association Name" +
+                "=\"fk_CliCom\"><End Type=\"m13_projectModel.Comercial\" Role=\"Comercial\" Multiplicit" +
+                "y=\"1\" /><End Type=\"m13_projectModel.Client\" Role=\"Client\" Multiplicity=\"*\" /><Re" +
+                "ferentialConstraint><Principal Role=\"Comercial\"><PropertyRef Name=\"Id\" /></Princ" +
+                "ipal><Dependent Role=\"Client\"><PropertyRef Name=\"ComercialId\" /></Dependent></Re" +
+                "ferentialConstraint></Association><Association Name=\"fk_ComCli\"><End Type=\"m13_p" +
+                "rojectModel.Client\" Role=\"Client\" Multiplicity=\"1\" /><End Type=\"m13_projectModel" +
+                ".Comanda\" Role=\"Comanda\" Multiplicity=\"*\" /><ReferentialConstraint><Principal Ro" +
+                "le=\"Client\"><PropertyRef Name=\"ComercialId\" /><PropertyRef Name=\"Id\" /></Princip" +
+                "al><Dependent Role=\"Comanda\"><PropertyRef Name=\"ClientId\" /><PropertyRef Name=\"C" +
+                "omercialId\" /></Dependent></ReferentialConstraint></Association><Association Nam" +
+                "e=\"fk_LocCli\"><End Type=\"m13_projectModel.Client\" Role=\"Client\" Multiplicity=\"1\"" +
+                " /><End Type=\"m13_projectModel.Localitzacio\" Role=\"Localitzacio\" Multiplicity=\"*" +
+                "\" /><ReferentialConstraint><Principal Role=\"Client\"><PropertyRef Name=\"Comercial" +
+                "Id\" /><PropertyRef Name=\"Id\" /></Principal><Dependent Role=\"Localitzacio\"><Prope" +
+                "rtyRef Name=\"ClientId\" /><PropertyRef Name=\"ComercialId\" /></Dependent></Referen" +
+                "tialConstraint></Association><Association Name=\"fk_ComProCom\"><End Type=\"m13_pro" +
+                "jectModel.Comanda\" Role=\"Comanda\" Multiplicity=\"1\" /><End Type=\"m13_projectModel" +
+                ".Comanda_Producte\" Role=\"Comanda_Producte\" Multiplicity=\"*\" /><ReferentialConstr" +
+                "aint><Principal Role=\"Comanda\"><PropertyRef Name=\"ComercialId\" /><PropertyRef Na" +
+                "me=\"Id\" /></Principal><Dependent Role=\"Comanda_Producte\"><PropertyRef Name=\"Coma" +
+                "ndaId\" /><PropertyRef Name=\"ComercialId\" /></Dependent></ReferentialConstraint><" +
+                "/Association><Association Name=\"fk_ComProPro\"><End Type=\"m13_projectModel.Produc" +
+                "te\" Role=\"Producte\" Multiplicity=\"1\" /><End Type=\"m13_projectModel.Comanda_Produ" +
+                "cte\" Role=\"Comanda_Producte\" Multiplicity=\"*\" /><ReferentialConstraint><Principa" +
+                "l Role=\"Producte\"><PropertyRef Name=\"Id\" /></Principal><Dependent Role=\"Comanda_" +
+                "Producte\"><PropertyRef Name=\"ProducteId\" /></Dependent></ReferentialConstraint><" +
+                "/Association><Association Name=\"fk_ComUsu\"><End Type=\"m13_projectModel.Usuari\" R" +
+                "ole=\"Usuari\" Multiplicity=\"1\" /><End Type=\"m13_projectModel.Comercial\" Role=\"Com" +
+                "ercial\" Multiplicity=\"0..1\" /><ReferentialConstraint><Principal Role=\"Usuari\"><P" +
+                "ropertyRef Name=\"Id\" /></Principal><Dependent Role=\"Comercial\"><PropertyRef Name" +
+                "=\"Id\" /></Dependent></ReferentialConstraint></Association></Schema><Schema Names" +
+                "pace=\"WebService\" xmlns=\"http://schemas.microsoft.com/ado/2009/11/edm\"><EntityCo" +
+                "ntainer Name=\"m13_projectEntities1\" m:IsDefaultEntityContainer=\"true\"><EntitySet" +
+                " Name=\"Administrador\" EntityType=\"m13_projectModel.Administrador\" /><EntitySet N" +
+                "ame=\"Categoria\" EntityType=\"m13_projectModel.Categoria\" /><EntitySet Name=\"Categ" +
+                "oriaLog\" EntityType=\"m13_projectModel.CategoriaLog\" /><EntitySet Name=\"Client\" E" +
+                "ntityType=\"m13_projectModel.Client\" /><EntitySet Name=\"Comanda\" EntityType=\"m13_" +
+                "projectModel.Comanda\" /><EntitySet Name=\"Comanda_Producte\" EntityType=\"m13_proje" +
+                "ctModel.Comanda_Producte\" /><EntitySet Name=\"Comercial\" EntityType=\"m13_projectM" +
+                "odel.Comercial\" /><EntitySet Name=\"Localitzacio\" EntityType=\"m13_projectModel.Lo" +
+                "calitzacio\" /><EntitySet Name=\"Producte\" EntityType=\"m13_projectModel.Producte\" " +
+                "/><EntitySet Name=\"ProducteLog\" EntityType=\"m13_projectModel.ProducteLog\" /><Ent" +
+                "itySet Name=\"Usuari\" EntityType=\"m13_projectModel.Usuari\" /><AssociationSet Name" +
+                "=\"fk_AdmUsu\" Association=\"m13_projectModel.fk_AdmUsu\"><End Role=\"Administrador\" " +
+                "EntitySet=\"Administrador\" /><End Role=\"Usuari\" EntitySet=\"Usuari\" /></Associatio" +
+                "nSet><AssociationSet Name=\"fk_ProCat\" Association=\"m13_projectModel.fk_ProCat\"><" +
+                "End Role=\"Categoria\" EntitySet=\"Categoria\" /><End Role=\"Producte\" EntitySet=\"Pro" +
+                "ducte\" /></AssociationSet><AssociationSet Name=\"fk_CliCom\" Association=\"m13_proj" +
+                "ectModel.fk_CliCom\"><End Role=\"Client\" EntitySet=\"Client\" /><End Role=\"Comercial" +
+                "\" EntitySet=\"Comercial\" /></AssociationSet><AssociationSet Name=\"fk_ComCli\" Asso" +
+                "ciation=\"m13_projectModel.fk_ComCli\"><End Role=\"Client\" EntitySet=\"Client\" /><En" +
+                "d Role=\"Comanda\" EntitySet=\"Comanda\" /></AssociationSet><AssociationSet Name=\"fk" +
+                "_LocCli\" Association=\"m13_projectModel.fk_LocCli\"><End Role=\"Client\" EntitySet=\"" +
+                "Client\" /><End Role=\"Localitzacio\" EntitySet=\"Localitzacio\" /></AssociationSet><" +
+                "AssociationSet Name=\"fk_ComProCom\" Association=\"m13_projectModel.fk_ComProCom\"><" +
+                "End Role=\"Comanda\" EntitySet=\"Comanda\" /><End Role=\"Comanda_Producte\" EntitySet=" +
+                "\"Comanda_Producte\" /></AssociationSet><AssociationSet Name=\"fk_ComProPro\" Associ" +
+                "ation=\"m13_projectModel.fk_ComProPro\"><End Role=\"Comanda_Producte\" EntitySet=\"Co" +
+                "manda_Producte\" /><End Role=\"Producte\" EntitySet=\"Producte\" /></AssociationSet><" +
+                "AssociationSet Name=\"fk_ComUsu\" Association=\"m13_projectModel.fk_ComUsu\"><End Ro" +
+                "le=\"Comercial\" EntitySet=\"Comercial\" /><End Role=\"Usuari\" EntitySet=\"Usuari\" /><" +
+                "/AssociationSet></EntityContainer></Schema></edmx:DataServices></edmx:Edmx>";
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
             private static string GetConcatenatedEdmxString()
             {
@@ -850,10 +859,11 @@ namespace ViewsProjecteFinal.ServiceReference
     /// There are no comments for m13_projectModel.Client in the schema.
     /// </summary>
     /// <KeyProperties>
+    /// ComercialId
     /// Id
     /// </KeyProperties>
     [global::System.Data.Services.Common.EntitySetAttribute("Client")]
-    [global::System.Data.Services.Common.DataServiceKeyAttribute("Id")]
+    [global::System.Data.Services.Common.DataServiceKeyAttribute("ComercialId", "Id")]
     public partial class Client : global::System.ComponentModel.INotifyPropertyChanged
     {
         /// <summary>
@@ -1091,7 +1101,7 @@ namespace ViewsProjecteFinal.ServiceReference
         /// There are no comments for Localitzacio in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public Localitzacio Localitzacio
+        public global::System.Data.Services.Client.DataServiceCollection<Localitzacio> Localitzacio
         {
             get
             {
@@ -1104,7 +1114,7 @@ namespace ViewsProjecteFinal.ServiceReference
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private Localitzacio _Localitzacio;
+        private global::System.Data.Services.Client.DataServiceCollection<Localitzacio> _Localitzacio = new global::System.Data.Services.Client.DataServiceCollection<Localitzacio>(null, global::System.Data.Services.Client.TrackingMode.None);
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
@@ -1120,10 +1130,11 @@ namespace ViewsProjecteFinal.ServiceReference
     /// There are no comments for m13_projectModel.Comanda in the schema.
     /// </summary>
     /// <KeyProperties>
+    /// ComercialId
     /// Id
     /// </KeyProperties>
     [global::System.Data.Services.Common.EntitySetAttribute("Comanda")]
-    [global::System.Data.Services.Common.DataServiceKeyAttribute("Id")]
+    [global::System.Data.Services.Common.DataServiceKeyAttribute("ComercialId", "Id")]
     public partial class Comanda : global::System.ComponentModel.INotifyPropertyChanged
     {
         /// <summary>
@@ -1133,14 +1144,16 @@ namespace ViewsProjecteFinal.ServiceReference
         /// <param name="lliurada">Initial value of Lliurada.</param>
         /// <param name="data">Initial value of Data.</param>
         /// <param name="clientId">Initial value of ClientId.</param>
+        /// <param name="comercialId">Initial value of ComercialId.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static Comanda CreateComanda(int ID, bool lliurada, global::System.DateTime data, int clientId)
+        public static Comanda CreateComanda(int ID, bool lliurada, global::System.DateTime data, int clientId, int comercialId)
         {
             Comanda comanda = new Comanda();
             comanda.Id = ID;
             comanda.Lliurada = lliurada;
             comanda.Data = data;
             comanda.ClientId = clientId;
+            comanda.ComercialId = comercialId;
             return comanda;
         }
         /// <summary>
@@ -1232,6 +1245,28 @@ namespace ViewsProjecteFinal.ServiceReference
         partial void OnClientIdChanging(int value);
         partial void OnClientIdChanged();
         /// <summary>
+        /// There are no comments for Property ComercialId in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public int ComercialId
+        {
+            get
+            {
+                return this._ComercialId;
+            }
+            set
+            {
+                this.OnComercialIdChanging(value);
+                this._ComercialId = value;
+                this.OnComercialIdChanged();
+                this.OnPropertyChanged("ComercialId");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private int _ComercialId;
+        partial void OnComercialIdChanging(int value);
+        partial void OnComercialIdChanged();
+        /// <summary>
         /// There are no comments for Client in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
@@ -1282,28 +1317,54 @@ namespace ViewsProjecteFinal.ServiceReference
     /// There are no comments for m13_projectModel.Comanda_Producte in the schema.
     /// </summary>
     /// <KeyProperties>
-    /// ComandaId
-    /// ProducteId
+    /// ComercialId
+    /// Id
     /// </KeyProperties>
     [global::System.Data.Services.Common.EntitySetAttribute("Comanda_Producte")]
-    [global::System.Data.Services.Common.DataServiceKeyAttribute("ComandaId", "ProducteId")]
+    [global::System.Data.Services.Common.DataServiceKeyAttribute("ComercialId", "Id")]
     public partial class Comanda_Producte : global::System.ComponentModel.INotifyPropertyChanged
     {
         /// <summary>
         /// Create a new Comanda_Producte object.
         /// </summary>
+        /// <param name="ID">Initial value of Id.</param>
         /// <param name="comandaId">Initial value of ComandaId.</param>
         /// <param name="producteId">Initial value of ProducteId.</param>
         /// <param name="quantitat">Initial value of Quantitat.</param>
+        /// <param name="comercialId">Initial value of ComercialId.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static Comanda_Producte CreateComanda_Producte(int comandaId, int producteId, int quantitat)
+        public static Comanda_Producte CreateComanda_Producte(int ID, int comandaId, int producteId, int quantitat, int comercialId)
         {
             Comanda_Producte comanda_Producte = new Comanda_Producte();
+            comanda_Producte.Id = ID;
             comanda_Producte.ComandaId = comandaId;
             comanda_Producte.ProducteId = producteId;
             comanda_Producte.Quantitat = quantitat;
+            comanda_Producte.ComercialId = comercialId;
             return comanda_Producte;
         }
+        /// <summary>
+        /// There are no comments for Property Id in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public int Id
+        {
+            get
+            {
+                return this._Id;
+            }
+            set
+            {
+                this.OnIdChanging(value);
+                this._Id = value;
+                this.OnIdChanged();
+                this.OnPropertyChanged("Id");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private int _Id;
+        partial void OnIdChanging(int value);
+        partial void OnIdChanged();
         /// <summary>
         /// There are no comments for Property ComandaId in the schema.
         /// </summary>
@@ -1370,6 +1431,28 @@ namespace ViewsProjecteFinal.ServiceReference
         private int _Quantitat;
         partial void OnQuantitatChanging(int value);
         partial void OnQuantitatChanged();
+        /// <summary>
+        /// There are no comments for Property ComercialId in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public int ComercialId
+        {
+            get
+            {
+                return this._ComercialId;
+            }
+            set
+            {
+                this.OnComercialIdChanging(value);
+                this._ComercialId = value;
+                this.OnComercialIdChanged();
+                this.OnPropertyChanged("ComercialId");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private int _ComercialId;
+        partial void OnComercialIdChanging(int value);
+        partial void OnComercialIdChanged();
         /// <summary>
         /// There are no comments for Comanda in the schema.
         /// </summary>
@@ -1579,10 +1662,11 @@ namespace ViewsProjecteFinal.ServiceReference
     /// There are no comments for m13_projectModel.Localitzacio in the schema.
     /// </summary>
     /// <KeyProperties>
+    /// ComercialId
     /// Id
     /// </KeyProperties>
     [global::System.Data.Services.Common.EntitySetAttribute("Localitzacio")]
-    [global::System.Data.Services.Common.DataServiceKeyAttribute("Id")]
+    [global::System.Data.Services.Common.DataServiceKeyAttribute("ComercialId", "Id")]
     public partial class Localitzacio : global::System.ComponentModel.INotifyPropertyChanged
     {
         /// <summary>
@@ -1590,12 +1674,16 @@ namespace ViewsProjecteFinal.ServiceReference
         /// </summary>
         /// <param name="ID">Initial value of Id.</param>
         /// <param name="direccio">Initial value of Direccio.</param>
+        /// <param name="clientId">Initial value of ClientId.</param>
+        /// <param name="comercialId">Initial value of ComercialId.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static Localitzacio CreateLocalitzacio(int ID, string direccio)
+        public static Localitzacio CreateLocalitzacio(int ID, string direccio, int clientId, int comercialId)
         {
             Localitzacio localitzacio = new Localitzacio();
             localitzacio.Id = ID;
             localitzacio.Direccio = direccio;
+            localitzacio.ClientId = clientId;
+            localitzacio.ComercialId = comercialId;
             return localitzacio;
         }
         /// <summary>
@@ -1624,7 +1712,7 @@ namespace ViewsProjecteFinal.ServiceReference
         /// There are no comments for Property CodiPostal in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Nullable<int> CodiPostal
+        public string CodiPostal
         {
             get
             {
@@ -1639,8 +1727,8 @@ namespace ViewsProjecteFinal.ServiceReference
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Nullable<int> _CodiPostal;
-        partial void OnCodiPostalChanging(global::System.Nullable<int> value);
+        private string _CodiPostal;
+        partial void OnCodiPostalChanging(string value);
         partial void OnCodiPostalChanged();
         /// <summary>
         /// There are no comments for Property Direccio in the schema.
@@ -1664,6 +1752,28 @@ namespace ViewsProjecteFinal.ServiceReference
         private string _Direccio;
         partial void OnDireccioChanging(string value);
         partial void OnDireccioChanged();
+        /// <summary>
+        /// There are no comments for Property Poblacio in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Poblacio
+        {
+            get
+            {
+                return this._Poblacio;
+            }
+            set
+            {
+                this.OnPoblacioChanging(value);
+                this._Poblacio = value;
+                this.OnPoblacioChanged();
+                this.OnPropertyChanged("Poblacio");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Poblacio;
+        partial void OnPoblacioChanging(string value);
+        partial void OnPoblacioChanged();
         /// <summary>
         /// There are no comments for Property Latitud in the schema.
         /// </summary>
@@ -1708,6 +1818,50 @@ namespace ViewsProjecteFinal.ServiceReference
         private global::System.Nullable<double> _Longitud;
         partial void OnLongitudChanging(global::System.Nullable<double> value);
         partial void OnLongitudChanged();
+        /// <summary>
+        /// There are no comments for Property ClientId in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public int ClientId
+        {
+            get
+            {
+                return this._ClientId;
+            }
+            set
+            {
+                this.OnClientIdChanging(value);
+                this._ClientId = value;
+                this.OnClientIdChanged();
+                this.OnPropertyChanged("ClientId");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private int _ClientId;
+        partial void OnClientIdChanging(int value);
+        partial void OnClientIdChanged();
+        /// <summary>
+        /// There are no comments for Property ComercialId in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public int ComercialId
+        {
+            get
+            {
+                return this._ComercialId;
+            }
+            set
+            {
+                this.OnComercialIdChanging(value);
+                this._ComercialId = value;
+                this.OnComercialIdChanged();
+                this.OnPropertyChanged("ComercialId");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private int _ComercialId;
+        partial void OnComercialIdChanging(int value);
+        partial void OnComercialIdChanged();
         /// <summary>
         /// There are no comments for Client in the schema.
         /// </summary>

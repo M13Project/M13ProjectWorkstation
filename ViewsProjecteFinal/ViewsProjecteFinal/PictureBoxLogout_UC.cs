@@ -21,7 +21,7 @@ namespace ViewsProjecteFinal
         private void onClickLogout(object sender, EventArgs e)
         {
             Form logout = new View_Login();
-
+            Form.ActiveForm.Close();
             logout.Show();
         }
     }
