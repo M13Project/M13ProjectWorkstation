@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBoxLogout_UC1 = new ViewsProjecteFinal.PictureBoxLogout_UC();
-            this.buttonBack_UC1 = new ViewsProjecteFinal.ButtonBack_UC();
             this.btnAdd = new System.Windows.Forms.Button();
             this.txtDescompte = new System.Windows.Forms.TextBox();
             this.txtPreu = new System.Windows.Forms.TextBox();
@@ -43,22 +41,10 @@
             this.cmbboxCategoria = new System.Windows.Forms.ComboBox();
             this.cboxHabilitat = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.pictureBoxLogout_UC1 = new ViewsProjecteFinal.PictureBoxLogout_UC();
+            this.buttonBack_UC1 = new ViewsProjecteFinal.ButtonBack_UC();
             ((System.ComponentModel.ISupportInitialize)(this.pboxProfilePicture)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBoxLogout_UC1
-            // 
-            this.pictureBoxLogout_UC1.Location = new System.Drawing.Point(1310, 2);
-            this.pictureBoxLogout_UC1.Name = "pictureBoxLogout_UC1";
-            this.pictureBoxLogout_UC1.Size = new System.Drawing.Size(50, 50);
-            this.pictureBoxLogout_UC1.TabIndex = 34;
-            // 
-            // buttonBack_UC1
-            // 
-            this.buttonBack_UC1.Location = new System.Drawing.Point(631, 443);
-            this.buttonBack_UC1.Name = "buttonBack_UC1";
-            this.buttonBack_UC1.Size = new System.Drawing.Size(70, 21);
-            this.buttonBack_UC1.TabIndex = 33;
             // 
             // btnAdd
             // 
@@ -162,7 +148,9 @@
             // cmbboxCategoria
             // 
             this.cmbboxCategoria.BackColor = System.Drawing.Color.LightCyan;
+            this.cmbboxCategoria.DropDownHeight = 80;
             this.cmbboxCategoria.FormattingEnabled = true;
+            this.cmbboxCategoria.IntegralHeight = false;
             this.cmbboxCategoria.Location = new System.Drawing.Point(597, 329);
             this.cmbboxCategoria.Name = "cmbboxCategoria";
             this.cmbboxCategoria.Size = new System.Drawing.Size(121, 21);
@@ -189,6 +177,20 @@
             this.label5.TabIndex = 77;
             this.label5.Text = "Categoria:";
             // 
+            // pictureBoxLogout_UC1
+            // 
+            this.pictureBoxLogout_UC1.Location = new System.Drawing.Point(1310, 2);
+            this.pictureBoxLogout_UC1.Name = "pictureBoxLogout_UC1";
+            this.pictureBoxLogout_UC1.Size = new System.Drawing.Size(50, 50);
+            this.pictureBoxLogout_UC1.TabIndex = 34;
+            // 
+            // buttonBack_UC1
+            // 
+            this.buttonBack_UC1.Location = new System.Drawing.Point(631, 443);
+            this.buttonBack_UC1.Name = "buttonBack_UC1";
+            this.buttonBack_UC1.Size = new System.Drawing.Size(70, 21);
+            this.buttonBack_UC1.TabIndex = 33;
+            // 
             // View_AfegirProducte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -212,6 +214,7 @@
             this.Controls.Add(this.label1);
             this.Name = "View_AfegirProducte";
             this.Text = "View_AfegirProducte";
+            this.Load += new System.EventHandler(this.View_AfegirProducte_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pboxProfilePicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

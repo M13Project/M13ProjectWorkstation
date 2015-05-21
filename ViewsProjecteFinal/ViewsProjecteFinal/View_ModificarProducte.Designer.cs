@@ -41,6 +41,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.cboxHabilitat = new System.Windows.Forms.CheckBox();
             this.cmbboxCategoria = new System.Windows.Forms.ComboBox();
+            this.buttonBack_UC2 = new ViewsProjecteFinal.ButtonBack_UC();
             ((System.ComponentModel.ISupportInitialize)(this.pboxProfilePicture)).BeginInit();
             this.SuspendLayout();
             // 
@@ -172,12 +173,20 @@
             this.cmbboxCategoria.Size = new System.Drawing.Size(121, 21);
             this.cmbboxCategoria.TabIndex = 76;
             // 
+            // buttonBack_UC2
+            // 
+            this.buttonBack_UC2.Location = new System.Drawing.Point(613, 448);
+            this.buttonBack_UC2.Name = "buttonBack_UC2";
+            this.buttonBack_UC2.Size = new System.Drawing.Size(70, 21);
+            this.buttonBack_UC2.TabIndex = 77;
+            // 
             // View_ModificarProducte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ViewsProjecteFinal.Properties.Resources.fonsViews;
             this.ClientSize = new System.Drawing.Size(1354, 733);
+            this.Controls.Add(this.buttonBack_UC2);
             this.Controls.Add(this.cmbboxCategoria);
             this.Controls.Add(this.cboxHabilitat);
             this.Controls.Add(this.label5);
@@ -216,5 +225,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox cboxHabilitat;
         private System.Windows.Forms.ComboBox cmbboxCategoria;
+        private ButtonBack_UC buttonBack_UC2;
     }
 }

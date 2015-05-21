@@ -125,6 +125,11 @@ namespace ViewsProjecteFinal.CustomClasses
             var com = from comandes in remoteDataContext.Comanda select comandes;
             return com;
         }
+        public IQueryable<Producte> AllProductes()
+        {
+            var prod = from productes in remoteDataContext.Producte select productes;
+            return prod;
+        }
         public IQueryable<Comanda> ComandesdelClient(Client client)
         {
             var com = from comandes in remoteDataContext.Comanda where comandes.Client.Id == client.Id select comandes;

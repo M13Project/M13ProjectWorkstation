@@ -39,6 +39,7 @@
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.lblTitolView = new System.Windows.Forms.Label();
+            this.buttonBack_UC2 = new ViewsProjecteFinal.ButtonBack_UC();
             ((System.ComponentModel.ISupportInitialize)(this.pboxProfilePicture)).BeginInit();
             this.SuspendLayout();
             // 
@@ -148,12 +149,20 @@
             this.lblTitolView.TabIndex = 70;
             this.lblTitolView.Text = "Modify Profile";
             // 
+            // buttonBack_UC2
+            // 
+            this.buttonBack_UC2.Location = new System.Drawing.Point(629, 442);
+            this.buttonBack_UC2.Name = "buttonBack_UC2";
+            this.buttonBack_UC2.Size = new System.Drawing.Size(70, 21);
+            this.buttonBack_UC2.TabIndex = 71;
+            // 
             // View_ModificarPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ViewsProjecteFinal.Properties.Resources.fonsViews;
             this.ClientSize = new System.Drawing.Size(1354, 733);
+            this.Controls.Add(this.buttonBack_UC2);
             this.Controls.Add(this.lblTitolView);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.txtUsername);
@@ -188,5 +197,6 @@
         private ButtonBack_UC buttonBack_UC1;
         private PictureBoxLogout_UC pictureBoxLogout_UC1;
         private System.Windows.Forms.Label lblTitolView;
+        private ButtonBack_UC buttonBack_UC2;
     }
 }

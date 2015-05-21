@@ -34,6 +34,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblTitolView = new System.Windows.Forms.Label();
+            this.buttonBack_UC2 = new ViewsProjecteFinal.ButtonBack_UC();
             this.SuspendLayout();
             // 
             // btnUpdate
@@ -96,12 +97,20 @@
             this.lblTitolView.TabIndex = 68;
             this.lblTitolView.Text = "Modify Category";
             // 
+            // buttonBack_UC2
+            // 
+            this.buttonBack_UC2.Location = new System.Drawing.Point(629, 362);
+            this.buttonBack_UC2.Name = "buttonBack_UC2";
+            this.buttonBack_UC2.Size = new System.Drawing.Size(70, 21);
+            this.buttonBack_UC2.TabIndex = 69;
+            // 
             // View_ModificarCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ViewsProjecteFinal.Properties.Resources.fonsViews;
             this.ClientSize = new System.Drawing.Size(1354, 733);
+            this.Controls.Add(this.buttonBack_UC2);
             this.Controls.Add(this.lblTitolView);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.txtDiscount);
@@ -125,5 +134,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblTitolView;
+        private ButtonBack_UC buttonBack_UC2;
     }
 }

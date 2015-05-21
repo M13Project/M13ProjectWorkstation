@@ -47,6 +47,7 @@
             this.txtWorkZone = new System.Windows.Forms.TextBox();
             this.cboxHabilitat = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.buttonBack_UC2 = new ViewsProjecteFinal.ButtonBack_UC();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -237,12 +238,20 @@
             this.label8.TabIndex = 76;
             this.label8.Text = "Habilitat:";
             // 
+            // buttonBack_UC2
+            // 
+            this.buttonBack_UC2.Location = new System.Drawing.Point(645, 417);
+            this.buttonBack_UC2.Name = "buttonBack_UC2";
+            this.buttonBack_UC2.Size = new System.Drawing.Size(70, 21);
+            this.buttonBack_UC2.TabIndex = 78;
+            // 
             // View_ModificarAgent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ViewsProjecteFinal.Properties.Resources.fonsViews;
             this.ClientSize = new System.Drawing.Size(1354, 733);
+            this.Controls.Add(this.buttonBack_UC2);
             this.Controls.Add(this.cboxHabilitat);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.pictureBox1);
@@ -293,5 +302,6 @@
         private System.Windows.Forms.TextBox txtWorkZone;
         private System.Windows.Forms.CheckBox cboxHabilitat;
         private System.Windows.Forms.Label label8;
+        private ButtonBack_UC buttonBack_UC2;
     }
 }
