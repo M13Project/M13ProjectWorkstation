@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBoxLogout_UC1 = new ViewsProjecteFinal.PictureBoxLogout_UC();
-            this.buttonBack_UC1 = new ViewsProjecteFinal.ButtonBack_UC();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtDNI = new System.Windows.Forms.TextBox();
@@ -52,20 +50,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBoxLogout_UC1
-            // 
-            this.pictureBoxLogout_UC1.Location = new System.Drawing.Point(1303, 1);
-            this.pictureBoxLogout_UC1.Name = "pictureBoxLogout_UC1";
-            this.pictureBoxLogout_UC1.Size = new System.Drawing.Size(50, 50);
-            this.pictureBoxLogout_UC1.TabIndex = 34;
-            // 
-            // buttonBack_UC1
-            // 
-            this.buttonBack_UC1.Location = new System.Drawing.Point(645, 388);
-            this.buttonBack_UC1.Name = "buttonBack_UC1";
-            this.buttonBack_UC1.Size = new System.Drawing.Size(70, 21);
-            this.buttonBack_UC1.TabIndex = 33;
-            // 
             // btnUpdate
             // 
             this.btnUpdate.Font = new System.Drawing.Font("Palatino Linotype", 10F);
@@ -75,6 +59,7 @@
             this.btnUpdate.TabIndex = 32;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // txtUsername
             // 
@@ -268,8 +253,6 @@
             this.Controls.Add(this.txtStartYear);
             this.Controls.Add(this.txtWorkZone);
             this.Controls.Add(this.lblTitolView);
-            this.Controls.Add(this.pictureBoxLogout_UC1);
-            this.Controls.Add(this.buttonBack_UC1);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.txtDNI);

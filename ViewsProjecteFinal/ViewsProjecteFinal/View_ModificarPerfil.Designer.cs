@@ -38,8 +38,6 @@
             this.txtDNI = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.btnUpdate = new System.Windows.Forms.Button();
-            this.buttonBack_UC1 = new ViewsProjecteFinal.ButtonBack_UC();
-            this.pictureBoxLogout_UC1 = new ViewsProjecteFinal.PictureBoxLogout_UC();
             this.lblTitolView = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pboxProfilePicture)).BeginInit();
             this.SuspendLayout();
@@ -137,20 +135,7 @@
             this.btnUpdate.TabIndex = 10;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
-            // 
-            // buttonBack_UC1
-            // 
-            this.buttonBack_UC1.Location = new System.Drawing.Point(630, 420);
-            this.buttonBack_UC1.Name = "buttonBack_UC1";
-            this.buttonBack_UC1.Size = new System.Drawing.Size(70, 21);
-            this.buttonBack_UC1.TabIndex = 11;
-            // 
-            // pictureBoxLogout_UC1
-            // 
-            this.pictureBoxLogout_UC1.Location = new System.Drawing.Point(1302, 1);
-            this.pictureBoxLogout_UC1.Name = "pictureBoxLogout_UC1";
-            this.pictureBoxLogout_UC1.Size = new System.Drawing.Size(50, 50);
-            this.pictureBoxLogout_UC1.TabIndex = 12;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // lblTitolView
             // 
@@ -170,8 +155,6 @@
             this.BackgroundImage = global::ViewsProjecteFinal.Properties.Resources.fonsViews;
             this.ClientSize = new System.Drawing.Size(1354, 733);
             this.Controls.Add(this.lblTitolView);
-            this.Controls.Add(this.pictureBoxLogout_UC1);
-            this.Controls.Add(this.buttonBack_UC1);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.txtDNI);
