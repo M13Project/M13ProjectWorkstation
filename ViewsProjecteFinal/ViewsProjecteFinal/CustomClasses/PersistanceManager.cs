@@ -159,6 +159,11 @@ namespace ViewsProjecteFinal.CustomClasses
             Client client = (from clients in remoteDataContext.Client where clients.Nom.Equals(name) && clients.Cognom.Equals(surname) select clients).SingleOrDefault();
             return client;
         }
+        public Client getClient(int id)
+        {
+            Client client = (from clients in remoteDataContext.Client where clients.Id == id select clients).SingleOrDefault();
+            return client;
+        }
         public Usuari getUsuari(int id)
         {
             Usuari u = (from usuari in remoteDataContext.Usuari where usuari.Id == id select usuari).SingleOrDefault();
@@ -179,6 +184,8 @@ namespace ViewsProjecteFinal.CustomClasses
             Producte pro = (from producte in remoteDataContext.Producte where producte.Id == id select producte).SingleOrDefault();
             return pro;
         }
+
+
         
         //Updates
         public void UpdateAgent(Comercial comercial)
