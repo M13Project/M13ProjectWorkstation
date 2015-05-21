@@ -27,12 +27,6 @@ namespace ViewsProjecteFinal
             this.btnAdd.ForeColor = Color.FromArgb(7, 59, 90);
 
             
-        //        System.Object[] ItemObject = new System.Object[];
-        //    for (int i = 0; i <= 9; i++)
-        //    {
-        //        ItemObject[i] = "Item" + i;
-        //    }
-        //        cmbboxCategoria.Items.AddRange(ItemObject);
         }
 
         private void btnAddProducte_Click(object sender, EventArgs e)
@@ -41,9 +35,17 @@ namespace ViewsProjecteFinal
             producte.Nom = txtName.Text.ToString();
             producte.Preu = Double.Parse(txtPreu.Text.ToString());
             producte.Descompte = Double.Parse(txtDescompte.Text.ToString());
-            producte.Habilitat = bool.Parse( cboxHabilitat.Text.ToString());
+            producte.Habilitat = bool.Parse( cboxHabilitat.Checked.ToString());
             producte.Categoria.Nom = cmbboxCategoria.Text.ToString();
             pm.InsertProduct(producte);
+        }
+
+        private void View_AfegirProducte_Load(object sender, EventArgs e)
+        {
+            foreach (Categoria cat in pm.AllCategoria())
+            {
+                cmbboxCategoria.Items.Add(cat.Nom);
+            }
         }
     }
 }
