@@ -35,7 +35,7 @@ namespace ViewsProjecteFinal
                              asd.Preu,
                              asd.Descompte,
                              asd.Habilitat,
-                             Categoria = asd.Categoria.Nom
+                             Categoria = asd.Categoria
                          };
 
             foreach (var productGroup in query)

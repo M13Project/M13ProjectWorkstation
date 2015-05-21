@@ -54,6 +54,7 @@ namespace ViewsProjecteFinal.CustomClasses
             {
             remoteDataContext.AddToCategoria(categoria);
             MessageBox.Show("S'ha inserit correctament.");
+            remoteDataContext.SaveChanges();
             } catch (Exception e){
                 MessageBox.Show("No s'ha pogut inserir: " + e);
             }
@@ -96,6 +97,9 @@ namespace ViewsProjecteFinal.CustomClasses
                 MessageBox.Show("No s'ha pogut inserir: " + e);
             }
         }
+        //public void AddCategoria(Producte category) {
+        //    remoteDataContext.AddObject("Categoria", category);
+        //}
         //Gets
         public IQueryable<Usuari> AllUsuari()
         {
@@ -357,7 +361,5 @@ namespace ViewsProjecteFinal.CustomClasses
                 MessageBox.Show("No s'ha pogut eliminar: " + e);
             }
         }
-
-
     }
 }

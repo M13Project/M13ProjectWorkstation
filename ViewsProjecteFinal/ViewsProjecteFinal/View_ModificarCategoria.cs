@@ -16,7 +16,7 @@ namespace ViewsProjecteFinal
     {
         Categoria categoria = new Categoria();
         PersistanceManager pm;
-        public View_ModificarCategoria(String id)
+        public View_ModificarCategoria(int id)
         {
             InitializeComponent();
             this.lblTitolView.ForeColor = Color.FromArgb(26, 183, 234);
@@ -25,7 +25,10 @@ namespace ViewsProjecteFinal
             this.label3.ForeColor = Color.FromArgb(7, 59, 90);
             this.btnUpdate.ForeColor = Color.FromArgb(7, 59, 90);
             pm = new PersistanceManager();
-            //categoria.getCategoria(int.Parse(id));
+            
+            categoria = pm.getCategoria(id);
+            this.txtName.Text = categoria.Nom;
+            this.txtDiscount.Text = categoria.Descompte.ToString();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)

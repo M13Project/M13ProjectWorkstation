@@ -63,6 +63,7 @@
             this.btnDelete.TabIndex = 22;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // txtSelect
             // 
@@ -143,6 +144,7 @@
             this.Controls.Add(this.pictureBoxLogout_UC1);
             this.Name = "View_ConsultarCategories";
             this.Text = "View_ConsultarCategories";
+            this.VisibleChanged += new System.EventHandler(this.View_ConsultarCategories_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

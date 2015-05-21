@@ -15,7 +15,7 @@ namespace ViewsProjecteFinal
  
             f2.ShowDialog();
 
-            f.Show(); 
+            f.Show();
         }
         public static string ComputeHash(string input, HashAlgorithm algorithm)
         {
@@ -24,6 +24,17 @@ namespace ViewsProjecteFinal
             Byte[] hashedBytes = algorithm.ComputeHash(inputBytes);
 
             return BitConverter.ToString(hashedBytes);
+        }
+        public static DialogResult PerformCalculations()
+        {
+            DialogResult result;
+            string message = "Estas segur que vols eliminar?";
+            string caption = "Eliminar Categoriat";
+            MessageBoxButtons buttons = MessageBoxButtons.OKCancel;
+
+            result = MessageBox.Show(message, caption, buttons);
+
+            return result;
         }
     }
 }

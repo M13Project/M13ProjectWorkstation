@@ -31,13 +31,24 @@ namespace ViewsProjecteFinal
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             Producte producte = new Producte();
+            Categoria cat = new Categoria();
             producte.Descompte = Double.Parse(txtDescompte.Text.ToString());
             producte.Habilitat = bool.Parse(cboxHabilitat.Checked.ToString());
             producte.Nom = txtName.Text.ToString();
             producte.Preu = Double.Parse(txtPreu.Text.ToString());
-            //producte.Categoria.Nom = cmbboxCategoria.SelectedText.ToString() ;
+            //cat.Nom = cmbboxCategoria.SelectedText.ToString();
+            
+            //producte.Categoria.Id = ;
             pm.UpdateProducte(producte);
 
+        }
+
+        private void View_ModificarProducte_Load(object sender, EventArgs e)
+        {
+            foreach (Categoria cat in pm.AllCategoria())
+            {
+                cmbboxCategoria.Items.Add(cat.Nom);
+            }
         }
     }
 }
