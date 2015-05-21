@@ -20,5 +20,11 @@ namespace ViewsProjecteFinal
             this.lblTitolView.ForeColor = Color.FromArgb(26, 183, 234);
             pm = new PersistanceManager();
         }
+
+        private void View_ConsultarProductesAgent_VisibleChanged(object sender, EventArgs e)
+        {
+            this.gridView.Update();
+
+        }
     }
 }

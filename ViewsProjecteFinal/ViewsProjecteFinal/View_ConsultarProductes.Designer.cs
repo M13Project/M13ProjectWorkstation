@@ -144,6 +144,7 @@
             this.Controls.Add(this.pictureBoxLogout_UC1);
             this.Name = "View_ConsultarProductes";
             this.Text = "View_ConsultarProductes";
+            this.VisibleChanged += new System.EventHandler(this.View_ConsultarProductes_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
