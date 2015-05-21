@@ -66,8 +66,9 @@ namespace ViewsProjecteFinal
 
         private void View_ConsultarProductes_VisibleChanged(object sender, EventArgs e)
         {
-            this.gridView.DataSource = pm.AllProductes().ToList();
             this.gridView.Update();
+            this.gridView.DataSource = pm.AllProductes().ToList();
+            
             //this.gridView
         }
     }
