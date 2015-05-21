@@ -14,8 +14,9 @@ namespace ViewsProjecteFinal
     public partial class View_ConsultarClientsAgent : Form
     {
         PersistanceManager pm;
-        public View_ConsultarClientsAgent(String id)
+        public View_ConsultarClientsAgent(/*String id*/)
         {
+            String id = "1";
             InitializeComponent();
             this.lblTitolView.ForeColor = Color.FromArgb(26, 183, 234);
             pm = new PersistanceManager();
