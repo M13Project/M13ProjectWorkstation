@@ -16,8 +16,10 @@ namespace ViewsProjecteFinal
     
     public partial class View_ModificarAgent : Form
     {
-        PersistanceManager pm = new PersistanceManager();
-        public View_ModificarAgent(String id)
+        PersistanceManager pm;
+        Usuari usuari = new Usuari();
+        Comercial comercial = new Comercial();
+        public View_ModificarAgent(int id)
         {
             InitializeComponent();
 
@@ -31,13 +33,17 @@ namespace ViewsProjecteFinal
             this.label6.ForeColor = Color.FromArgb(7, 59, 90);
             this.label7.ForeColor = Color.FromArgb(7, 59, 90);
             this.btnUpdate.ForeColor = Color.FromArgb(7, 59, 90);
-            this.txtName.Text = id;
+            pm = new PersistanceManager();
+            usuari = pm.getUsuari(id);
+            comercial = pm.getComercial(id);
+
+            this.txtName.Text = id.ToString();
+
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            Usuari usuari = new Usuari();
-            Comercial comercial = new Comercial();
+            
             //comercial.AnyInici = txtStartYear.Text.ToString();
             comercial.ZonaTreball = txtWorkZone.Text.ToString();
             comercial.Habilitat = bool.Parse(cboxHabilitat.Checked.ToString());

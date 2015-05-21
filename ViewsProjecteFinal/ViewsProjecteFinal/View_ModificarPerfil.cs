@@ -14,8 +14,9 @@ namespace ViewsProjecteFinal
 {
     public partial class View_ModificarPerfil : Form
     {
-        PersistanceManager pm = new PersistanceManager();
-        public View_ModificarPerfil()
+        PersistanceManager pm;
+        Usuari usuari;
+        public View_ModificarPerfil(int id)
         {
             InitializeComponent();
             this.lblTitolView.ForeColor = Color.FromArgb(26, 183, 234);
@@ -25,11 +26,13 @@ namespace ViewsProjecteFinal
             this.label3.ForeColor = Color.FromArgb(7, 59, 90);
             this.label4.ForeColor = Color.FromArgb(7, 59, 90);
             this.btnUpdate.ForeColor = Color.FromArgb(7, 59, 90);
+            pm = new PersistanceManager();
+            usuari = pm.getUsuari(id);
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            Usuari usuari = new Usuari();
+            
             usuari.Nom = txtName.Text.ToString();
             usuari.Dni = txtDNI.Text.ToString();
             usuari.Cognom = txtSurname.Text.ToString();

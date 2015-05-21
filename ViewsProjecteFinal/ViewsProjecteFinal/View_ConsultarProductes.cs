@@ -33,17 +33,17 @@ namespace ViewsProjecteFinal
             var query = from asd in entities.Producte
                         select new
                         {
-                            asd.Id,
-                            asd.Nom,
-                            asd.Preu,
-                            asd.Descompte,
-                            asd.Habilitat,
-                            Categoria = asd.Categoria
+                            ID = asd.Id,
+                            Name = asd.Nom,
+                            Price = asd.Preu,
+                            Discount = asd.Descompte,
+                            Hability = asd.Habilitat,
+                            Category = asd.Categoria
                         };
 
             foreach (var productGroup in query)
             {
-                Console.WriteLine(productGroup.Categoria);
+                Console.WriteLine(productGroup.Category);
 
             }
             this.gridView.DataSource = query.ToList();
