@@ -14,6 +14,7 @@ namespace ViewsProjecteFinal
 {
     public partial class View_ModificarCategoria : Form
     {
+        Categoria categoria = new Categoria();
         PersistanceManager pm;
         public View_ModificarCategoria(String id)
         {
@@ -24,11 +25,11 @@ namespace ViewsProjecteFinal
             this.label3.ForeColor = Color.FromArgb(7, 59, 90);
             this.btnUpdate.ForeColor = Color.FromArgb(7, 59, 90);
             pm = new PersistanceManager();
+            //categoria.getCategoria(int.Parse(id));
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            Categoria categoria = new Categoria();
             categoria.Descompte = Double.Parse(txtDiscount.Text.ToString());
             categoria.Nom = txtName.Text.ToString();
             pm.UpdateCategoria(categoria);
