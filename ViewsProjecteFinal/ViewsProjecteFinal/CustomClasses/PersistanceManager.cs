@@ -145,6 +145,31 @@ namespace ViewsProjecteFinal.CustomClasses
             var pro = from productes in remoteDataContext.Producte where productes.CategoriaId == c.Id select productes;
             return pro;
         }
+        public Client getClient(String name, String surname)
+        {
+            Client client = (from clients in remoteDataContext.Client where clients.Nom.Equals(name) && clients.Cognom.Equals(surname) select clients).SingleOrDefault();
+            return client;
+        }
+        public Usuari getUsuari(int id)
+        {
+            Usuari u = (from usuari in remoteDataContext.Usuari where usuari.Id == id select usuari).SingleOrDefault();
+            return u;
+        }
+        public Categoria getCategoria(int id)
+        {
+            Categoria cat = (from categoria in remoteDataContext.Categoria where categoria.Id == id select categoria).SingleOrDefault();
+            return cat;
+        }
+        public Comercial getComercial(int id)
+        {
+            Comercial com = (from comercial in remoteDataContext.Comercial where comercial.Id == id select comercial).SingleOrDefault();
+            return com;
+        }
+        public Producte getProducte(int id)
+        {
+            Producte pro = (from producte in remoteDataContext.Producte where producte.Id == id select producte).SingleOrDefault();
+            return pro;
+        }
         
         //Updates
         public void UpdateAgent(Comercial comercial)
