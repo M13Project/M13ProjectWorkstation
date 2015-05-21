@@ -202,6 +202,7 @@
             this.Controls.Add(this.label1);
             this.Name = "View_ModificarProducte";
             this.Text = "View_ModificarProducte";
+            this.Load += new System.EventHandler(this.View_ModificarProducte_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pboxProfilePicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

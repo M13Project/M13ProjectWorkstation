@@ -35,9 +35,17 @@ namespace ViewsProjecteFinal
             producte.Habilitat = bool.Parse(cboxHabilitat.Checked.ToString());
             producte.Nom = txtName.Text.ToString();
             producte.Preu = Double.Parse(txtPreu.Text.ToString());
-            //producte.Categoria.Nom = cmbboxCategoria.SelectedText.ToString() ;
+            producte.Categoria.Nom = cmbboxCategoria.SelectedText.ToString() ;
             pm.UpdateProducte(producte);
 
+        }
+
+        private void View_ModificarProducte_Load(object sender, EventArgs e)
+        {
+            foreach (Categoria cat in pm.AllCategoria())
+            {
+                cmbboxCategoria.Items.Add(cat.Nom);
+            }
         }
     }
 }
