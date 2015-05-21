@@ -15,7 +15,7 @@ namespace ViewsProjecteFinal
     public partial class View_ConsultarCategories : Form
     {
         Categoria categoria = new Categoria();
-        PersistanceManager pm = new PersistanceManager();
+        PersistanceManager pm;
         static String webServiceDomain = "http://localhost:52220/M13ProjectWcfDataService.svc/";
         m13_projectEntities1 entities = new m13_projectEntities1(new Uri(webServiceDomain));
         public View_ConsultarCategories()
@@ -29,6 +29,7 @@ namespace ViewsProjecteFinal
             this.btnDelete.ForeColor = Color.FromArgb(7, 59, 90);
             this.lblSelect.ForeColor = Color.FromArgb(7, 59, 90);
             this.btnAdd.ForeColor = Color.FromArgb(7, 59, 90);
+            pm = new PersistanceManager();
 
             
             this.gridView.DataSource = entities.Categoria.ToList();
@@ -92,6 +93,7 @@ namespace ViewsProjecteFinal
 
         private void View_ConsultarCategories_VisibleChanged(object sender, EventArgs e)
         {
+            this.gridView.Update();
             this.gridView.DataSource = entities.Categoria.ToList();
             this.gridView.Refresh();
         }

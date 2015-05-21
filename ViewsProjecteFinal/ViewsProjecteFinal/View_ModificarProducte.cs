@@ -16,7 +16,7 @@ namespace ViewsProjecteFinal
     {
         PersistanceManager pm;
         Producte producte;
-        public View_ModificarProducte(String id)
+        public View_ModificarProducte(int id)
         {
             InitializeComponent();
             this.lblTitolView.ForeColor = Color.FromArgb(26, 183, 234);
@@ -27,7 +27,7 @@ namespace ViewsProjecteFinal
             this.label4.ForeColor = Color.FromArgb(7, 59, 90);
             this.btnUpdate.ForeColor = Color.FromArgb(7, 59, 90);
             pm = new PersistanceManager();
-            producte = pm.getProducte(int.Parse(id));
+            producte = pm.getProducte(id);
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
