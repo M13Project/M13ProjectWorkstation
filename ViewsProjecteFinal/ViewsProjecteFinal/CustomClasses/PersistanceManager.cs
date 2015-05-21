@@ -24,6 +24,7 @@ namespace ViewsProjecteFinal.CustomClasses
             }            
             return extractedUser;
         }
+        //Inserts
         public void InsertAgent(Comercial comercial)
         {
             try
@@ -95,6 +96,7 @@ namespace ViewsProjecteFinal.CustomClasses
                 MessageBox.Show("No s'ha pogut inserir: " + e);
             }
         }
+        //Gets
         public IQueryable<Usuari> AllUsuari()
         {
             var u = from usuari in remoteDataContext.Usuari select usuari;
@@ -144,7 +146,7 @@ namespace ViewsProjecteFinal.CustomClasses
             return pro;
         }
         
-        
+        //Updates
         public void UpdateAgent(Comercial comercial)
         {
             try
@@ -212,8 +214,10 @@ namespace ViewsProjecteFinal.CustomClasses
                 MessageBox.Show("No s'ha pogut actualitzar: " + e);
             } 
         }
+        //Deletes
         public void DeleteComanda(Comanda c)
         {
+            try { 
             IQueryable<Comanda_Producte> comanda_producte = AllProducteinComanda(c);
             foreach (Comanda_Producte c_P in comanda_producte)
             {
@@ -221,14 +225,30 @@ namespace ViewsProjecteFinal.CustomClasses
             }
             remoteDataContext.DeleteObject(c);
             remoteDataContext.SaveChanges();
+            MessageBox.Show("S'ha eliminat correctament.");
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("No s'ha pogut eliminar: " + e);
+            }
         }
         public void DeleteComanda_Producte(Comanda_Producte cp)
         {
+            try { 
             remoteDataContext.DeleteObject(cp);
             remoteDataContext.SaveChanges();
+            MessageBox.Show("S'ha eliminat correctament.");
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("No s'ha pogut eliminar: " + e);
+            }
         }
         public void DeleteClient(Client c)
         {
+            try { 
             IQueryable<Comanda> comandes= ComandesdelClient(c);
             foreach (Comanda comanda in comandes)
             {
@@ -236,13 +256,29 @@ namespace ViewsProjecteFinal.CustomClasses
             }
             remoteDataContext.DeleteObject(c);
             remoteDataContext.SaveChanges();
+            MessageBox.Show("S'ha eliminat correctament.");
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("No s'ha pogut eliminar: " + e);
+            }
         }
         public void DeleteProducte(Producte p){
+            try{
             remoteDataContext.DeleteObject(p);
             remoteDataContext.SaveChanges();
+            MessageBox.Show("S'ha eliminat correctament.");
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("No s'ha pogut eliminar: " + e);
+            }
         }
         public void DeleteCategoria(Categoria c/*, Categoria NovaC*/)
         {
+            try { 
             //Eliminar Productes de la categoria
             IQueryable<Producte> productes = ProductesdeCategoria(c);
             foreach(Producte p in productes  ){
@@ -257,24 +293,39 @@ namespace ViewsProjecteFinal.CustomClasses
             //Delete Categoria
             remoteDataContext.DeleteObject(c);
             remoteDataContext.SaveChanges();
+            MessageBox.Show("S'ha eliminat correctament.");
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("No s'ha pogut eliminar: " + e);
+            }
         }
         public void DeleteComercial(Comercial c /*, Comercial NouComercial*/)
         {
             //Change or Delete all clients of comercial
-            IQueryable<Client> client = AllClient();
-            foreach (Client cli in client)
+            try
             {
-                DeleteClient(cli);
-                // Change 
-                //cli.Comercial = NouComercial;
-                //cli.ComercialId = NouComercia.Id;
-                //UpdateClient(cli);
-                    
-            }
+                IQueryable<Client> client = AllClient();
+                foreach (Client cli in client)
+                {
+                    DeleteClient(cli);
+                    // Change 
+                    //cli.Comercial = NouComercial;
+                    //cli.ComercialId = NouComercia.Id;
+                    //UpdateClient(cli);
 
-            remoteDataContext.DeleteObject(c.Usuari);
-            remoteDataContext.DeleteObject(c);
-            remoteDataContext.SaveChanges();
+                }
+
+                remoteDataContext.DeleteObject(c.Usuari);
+                remoteDataContext.DeleteObject(c);
+                remoteDataContext.SaveChanges();
+                MessageBox.Show("S'ha eliminat correctament.");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("No s'ha pogut eliminar: " + e);
+            }
         }
 
 

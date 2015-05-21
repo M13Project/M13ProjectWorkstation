@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.pboxProfilePicture = new System.Windows.Forms.PictureBox();
-            this.pictureBoxLogout_UC1 = new ViewsProjecteFinal.PictureBoxLogout_UC();
-            this.buttonBack_UC1 = new ViewsProjecteFinal.ButtonBack_UC();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.txtDescompte = new System.Windows.Forms.TextBox();
             this.txtPreu = new System.Windows.Forms.TextBox();
@@ -54,20 +52,6 @@
             this.pboxProfilePicture.TabIndex = 47;
             this.pboxProfilePicture.TabStop = false;
             // 
-            // pictureBoxLogout_UC1
-            // 
-            this.pictureBoxLogout_UC1.Location = new System.Drawing.Point(1303, 2);
-            this.pictureBoxLogout_UC1.Name = "pictureBoxLogout_UC1";
-            this.pictureBoxLogout_UC1.Size = new System.Drawing.Size(50, 50);
-            this.pictureBoxLogout_UC1.TabIndex = 46;
-            // 
-            // buttonBack_UC1
-            // 
-            this.buttonBack_UC1.Location = new System.Drawing.Point(614, 431);
-            this.buttonBack_UC1.Name = "buttonBack_UC1";
-            this.buttonBack_UC1.Size = new System.Drawing.Size(70, 21);
-            this.buttonBack_UC1.TabIndex = 45;
-            // 
             // btnUpdate
             // 
             this.btnUpdate.Font = new System.Drawing.Font("Palatino Linotype", 10F);
@@ -77,6 +61,7 @@
             this.btnUpdate.TabIndex = 44;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // txtDescompte
             // 
@@ -198,8 +183,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lblTitolView);
             this.Controls.Add(this.pboxProfilePicture);
-            this.Controls.Add(this.pictureBoxLogout_UC1);
-            this.Controls.Add(this.buttonBack_UC1);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.txtDescompte);
             this.Controls.Add(this.txtPreu);

@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBoxLogout_UC1 = new ViewsProjecteFinal.PictureBoxLogout_UC();
-            this.buttonBack_UC1 = new ViewsProjecteFinal.ButtonBack_UC();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.txtDiscount = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
@@ -37,20 +35,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblTitolView = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // pictureBoxLogout_UC1
-            // 
-            this.pictureBoxLogout_UC1.Location = new System.Drawing.Point(1302, 1);
-            this.pictureBoxLogout_UC1.Name = "pictureBoxLogout_UC1";
-            this.pictureBoxLogout_UC1.Size = new System.Drawing.Size(50, 50);
-            this.pictureBoxLogout_UC1.TabIndex = 53;
-            // 
-            // buttonBack_UC1
-            // 
-            this.buttonBack_UC1.Location = new System.Drawing.Point(628, 342);
-            this.buttonBack_UC1.Name = "buttonBack_UC1";
-            this.buttonBack_UC1.Size = new System.Drawing.Size(70, 21);
-            this.buttonBack_UC1.TabIndex = 52;
             // 
             // btnUpdate
             // 
@@ -61,6 +45,7 @@
             this.btnUpdate.TabIndex = 51;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // txtDiscount
             // 
@@ -118,8 +103,6 @@
             this.BackgroundImage = global::ViewsProjecteFinal.Properties.Resources.fonsViews;
             this.ClientSize = new System.Drawing.Size(1354, 733);
             this.Controls.Add(this.lblTitolView);
-            this.Controls.Add(this.pictureBoxLogout_UC1);
-            this.Controls.Add(this.buttonBack_UC1);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.txtDiscount);
             this.Controls.Add(this.txtName);
