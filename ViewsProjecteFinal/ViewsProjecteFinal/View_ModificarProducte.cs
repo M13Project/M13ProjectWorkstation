@@ -15,9 +15,10 @@ namespace ViewsProjecteFinal
     public partial class View_ModificarProducte : Form
     {
         PersistanceManager pm;
+       
         Producte producte;
         Categoria cat;
-        public View_ModificarProducte(String id)
+        public View_ModificarProducte(int id)
         {
             InitializeComponent();
             this.lblTitolView.ForeColor = Color.FromArgb(26, 183, 234);
@@ -28,7 +29,7 @@ namespace ViewsProjecteFinal
             this.label4.ForeColor = Color.FromArgb(7, 59, 90);
             this.btnUpdate.ForeColor = Color.FromArgb(7, 59, 90);
             pm = new PersistanceManager();
-            producte = pm.getProducte(int.Parse(id));
+            producte = pm.getProducte(id);
             cat = pm.getCategoria(producte.CategoriaId);
             txtDescompte.Text = producte.Descompte.ToString();
             txtName.Text = producte.Nom.ToString();
