@@ -8,12 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ViewsProjecteFinal.ServiceReference;
+using ViewsProjecteFinal.CustomClasses;
 
 namespace ViewsProjecteFinal
 {
     public partial class View_ConsultarProductes : Form
     {
+        Producte producte = new Producte();
         String webServiceDomain = "http://localhost:52220/M13ProjectWcfDataService.svc/";
+        PersistanceManager pm = new PersistanceManager();
+        List<Object> productes;
         public View_ConsultarProductes()
         {
             InitializeComponent();
@@ -26,24 +30,8 @@ namespace ViewsProjecteFinal
             this.lblSelect.ForeColor = Color.FromArgb(7, 59, 90);
             this.btnAdd.ForeColor = Color.FromArgb(7, 59, 90);
 
-            m13_projectEntities1 entities = new m13_projectEntities1(new Uri(webServiceDomain));
-            var query = from asd in entities.Producte
-                         select new
-                         {
-                             asd.Id,
-                             asd.Nom,
-                             asd.Preu,
-                             asd.Descompte,
-                             asd.Habilitat,
-                             Categoria = asd.Categoria
-                         };
-
-            foreach (var productGroup in query)
-            {
-                Console.WriteLine(productGroup.Categoria);
-
-            }
-            this.gridView.DataSource = query.ToList();
+            productes = pm.gridProductes();
+            this.gridView.DataSource = productes.ToList();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -57,8 +45,39 @@ namespace ViewsProjecteFinal
             String id;
             id = this.txtSelect.Text;
 
-            Form modificarProducte = new View_ModificarProducte(id);
+            Form modificarProducte = new View_ModificarProducte(int.Parse(id));
             Methods.back(this, modificarProducte);
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int id;
+
+                id = int.Parse(this.txtSelect.Text);
+                producte = pm.getProducte(id);
+                DialogResult result;
+                result = Methods.PerformCalculations();
+                if (result == System.Windows.Forms.DialogResult.OK)
+                {
+                    pm.DeleteProducte(producte);
+                    productes = pm.gridProductes();
+                    this.gridView.DataSource = productes.ToList();
+                }
+                else { }
+            }
+            catch
+            {
+                if (txtSelect.Text.Equals(""))
+                {
+                    MessageBox.Show("Introdueix una id al camp de text!");
+                }
+                else
+                {
+                    MessageBox.Show("Valor incorrecte!");
+                }
+            }
+        }
+        }
     }
-}

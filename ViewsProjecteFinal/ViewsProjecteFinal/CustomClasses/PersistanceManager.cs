@@ -368,5 +368,24 @@ namespace ViewsProjecteFinal.CustomClasses
                 MessageBox.Show("No s'ha pogut eliminar: " + e);
             }
         }
+        public List<Object> gridProductes() {
+            List<Object> prod = new List<Object>();
+            var query = from asd in remoteDataContext.Producte
+                        select new
+                        {
+                            asd.Id,
+                            Name = asd.Nom,
+                            asd.Preu,
+                            asd.Descompte,
+                            asd.Habilitat,
+                            Categoria = asd.Categoria
+                        };
+             foreach (var productGroup in query)
+             {
+                 Console.WriteLine(productGroup);
+                 prod.Add(productGroup);
+             }
+            return prod;
+        }
     }
 }
