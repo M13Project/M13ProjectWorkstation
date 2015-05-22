@@ -15,6 +15,8 @@ namespace ViewsProjecteFinal
     public partial class View_ModificarProducte : Form
     {
         PersistanceManager pm;
+        Producte producte;
+        Categoria cat;
         public View_ModificarProducte(String id)
         {
             InitializeComponent();
@@ -26,19 +28,27 @@ namespace ViewsProjecteFinal
             this.label4.ForeColor = Color.FromArgb(7, 59, 90);
             this.btnUpdate.ForeColor = Color.FromArgb(7, 59, 90);
             pm = new PersistanceManager();
+            producte = pm.getProducte(int.Parse(id));
+            cat = pm.getCategoria(producte.CategoriaId);
+            txtDescompte.Text = producte.Descompte.ToString();
+            txtName.Text = producte.Nom.ToString();
+            txtPreu.Text = producte.Preu.ToString();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            Producte producte = new Producte();
-            Categoria cat = new Categoria();
+            
             producte.Descompte = Double.Parse(txtDescompte.Text.ToString());
             producte.Habilitat = bool.Parse(cboxHabilitat.Checked.ToString());
             producte.Nom = txtName.Text.ToString();
             producte.Preu = Double.Parse(txtPreu.Text.ToString());
-            //cat.Nom = cmbboxCategoria.SelectedText.ToString();
-            
-            //producte.Categoria.Id = ;
+              foreach (Categoria cat in pm.AllCategoria())
+            {
+                if (cmbboxCategoria.SelectedItem.ToString().Equals(cat.Nom))
+                {
+                    producte.CategoriaId = cat.Id;
+                }
+            }
             pm.UpdateProducte(producte);
 
         }
@@ -49,6 +59,7 @@ namespace ViewsProjecteFinal
             {
                 cmbboxCategoria.Items.Add(cat.Nom);
             }
+            cmbboxCategoria.SelectedItem = producte.Categoria.Nom;
         }
     }
 }
