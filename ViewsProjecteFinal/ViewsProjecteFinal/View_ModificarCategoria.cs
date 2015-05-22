@@ -36,7 +36,6 @@ namespace ViewsProjecteFinal
             categoria.Descompte = Double.Parse(txtDiscount.Text.ToString());
             categoria.Nom = txtName.Text.ToString();
             pm.UpdateCategoria(categoria);
-            
         }
     }
 }

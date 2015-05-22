@@ -14,13 +14,12 @@ namespace ViewsProjecteFinal
 {
     public partial class View_ModificarProducte : Form
     {
+        Producte producte = new Producte();
         PersistanceManager pm;
-       
-        Producte producte;
-        Categoria cat;
         public View_ModificarProducte(int id)
         {
             InitializeComponent();
+            
             this.lblTitolView.ForeColor = Color.FromArgb(26, 183, 234);
             this.btnUpdate.BackColor = Color.FromArgb(26, 183, 234);
             this.label1.ForeColor = Color.FromArgb(7, 59, 90);
@@ -29,20 +28,25 @@ namespace ViewsProjecteFinal
             this.label4.ForeColor = Color.FromArgb(7, 59, 90);
             this.btnUpdate.ForeColor = Color.FromArgb(7, 59, 90);
             pm = new PersistanceManager();
+            foreach (Categoria cat in pm.AllCategoria())
+            {
+                cmbboxCategoria.Items.Add(cat.Nom);
+            }
             producte = pm.getProducte(id);
-            cat = pm.getCategoria(producte.CategoriaId);
             txtDescompte.Text = producte.Descompte.ToString();
-            txtName.Text = producte.Nom.ToString();
+            txtName.Text = producte.Nom;
             txtPreu.Text = producte.Preu.ToString();
+            cboxHabilitat.Checked = producte.Habilitat;
+            cmbboxCategoria.SelectedItem = pm.getCategoria(producte.CategoriaId).Nom;
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            
-            producte.Descompte = Double.Parse(txtDescompte.Text.ToString());
-            producte.Habilitat = bool.Parse(cboxHabilitat.Checked.ToString());
+            Producte producte = new Producte();
             producte.Nom = txtName.Text.ToString();
             producte.Preu = Double.Parse(txtPreu.Text.ToString());
+            producte.Descompte = Double.Parse(txtDescompte.Text.ToString());
+            producte.Habilitat = bool.Parse(cboxHabilitat.Checked.ToString());
               foreach (Categoria cat in pm.AllCategoria())
             {
                 if (cmbboxCategoria.SelectedItem.ToString().Equals(cat.Nom))
@@ -61,7 +65,6 @@ namespace ViewsProjecteFinal
                 cmbboxCategoria.Items.Add(cat.Nom);
             }
             cmbboxCategoria.SelectedItem = producte.Categoria.Nom;
-           
         }
     }
 }

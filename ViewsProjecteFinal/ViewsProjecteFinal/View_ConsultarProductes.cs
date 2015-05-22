@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ViewsProjecteFinal.CustomClasses;
 using ViewsProjecteFinal.ServiceReference;
-using ViewsProjecteFinal.CustomClasses;
 
 namespace ViewsProjecteFinal
 {
@@ -35,25 +34,23 @@ namespace ViewsProjecteFinal
             this.gridView.DataSource = productes.ToList();
         }
 
-
-            }
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            Form afegirProducte = new View_AfegirProducte();
+        Form afegirProducte = new View_AfegirProducte();
             Methods.back(this, afegirProducte);
         }
 
         private void btnModify_Click(object sender, EventArgs e)
         {
-            try{
-               int id;
+            try
+            {
+                int id;
 
                 id = int.Parse(this.txtSelect.Text);
 
-            Form modificarProducte = new View_ModificarProducte(id);
-            Methods.back(this, modificarProducte);
-        }
+                Form modificarProducte = new View_ModificarProducte(id);
+                Methods.back(this, modificarProducte);
+            }
             catch
             {
                 if (txtSelect.Text.Equals(""))
@@ -82,20 +79,27 @@ namespace ViewsProjecteFinal
                     pm.DeleteProducte(producte);
                     productes = pm.gridProductes();
                     this.gridView.DataSource = productes.ToList();
-               }
+                }
                 else { }
             }
             catch
             {
                 if (txtSelect.Text.Equals(""))
-               {
-                   MessageBox.Show("Introdueix una id al camp de text!");
-               }
+                {
+                    MessageBox.Show("Introdueix una id al camp de text!");
+                }
                 else
                 {
                     MessageBox.Show("Valor incorrecte!");
                 }
             }
+        }
+
+        private void View_ConsultarProductes_VisibleChanged(object sender, EventArgs e)
+        {
+            this.Refresh();
+            this.Update();
+            this.gridView.DataSource = pm.AllProductes().ToList();
         }
     }
 }
