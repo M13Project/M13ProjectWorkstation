@@ -15,7 +15,7 @@ namespace ViewsProjecteFinal
     public partial class View_ModificarProducte : Form
     {
         PersistanceManager pm;
-        public View_ModificarProducte(String id)
+        public View_ModificarProducte(int id)
         {
             InitializeComponent();
             this.lblTitolView.ForeColor = Color.FromArgb(26, 183, 234);

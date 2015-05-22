@@ -78,7 +78,7 @@ namespace ViewsProjecteFinal
             {
                 if (this.lblOption.Text == EnglishStringValues.SELECTION_AC_1)
                 {
-                    f = new View_ModificarPerfil();
+                    //f = new View_ModificarPerfil();
                 }
                 else if (this.lblOption.Text == EnglishStringValues.SELECTION_AC_2)
                 {

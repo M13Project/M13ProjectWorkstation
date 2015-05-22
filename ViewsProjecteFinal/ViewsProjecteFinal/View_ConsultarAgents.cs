@@ -70,8 +70,8 @@ namespace ViewsProjecteFinal
 
         private void btnModify_Click(object sender, EventArgs e)
         {
-            String id;
-            id = this.txtSelect.Text;
+            int id;
+            id = int.Parse(this.txtSelect.Text);
 
             Form modificarAgent = new View_ModificarAgent(id);
             Methods.back(this, modificarAgent);
