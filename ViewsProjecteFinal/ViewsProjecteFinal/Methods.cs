@@ -11,11 +11,13 @@ namespace ViewsProjecteFinal
     class Methods
     {
         public static void back(Form f, Form f2) {
+            PictureBoxLogout_UC pbl = new PictureBoxLogout_UC();
             f.Hide();
  
             f2.ShowDialog();
-
+            if(pbl.Capture != false){
             f.Show();
+            }
         }
         public static string ComputeHash(string input, HashAlgorithm algorithm)
         {

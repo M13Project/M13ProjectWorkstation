@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ViewsProjecteFinal.ServiceReference;
 using ViewsProjecteFinal.CustomClasses;
+using System.Security.Cryptography;
 
 
 namespace ViewsProjecteFinal
@@ -17,7 +18,6 @@ namespace ViewsProjecteFinal
     {
 
         PersistanceManager pm = new PersistanceManager();
-        MonthCalendar mc = new MonthCalendar();
 
         public View_AfegirAgent()
         {
@@ -36,30 +36,30 @@ namespace ViewsProjecteFinal
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            
+            int id;
             Usuari us = new Usuari();
-            us.Nom = txtName.ToString();
-            us.Cognom = txtSurname.ToString();
-            us.Dni = txtDNI.ToString();
-            us.Usuari1 = txtUsername.ToString();
-            us.Contrasenya = txtPassword.ToString();
-            //us. = com;
+            us.Nom = txtName.Text;
+            us.Cognom = txtSurname.Text;
+            us.Dni = txtDNI.Text;
+            us.Usuari1 = txtUsername.Text;
+            us.Contrasenya = Methods.ComputeHash(txtPassword.Text.ToString() , new SHA256CryptoServiceProvider());
 
+            id = pm.InsertUser(us);
+            MessageBox.Show(id.ToString());
             Comercial com = new Comercial();
-            //string date = "01/08/2008";
-            //DateTime dt = Convert.ToDateTime(date);
-            //com.AnyInici = dt;
+            string date = txtStartYear.Text.ToString();
+            DateTime dt = Convert.ToDateTime(date);
+            com.AnyInici = dt;
             com.Habilitat = true;
-            com.ZonaTreball = txtWorkZone.ToString();
-            com.Id = us.Id;
-            
-            pm.InsertUser(us);
+            com.ZonaTreball = txtWorkZone.Text;
+
+            com.Id = id;
             pm.InsertAgent(com);
         }
 
         private void txtStartYear_Enter(object sender, EventArgs e)
         {
-            lblHelp.Text = "yyyy-mm-dd";
+            lblHelp.Text = "dd/mm/yyyy";
             lblHelp.ForeColor = Color.White;
             lblHelp.BackColor = Color.DarkGreen;
         }

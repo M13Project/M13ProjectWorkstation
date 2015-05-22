@@ -8,11 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ViewsProjecteFinal.ServiceReference;
+using ViewsProjecteFinal.CustomClasses;
 
 namespace ViewsProjecteFinal
 {
     public partial class View_ConsultarAgents : Form
     {
+        PersistanceManager pm = new PersistanceManager();
+        Comercial comercial = new Comercial();
+        Usuari usuari = new Usuari();
+        List<Object> comercials = new List<Object>();
         String webServiceDomain = "http://localhost:52220/M13ProjectWcfDataService.svc/";
         public View_ConsultarAgents()
         {
@@ -29,29 +34,8 @@ namespace ViewsProjecteFinal
             this.btnAdd.ForeColor = Color.FromArgb(7, 59, 90);
 
             m13_projectEntities1 entities = new m13_projectEntities1(new Uri(webServiceDomain));
-            
-
-            var query = from asd in entities.Comercial
-                         select new
-                         {
-                             asd.Usuari.Id,
-                             asd.Usuari.Nom,
-                             asd.Usuari.Cognom,
-                             asd.Usuari.Dni,
-                             asd.Usuari.Contrasenya,
-                             asd.AnyInici, 
-                             ZonaT = asd.ZonaTreball,
-                             asd.Habilitat
-                         };
-
-            foreach (var productGroup in query)
-            {
-                Console.WriteLine(productGroup.AnyInici);
-                Console.WriteLine(productGroup.ZonaT);
-                Console.WriteLine(productGroup.Habilitat);
-
-            }
-            this.gridView.DataSource = query.ToList();
+            comercials = pm.gridUsuaris();
+            this.gridView.DataSource = comercials.ToList();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -65,16 +49,57 @@ namespace ViewsProjecteFinal
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            try
+            {
+                int id;
 
+                id = int.Parse(this.txtSelect.Text);
+                //usuari = pm.getUsuari(id);
+                comercial = pm.getComercial(id);
+                DialogResult result;
+                result = Methods.PerformCalculations();
+                if (result == System.Windows.Forms.DialogResult.OK)
+                {
+                    pm.DeleteComercial(comercial);
+                    comercials = pm.gridUsuaris();
+                    this.gridView.DataSource = comercials.ToList();
+                }
+                else { }
+            }
+            catch
+            {
+                if (txtSelect.Text.Equals(""))
+                {
+                    MessageBox.Show("Introdueix una id al camp de text!");
+                }
+                else
+                {
+                    MessageBox.Show("Valor incorrecte!");
+                }
+            }
         }
 
         private void btnModify_Click(object sender, EventArgs e)
         {
-            int id;
-            id = int.Parse(this.txtSelect.Text);
+            try
+            {
+                int id;
+                id = int.Parse(this.txtSelect.Text);
 
-            Form modificarAgent = new View_ModificarAgent(id);
-            Methods.back(this, modificarAgent);
+                Form modificarAgent = new View_ModificarAgent(id);
+                Methods.back(this, modificarAgent);
+            }
+            catch
+            {
+                if (txtSelect.Text.Equals(""))
+                {
+                    MessageBox.Show("Introdueix una id al camp de text!");
+                }
+                else
+                {
+                    MessageBox.Show("Valor incorrecte!");
+                }
+            }
         }
     }
 }

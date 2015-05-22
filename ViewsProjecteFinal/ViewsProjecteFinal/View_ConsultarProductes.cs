@@ -15,7 +15,6 @@ namespace ViewsProjecteFinal
     public partial class View_ConsultarProductes : Form
     {
         Producte producte = new Producte();
-        String webServiceDomain = "http://localhost:52220/M13ProjectWcfDataService.svc/";
         PersistanceManager pm = new PersistanceManager();
         List<Object> productes;
         public View_ConsultarProductes()

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ViewsProjecteFinal.ServiceReference;
 using System.Windows.Forms;
+using System.Security.Cryptography;
 
 namespace ViewsProjecteFinal.CustomClasses
 {
@@ -16,7 +17,8 @@ namespace ViewsProjecteFinal.CustomClasses
             remoteDataContext = new m13_projectEntities1(new Uri("http://localhost:52220/M13ProjectWcfDataService.svc/"));
         }
 
-        public Usuari getUserWithUsernameAndPassword(string username, string password) {            
+        public Usuari getUserWithUsernameAndPassword(string username, string password) {
+            String password_encripted = Methods.ComputeHash(password , new SHA256CryptoServiceProvider());
             //IQueryable query = from user in remoteDataContext.Usuari select new { Username = user.Usuari1, Password = user.Contrasenya, isComercial = user.Comercial };
             Usuari extractedUser = (from user in remoteDataContext.Usuari where user.Usuari1.Equals(username) && user.Contrasenya.Equals(password) select user).SingleOrDefault();
             if(extractedUser != null) {
@@ -37,16 +39,16 @@ namespace ViewsProjecteFinal.CustomClasses
                 MessageBox.Show("No s'ha pogut inserir: " + e);
         }
          }
-        public void InsertUser(Usuari usuari)
+        public int InsertUser(Usuari usuari)
         {
             try
             {
             remoteDataContext.AddToUsuari(usuari);
             remoteDataContext.SaveChanges();
-            MessageBox.Show("S'ha inserit correctament.");
             } catch (Exception e){
                 MessageBox.Show("No s'ha pogut inserir: " + e);
         }
+            return usuari.Id;
         }
         public void InsertCategoria(Categoria categoria)
         {
@@ -199,7 +201,6 @@ namespace ViewsProjecteFinal.CustomClasses
             {
             remoteDataContext.UpdateObject(comercial);
             remoteDataContext.SaveChanges();
-            MessageBox.Show("S'ha actualitzar correctament.");
             } catch (Exception e){
                 MessageBox.Show("No s'ha actualitzar inserir: " + e);
             } 
@@ -363,10 +364,10 @@ namespace ViewsProjecteFinal.CustomClasses
 
                 }
 
-                remoteDataContext.DeleteObject(c.Usuari);
                 remoteDataContext.DeleteObject(c);
                 remoteDataContext.SaveChanges();
-                MessageBox.Show("S'ha eliminat correctament.");
+                remoteDataContext.DeleteObject(getUsuari(c.Id));
+                remoteDataContext.SaveChanges();
             }
             catch (Exception e)
             {
@@ -390,6 +391,31 @@ namespace ViewsProjecteFinal.CustomClasses
                  Console.WriteLine(productGroup);
                  prod.Add(productGroup);
              }
+            return prod;
+        }
+        public List<Object> gridUsuaris()
+        {
+            List<Object> prod = new List<Object>();
+            var query = from asd in remoteDataContext.Comercial
+                         select new
+                         {
+                             asd.Usuari.Id,
+                             asd.Usuari.Nom,
+                             asd.Usuari.Cognom,
+                             asd.Usuari.Dni,
+                             asd.Usuari.Contrasenya,
+                             asd.AnyInici, 
+                             ZonaT = asd.ZonaTreball,
+                             asd.Habilitat
+                         };
+
+            foreach (var productGroup in query)
+            {
+                Console.WriteLine(productGroup.AnyInici);
+                Console.WriteLine(productGroup.ZonaT);
+                Console.WriteLine(productGroup.Habilitat);
+                prod.Add(productGroup);
+            }
             return prod;
         }
     }

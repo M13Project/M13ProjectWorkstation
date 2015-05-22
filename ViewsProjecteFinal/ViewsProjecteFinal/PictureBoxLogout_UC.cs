@@ -20,9 +20,16 @@ namespace ViewsProjecteFinal
 
         private void onClickLogout(object sender, EventArgs e)
         {
-            Form logout = new View_Login();
-            Form.ActiveForm.Close();
-            logout.Show();
+            for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
+            {
+                if (Application.OpenForms[i].Name.Equals("View_Login"))
+                {
+                    Application.OpenForms[i].Show();
+                }
+                if (!Application.OpenForms[i].Name.Equals("View_Login")){
+                    Application.OpenForms[i].Close();
+                }
+            }
         }
     }
 }

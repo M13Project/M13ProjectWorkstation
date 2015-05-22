@@ -37,10 +37,28 @@ namespace ViewsProjecteFinal
             usuari = pm.getUsuari(id);
             comercial = pm.getComercial(id);
 
-            this.txtName.Text = id.ToString();
-
+            this.txtName.Text = usuari.Nom;
+            this.txtDNI.Text = usuari.Dni;
+            this.txtPassword.Text = usuari.Contrasenya;
+            this.txtSurname.Text = usuari.Usuari1;
+            this.txtUsername.Text = usuari.Cognom;
+            this.txtWorkZone.Text = comercial.ZonaTreball;
+            DateTime dt = (DateTime)comercial.AnyInici;
+            txtStartYear.Text = dt.Date.ToString();
+            this.cboxHabilitat.Checked = comercial.Habilitat;
+        }
+        private void txtStartYear_Enter(object sender, EventArgs e)
+        {
+            lblHelp.Text = "dd/mm/yyyy";
+            lblHelp.ForeColor = Color.White;
+            lblHelp.BackColor = Color.DarkGreen;
         }
 
+        private void txtStartYear_Leave(object sender, EventArgs e)
+        {
+            lblHelp.Text = "";
+            lblHelp.BackColor = Color.Transparent;
+        }
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             
