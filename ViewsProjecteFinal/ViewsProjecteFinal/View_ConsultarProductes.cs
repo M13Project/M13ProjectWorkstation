@@ -34,8 +34,9 @@ namespace ViewsProjecteFinal
             productes = pm.gridProductes();
             this.gridView.DataSource = productes.ToList();
         }
-            
-           
+
+
+            }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -52,7 +53,7 @@ namespace ViewsProjecteFinal
 
             Form modificarProducte = new View_ModificarProducte(id);
             Methods.back(this, modificarProducte);
-            }
+        }
             catch
             {
                 if (txtSelect.Text.Equals(""))
