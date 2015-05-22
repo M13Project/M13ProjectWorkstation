@@ -17,6 +17,7 @@ namespace ViewsProjecteFinal
     {
         Producte producte = new Producte();
         String webServiceDomain = "http://localhost:52220/M13ProjectWcfDataService.svc/";
+        PersistanceManager pm;
         public View_ConsultarProductes()
         {
             InitializeComponent();
@@ -32,21 +33,22 @@ namespace ViewsProjecteFinal
 
             m13_projectEntities1 entities = new m13_projectEntities1(new Uri(webServiceDomain));
             var query = from asd in entities.Producte
-                         select new
-                         {
-                             asd.Id,
-                             asd.Nom,
-                             asd.Preu,
-                             asd.Descompte,
-                             asd.Habilitat,
-                             Categoria = asd.Categoria
-                         };
+                        select new
+                        {
+                            asd.Id,
+                            asd.Nom,
+                            asd.Preu,
+                            asd.Descompte,
+                            asd.Habilitat,
+                            Categoria = asd.Categoria
+                        };
 
             foreach (var productGroup in query)
             {
                 Console.WriteLine(productGroup.Categoria);
 
             }
+        }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -56,8 +58,8 @@ namespace ViewsProjecteFinal
 
         private void btnModify_Click(object sender, EventArgs e)
         {
-
-            Form modificarProducte = new View_ModificarProducte(id);
+            
+            Form modificarProducte = new View_ModificarProducte(txtSelect.Text.ToString());
             Methods.back(this, modificarProducte);
         }
     }
