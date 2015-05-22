@@ -61,6 +61,7 @@ namespace ViewsProjecteFinal
                 cmbboxCategoria.Items.Add(cat.Nom);
             }
             cmbboxCategoria.SelectedItem = producte.Categoria.Nom;
+           
         }
     }
 }
