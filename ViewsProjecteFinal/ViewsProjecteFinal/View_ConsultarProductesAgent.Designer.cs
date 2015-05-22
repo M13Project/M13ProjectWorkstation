@@ -74,13 +74,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ViewsProjecteFinal.Properties.Resources.fonsViews;
-            this.ClientSize = new System.Drawing.Size(1362, 741);
+            this.ClientSize = new System.Drawing.Size(1354, 733);
             this.Controls.Add(this.lblTitolView);
             this.Controls.Add(this.gridView);
             this.Controls.Add(this.buttonBack_UC1);
             this.Controls.Add(this.pictureBoxLogout_UC1);
             this.Name = "View_ConsultarProductesAgent";
             this.Text = "View_ConsultarProductesAgent";
+            this.VisibleChanged += new System.EventHandler(this.View_ConsultarProductesAgent_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

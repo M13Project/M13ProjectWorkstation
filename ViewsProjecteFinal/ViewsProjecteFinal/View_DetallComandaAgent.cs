@@ -7,15 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ViewsProjecteFinal.CustomClasses;
 
 namespace ViewsProjecteFinal
 {
     public partial class View_DetallComandaAgent : Form
     {
-        public View_DetallComandaAgent()
+        PersistanceManager pm;
+        public View_DetallComandaAgent(int id)
         {
             InitializeComponent();
+
             this.lblTitolView.ForeColor = Color.FromArgb(26, 183, 234);
+            pm = new PersistanceManager();
+            gridView.DataSource = pm.ComandesdelComercial(pm.getComercial(id));
+
         }
+
     }
 }

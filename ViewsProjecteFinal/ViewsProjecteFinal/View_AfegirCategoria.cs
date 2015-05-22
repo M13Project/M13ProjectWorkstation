@@ -14,7 +14,7 @@ namespace ViewsProjecteFinal
 {
     public partial class View_AfegirCategoria : Form
     {
-        PersistanceManager pm = new PersistanceManager();
+        PersistanceManager pm;
         public View_AfegirCategoria()
         {
             InitializeComponent();
@@ -23,6 +23,7 @@ namespace ViewsProjecteFinal
             this.label2.ForeColor = Color.FromArgb(7, 59, 90);
             this.label3.ForeColor = Color.FromArgb(7, 59, 90);
             this.btnAdd.ForeColor = Color.FromArgb(7, 59, 90);
+            pm = new PersistanceManager();
         }
 
         private void btnAddCategoria_Click(object sender, EventArgs e)

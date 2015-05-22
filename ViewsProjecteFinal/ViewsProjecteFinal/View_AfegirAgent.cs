@@ -52,7 +52,7 @@ namespace ViewsProjecteFinal
             com.Habilitat = true;
             com.ZonaTreball = txtWorkZone.ToString();
             com.Id = us.Id;
-
+            
             pm.InsertUser(us);
             pm.InsertAgent(com);
         }
