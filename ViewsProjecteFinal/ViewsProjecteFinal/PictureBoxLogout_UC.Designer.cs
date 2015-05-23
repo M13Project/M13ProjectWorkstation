@@ -34,7 +34,8 @@
             // 
             // pboxLogout
             // 
-            this.pboxLogout.Image = global::ViewsProjecteFinal.Properties.Resources.logout_image;
+            this.pboxLogout.BackColor = System.Drawing.Color.Transparent;
+            this.pboxLogout.Image = global::ViewsProjecteFinal.Properties.Resources.logout;
             this.pboxLogout.InitialImage = null;
             this.pboxLogout.Location = new System.Drawing.Point(0, 0);
             this.pboxLogout.Name = "pboxLogout";
@@ -43,11 +44,14 @@
             this.pboxLogout.TabIndex = 0;
             this.pboxLogout.TabStop = false;
             this.pboxLogout.Click += new System.EventHandler(this.onClickLogout);
+            this.pboxLogout.MouseEnter += new System.EventHandler(this.pboxLogout_MouseEnter);
+            this.pboxLogout.MouseLeave += new System.EventHandler(this.pboxLogout_MouseLeave);
             // 
             // PictureBoxLogout_UC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.pboxLogout);
             this.Name = "PictureBoxLogout_UC";
             this.Size = new System.Drawing.Size(50, 50);

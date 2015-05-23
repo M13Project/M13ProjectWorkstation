@@ -116,6 +116,7 @@
             // 
             // pictureBoxLogout_UC1
             // 
+            this.pictureBoxLogout_UC1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxLogout_UC1.Location = new System.Drawing.Point(1311, 1);
             this.pictureBoxLogout_UC1.Name = "pictureBoxLogout_UC1";
             this.pictureBoxLogout_UC1.Size = new System.Drawing.Size(50, 50);
@@ -145,6 +146,8 @@
             this.Controls.Add(this.gridView);
             this.Name = "View_ConsultarAgents";
             this.Text = "ConsultarAgentsView";
+            this.Load += new System.EventHandler(this.View_ConsultarAgents_Load);
+            this.VisibleChanged += new System.EventHandler(this.View_ConsultarAgents_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -28,11 +28,30 @@ namespace ViewsProjecteFinal
 
         private void btnShowDetail_Click(object sender, EventArgs e)
         {
-            String id;
-            id = this.txtSelect.Text;
+            try
+            {
+                int id;
+                id = int.Parse(this.txtSelect.Text);
 
-            Form showDetail = new View_DetallComanda(id);
-            Methods.back(this, showDetail);
+                Form showDetail = new View_DetallComanda(id);
+                Methods.back(this, showDetail);
+            }
+            catch
+            {
+                if (txtSelect.Text.Equals(""))
+                {
+                    MessageBox.Show("Introdueix una id al camp de text!");
+                }
+                else
+                {
+                    MessageBox.Show("Valor incorrecte!");
+                }
+            }
+        }
+
+        private void View_ConsultarComandes_Load(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
         }
     }
 }

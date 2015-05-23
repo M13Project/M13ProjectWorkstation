@@ -101,5 +101,17 @@ namespace ViewsProjecteFinal
                 }
             }
         }
+
+        private void View_ConsultarAgents_VisibleChanged(object sender, EventArgs e)
+        {
+            this.Update();
+            this.Refresh();
+            this.gridView.DataSource = comercials.ToList();
+        }
+
+        private void View_ConsultarAgents_Load(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
     }
 }

@@ -23,5 +23,26 @@ namespace ViewsProjecteFinal
             this.btnMostOrders.ForeColor = Color.FromArgb(7, 59, 90);
             this.btnMostClients.ForeColor = Color.FromArgb(7, 59, 90);
         }
+
+        private void btnMostClients_Click(object sender, EventArgs e)
+        {
+            E_AgentMesClients_View f2 = new E_AgentMesClients_View();
+            Methods.back(this, f2);
+        }
+
+        private void btnMostOrders_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMostSold_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void View_ConsultarEstadistiques_Load(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
     }
 }

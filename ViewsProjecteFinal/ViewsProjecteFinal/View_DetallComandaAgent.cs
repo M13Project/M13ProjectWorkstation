@@ -24,5 +24,10 @@ namespace ViewsProjecteFinal
 
         }
 
+        private void View_DetallComandaAgent_Load(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
+
     }
 }

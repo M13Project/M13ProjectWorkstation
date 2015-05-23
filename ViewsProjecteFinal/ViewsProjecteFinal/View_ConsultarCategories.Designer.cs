@@ -42,6 +42,7 @@
             // 
             // pictureBoxLogout_UC1
             // 
+            this.pictureBoxLogout_UC1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxLogout_UC1.Location = new System.Drawing.Point(1310, 3);
             this.pictureBoxLogout_UC1.Name = "pictureBoxLogout_UC1";
             this.pictureBoxLogout_UC1.Size = new System.Drawing.Size(50, 50);
@@ -144,6 +145,7 @@
             this.Controls.Add(this.pictureBoxLogout_UC1);
             this.Name = "View_ConsultarCategories";
             this.Text = "View_ConsultarCategories";
+            this.Load += new System.EventHandler(this.View_ConsultarCategories_Load);
             this.VisibleChanged += new System.EventHandler(this.View_ConsultarCategories_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
             this.ResumeLayout(false);

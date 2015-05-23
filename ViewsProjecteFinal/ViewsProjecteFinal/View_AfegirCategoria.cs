@@ -34,5 +34,10 @@ namespace ViewsProjecteFinal
             pm.InsertCategoria(categoria);
 
         }
+
+        private void View_AfegirCategoria_Load(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
     }
 }

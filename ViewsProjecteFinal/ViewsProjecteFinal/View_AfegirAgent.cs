@@ -69,5 +69,10 @@ namespace ViewsProjecteFinal
             lblHelp.Text = "";
             lblHelp.BackColor = Color.Transparent;
         }
+
+        private void View_AfegirAgent_Load(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
     }
 }

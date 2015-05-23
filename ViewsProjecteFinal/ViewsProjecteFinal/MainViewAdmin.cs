@@ -25,6 +25,7 @@ namespace ViewsProjecteFinal
 
         private void MainView_Load(object sender, EventArgs e)
         {
+            this.WindowState = FormWindowState.Maximized; 
             changeViewSelectionLabel();
         }
 

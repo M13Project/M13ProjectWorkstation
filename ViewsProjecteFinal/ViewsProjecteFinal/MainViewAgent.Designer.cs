@@ -38,6 +38,7 @@
             // 
             // pictureBoxLogout_UC1
             // 
+            this.pictureBoxLogout_UC1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxLogout_UC1.Location = new System.Drawing.Point(1310, 2);
             this.pictureBoxLogout_UC1.Name = "pictureBoxLogout_UC1";
             this.pictureBoxLogout_UC1.Size = new System.Drawing.Size(50, 50);
@@ -100,6 +101,7 @@
             this.Controls.Add(this.pictureBoxLogout_UC1);
             this.Name = "MainViewAgent";
             this.Text = "MainViewAgent";
+            this.Load += new System.EventHandler(this.MainViewAgent_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

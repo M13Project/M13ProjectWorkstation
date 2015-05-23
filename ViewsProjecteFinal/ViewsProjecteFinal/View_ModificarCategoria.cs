@@ -37,5 +37,10 @@ namespace ViewsProjecteFinal
             categoria.Nom = txtName.Text.ToString();
             pm.UpdateCategoria(categoria);
         }
+
+        private void View_ModificarCategoria_Load(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
     }
 }

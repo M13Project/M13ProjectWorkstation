@@ -205,7 +205,6 @@
             this.txtStartYear.BackColor = System.Drawing.Color.LightCyan;
             this.txtStartYear.Location = new System.Drawing.Point(698, 173);
             this.txtStartYear.Name = "txtStartYear";
-            this.txtStartYear.PasswordChar = '*';
             this.txtStartYear.Size = new System.Drawing.Size(73, 20);
             this.txtStartYear.TabIndex = 68;
             // 
@@ -214,7 +213,6 @@
             this.txtWorkZone.BackColor = System.Drawing.Color.LightCyan;
             this.txtWorkZone.Location = new System.Drawing.Point(698, 214);
             this.txtWorkZone.Name = "txtWorkZone";
-            this.txtWorkZone.PasswordChar = '*';
             this.txtWorkZone.Size = new System.Drawing.Size(123, 20);
             this.txtWorkZone.TabIndex = 67;
             // 
@@ -283,6 +281,7 @@
             this.Controls.Add(this.label1);
             this.Name = "View_ModificarAgent";
             this.Text = "View_ModificarAgent";
+            this.Load += new System.EventHandler(this.View_ModificarAgent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

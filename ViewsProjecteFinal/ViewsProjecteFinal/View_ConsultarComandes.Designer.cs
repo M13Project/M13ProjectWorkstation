@@ -47,6 +47,7 @@
             // 
             // pictureBoxLogout_UC1
             // 
+            this.pictureBoxLogout_UC1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxLogout_UC1.Location = new System.Drawing.Point(1311, 2);
             this.pictureBoxLogout_UC1.Name = "pictureBoxLogout_UC1";
             this.pictureBoxLogout_UC1.Size = new System.Drawing.Size(50, 50);
@@ -89,6 +90,7 @@
             this.gridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridView.Location = new System.Drawing.Point(256, 147);
             this.gridView.Name = "gridView";
+            this.gridView.ReadOnly = true;
             this.gridView.Size = new System.Drawing.Size(851, 367);
             this.gridView.TabIndex = 22;
             // 
@@ -118,6 +120,7 @@
             this.Controls.Add(this.pictureBoxLogout_UC1);
             this.Name = "View_ConsultarComandes";
             this.Text = "View_ConsultarComandes";
+            this.Load += new System.EventHandler(this.View_ConsultarComandes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

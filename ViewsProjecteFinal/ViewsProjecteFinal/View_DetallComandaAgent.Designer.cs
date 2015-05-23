@@ -37,6 +37,7 @@
             // 
             // pictureBoxLogout_UC1
             // 
+            this.pictureBoxLogout_UC1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxLogout_UC1.Location = new System.Drawing.Point(1302, 2);
             this.pictureBoxLogout_UC1.Name = "pictureBoxLogout_UC1";
             this.pictureBoxLogout_UC1.Size = new System.Drawing.Size(50, 50);
@@ -81,6 +82,7 @@
             this.Controls.Add(this.pictureBoxLogout_UC1);
             this.Name = "View_DetallComandaAgent";
             this.Text = "View_DetallComandaAgent";
+            this.Load += new System.EventHandler(this.View_DetallComandaAgent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

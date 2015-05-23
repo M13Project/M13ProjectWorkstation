@@ -21,5 +21,10 @@ namespace ViewsProjecteFinal
             m13_projectEntities1 entities = new m13_projectEntities1(new Uri(webServiceDomain));
             this.gridView.DataSource = entities.Client.ToList();
         }
+
+        private void View_ConsultarClients_Load(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
     }
 }

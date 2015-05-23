@@ -119,6 +119,7 @@
             this.Controls.Add(this.label2);
             this.Name = "View_ModificarCategoria";
             this.Text = "View_ModificarCategoria";
+            this.Load += new System.EventHandler(this.View_ModificarCategoria_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

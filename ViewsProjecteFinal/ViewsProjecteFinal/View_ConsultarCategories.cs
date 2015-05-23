@@ -97,5 +97,10 @@ namespace ViewsProjecteFinal
             this.gridView.DataSource = entities.Categoria.ToList();
             this.gridView.Refresh();
         }
+
+        private void View_ConsultarCategories_Load(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
     }
 }

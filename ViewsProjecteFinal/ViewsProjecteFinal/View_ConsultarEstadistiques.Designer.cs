@@ -45,6 +45,7 @@
             this.btnMostClients.TabIndex = 1;
             this.btnMostClients.Text = "Agent with most clients";
             this.btnMostClients.UseVisualStyleBackColor = true;
+            this.btnMostClients.Click += new System.EventHandler(this.btnMostClients_Click);
             // 
             // btnMostOrders
             // 
@@ -55,6 +56,7 @@
             this.btnMostOrders.TabIndex = 2;
             this.btnMostOrders.Text = "Agent with most orders";
             this.btnMostOrders.UseVisualStyleBackColor = true;
+            this.btnMostOrders.Click += new System.EventHandler(this.btnMostOrders_Click);
             // 
             // btnMostSold
             // 
@@ -65,9 +67,11 @@
             this.btnMostSold.TabIndex = 3;
             this.btnMostSold.Text = "Most sold products";
             this.btnMostSold.UseVisualStyleBackColor = true;
+            this.btnMostSold.Click += new System.EventHandler(this.btnMostSold_Click);
             // 
             // pictureBoxLogout_UC1
             // 
+            this.pictureBoxLogout_UC1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxLogout_UC1.Location = new System.Drawing.Point(1345, -2);
             this.pictureBoxLogout_UC1.Name = "pictureBoxLogout_UC1";
             this.pictureBoxLogout_UC1.Size = new System.Drawing.Size(54, 50);
@@ -105,6 +109,7 @@
             this.Controls.Add(this.btnMostClients);
             this.Name = "View_ConsultarEstadistiques";
             this.Text = "View_ConsultarEstadistiques";
+            this.Load += new System.EventHandler(this.View_ConsultarEstadistiques_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

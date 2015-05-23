@@ -15,7 +15,6 @@ namespace ViewsProjecteFinal
         public PictureBoxLogout_UC()
         {
             InitializeComponent();
-            
         }
 
         private void onClickLogout(object sender, EventArgs e)
@@ -30,6 +29,16 @@ namespace ViewsProjecteFinal
                     Application.OpenForms[i].Close();
                 }
             }
+        }
+
+        private void pboxLogout_MouseEnter(object sender, EventArgs e)
+        {
+            pboxLogout.Image = ViewsProjecteFinal.Properties.Resources.logout2; 
+        }
+
+        private void pboxLogout_MouseLeave(object sender, EventArgs e)
+        {
+            pboxLogout.Image = ViewsProjecteFinal.Properties.Resources.logout;
         }
     }
 }

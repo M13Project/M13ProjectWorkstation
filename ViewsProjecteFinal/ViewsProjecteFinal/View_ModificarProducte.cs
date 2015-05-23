@@ -66,5 +66,10 @@ namespace ViewsProjecteFinal
             }
             cmbboxCategoria.SelectedItem = producte.Categoria.Nom;
         }
+
+        private void View_ModificarProducte_Load_1(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
     }
 }

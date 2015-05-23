@@ -23,5 +23,10 @@ namespace ViewsProjecteFinal
             this.gridView.DataSource = pm.ClientsdelComercial(pm.getComercial(int.Parse(id))).ToList();
         }
 
+        private void View_ConsultarClientsAgent_Load(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
+
     }
 }

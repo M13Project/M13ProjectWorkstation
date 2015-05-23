@@ -15,9 +15,8 @@ namespace ViewsProjecteFinal
             f.Hide();
  
             f2.ShowDialog();
-            if(pbl.Capture != false){
+
             f.Show();
-            }
         }
         public static string ComputeHash(string input, HashAlgorithm algorithm)
         {

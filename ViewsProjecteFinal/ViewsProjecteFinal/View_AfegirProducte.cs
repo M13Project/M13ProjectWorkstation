@@ -52,6 +52,7 @@ namespace ViewsProjecteFinal
         
         private void View_AfegirProducte_Load(object sender, EventArgs e)
         {
+            this.WindowState = FormWindowState.Maximized;
             List<int> h = new List<int>();
             foreach (Categoria cat in pm.AllCategoria())
             {

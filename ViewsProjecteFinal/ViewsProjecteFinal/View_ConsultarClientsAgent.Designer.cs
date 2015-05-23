@@ -37,6 +37,7 @@
             // 
             // pictureBoxLogout_UC1
             // 
+            this.pictureBoxLogout_UC1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxLogout_UC1.Location = new System.Drawing.Point(1311, 1);
             this.pictureBoxLogout_UC1.Name = "pictureBoxLogout_UC1";
             this.pictureBoxLogout_UC1.Size = new System.Drawing.Size(50, 50);
@@ -83,6 +84,7 @@
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "View_ConsultarClientsAgent";
             this.Text = "View_ConsultarClientsAgent";
+            this.Load += new System.EventHandler(this.View_ConsultarClientsAgent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

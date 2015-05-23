@@ -24,6 +24,11 @@ namespace ViewsProjecteFinal
             chooseView_UC2.changeLabelName(EnglishStringValues.SELECTION_AC_2);
             chooseView_UC3.changeLabelName(EnglishStringValues.SELECTION_AC_3);
             chooseView_UC4.changeLabelName(EnglishStringValues.SELECTION_AC_4);
+        }
+
+        private void MainViewAgent_Load(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
         }        
     }
 }

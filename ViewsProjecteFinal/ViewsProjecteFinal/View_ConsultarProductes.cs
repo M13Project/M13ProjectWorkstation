@@ -100,5 +100,10 @@ namespace ViewsProjecteFinal
             this.Update();
             this.gridView.DataSource = pm.AllProductes().ToList();
         }
+
+        private void View_ConsultarProductes_Load(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
     }
 }

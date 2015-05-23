@@ -24,7 +24,7 @@ namespace ViewsProjecteFinal
 
         private void View_DetallEstadistica_Load(object sender, EventArgs e)
         {
-
+            this.WindowState = FormWindowState.Maximized;
             this.reportViewer1.RefreshReport();
         }
     }

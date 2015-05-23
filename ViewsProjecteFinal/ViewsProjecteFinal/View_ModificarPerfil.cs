@@ -40,5 +40,10 @@ namespace ViewsProjecteFinal
             pm.UpdatePerfil(usuari);
 
         }
+
+        private void View_ModificarPerfil_Load(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
     }
 }

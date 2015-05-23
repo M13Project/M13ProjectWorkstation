@@ -418,5 +418,35 @@ namespace ViewsProjecteFinal.CustomClasses
             }
             return prod;
         }
+        public List<Object> gridDetallComandes(int id) {
+            List<Object> com_prod = new List<Object>();
+
+            var query = from asd in remoteDataContext.Comanda_Producte where asd.ComandaId == id
+                        select new
+                        {
+                            Quantity = asd.Quantitat,
+                            Date = asd.Comanda.Data,
+                            Committed = asd.Comanda.Lliurada,
+                            Name_Category = asd.Producte.Categoria.Nom,
+                            Enabled = asd.Producte.Habilitat,
+                            Name_Product = asd.Producte.Nom,
+                            Price_Product = asd.Producte.Preu,
+                            Discount = asd.Producte.Descompte
+                        };
+
+            foreach (var productGroup in query)
+            {
+                Console.WriteLine(productGroup.Committed);
+                Console.WriteLine(productGroup.Date);
+                Console.WriteLine(productGroup.Discount);
+                Console.WriteLine(productGroup.Enabled);
+                Console.WriteLine(productGroup.Name_Category);
+                Console.WriteLine(productGroup.Name_Product);
+                Console.WriteLine(productGroup.Price_Product);
+                Console.WriteLine(productGroup.Quantity);
+                com_prod.Add(productGroup);
+            }
+            return com_prod;
+        }
     }
 }

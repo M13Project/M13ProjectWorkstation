@@ -26,5 +26,10 @@ namespace ViewsProjecteFinal
             this.gridView.Update();
 
         }
+
+        private void View_ConsultarProductesAgent_Load(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
     }
 }

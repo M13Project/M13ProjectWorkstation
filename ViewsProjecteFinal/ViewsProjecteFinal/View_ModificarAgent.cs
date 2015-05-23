@@ -40,8 +40,8 @@ namespace ViewsProjecteFinal
             this.txtName.Text = usuari.Nom;
             this.txtDNI.Text = usuari.Dni;
             this.txtPassword.Text = usuari.Contrasenya;
-            this.txtSurname.Text = usuari.Usuari1;
-            this.txtUsername.Text = usuari.Cognom;
+            this.txtSurname.Text = usuari.Cognom;
+            this.txtUsername.Text = usuari.Usuari1;
             this.txtWorkZone.Text = comercial.ZonaTreball;
             DateTime dt = (DateTime)comercial.AnyInici;
             txtStartYear.Text = dt.Date.ToString();
@@ -77,6 +77,11 @@ namespace ViewsProjecteFinal
             pm.UpdateAgent(comercial);
             pm.UpdatePerfil(usuari);
 
+        }
+
+        private void View_ModificarAgent_Load(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
         }
     }
 }

@@ -176,6 +176,7 @@
             this.Controls.Add(this.pboxProfilePicture);
             this.Name = "View_ModificarPerfil";
             this.Text = "View_ModificarPerfil";
+            this.Load += new System.EventHandler(this.View_ModificarPerfil_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pboxProfilePicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

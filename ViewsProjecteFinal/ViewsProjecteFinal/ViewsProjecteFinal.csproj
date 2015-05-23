@@ -76,6 +76,12 @@
     <Compile Include="CustomClasses\EnglishStringValues.cs" />
     <Compile Include="CustomClasses\LoginController.cs" />
     <Compile Include="CustomClasses\PersistanceManager.cs" />
+    <Compile Include="E_AgentMesClients_View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="E_AgentMesClients_View.Designer.cs">
+      <DependentUpon>E_AgentMesClients_View.cs</DependentUpon>
+    </Compile>
     <Compile Include="Methods.cs" />
     <Compile Include="PictureBoxLogout_UC.cs">
       <SubType>UserControl</SubType>
@@ -233,6 +239,9 @@
     <EmbeddedResource Include="ChooseView_UC.resx">
       <DependentUpon>ChooseView_UC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="E_AgentMesClients_View.resx">
+      <DependentUpon>E_AgentMesClients_View.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PictureBoxLogout_UC.resx">
       <DependentUpon>PictureBoxLogout_UC.cs</DependentUpon>
     </EmbeddedResource>
@@ -348,6 +357,13 @@
       <Generator>DataServicesCoreClientGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\logout2.png" />
+    <None Include="Resources\logout21.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

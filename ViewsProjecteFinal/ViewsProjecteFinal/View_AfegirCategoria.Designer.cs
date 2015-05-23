@@ -100,6 +100,7 @@
             // 
             // pictureBoxLogout_UC1
             // 
+            this.pictureBoxLogout_UC1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxLogout_UC1.Location = new System.Drawing.Point(1311, 1);
             this.pictureBoxLogout_UC1.Name = "pictureBoxLogout_UC1";
             this.pictureBoxLogout_UC1.Size = new System.Drawing.Size(50, 50);
@@ -128,6 +129,7 @@
             this.Controls.Add(this.label2);
             this.Name = "View_AfegirCategoria";
             this.Text = "View_AfegirCategoria";
+            this.Load += new System.EventHandler(this.View_AfegirCategoria_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
