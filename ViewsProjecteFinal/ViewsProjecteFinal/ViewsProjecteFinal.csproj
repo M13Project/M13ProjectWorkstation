@@ -51,6 +51,7 @@
       <HintPath>..\packages\System.Spatial.5.6.0\lib\net40\System.Spatial.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -66,6 +67,11 @@
     </Compile>
     <Compile Include="ButtonBack_UC.Designer.cs">
       <DependentUpon>ButtonBack_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChartsDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="ChooseView_UC.cs">
       <SubType>UserControl</SubType>
@@ -245,6 +251,7 @@
     <EmbeddedResource Include="PictureBoxLogout_UC.resx">
       <DependentUpon>PictureBoxLogout_UC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportAgentMesClients.rdlc" />
     <EmbeddedResource Include="View_AfegirAgent.resx">
       <DependentUpon>View_AfegirAgent.cs</DependentUpon>
     </EmbeddedResource>
@@ -316,6 +323,17 @@
     <EmbeddedResource Include="View_ModificarProducte.resx">
       <DependentUpon>View_ModificarProducte.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ChartsDataSet.xsc">
+      <DependentUpon>ChartsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ChartsDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChartsDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ChartsDataSet.xss">
+      <DependentUpon>ChartsDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\ViewsProjecteFinal.ServiceReference.m13_projectEntities.datasource" />
     <None Include="Properties\Settings.settings">
