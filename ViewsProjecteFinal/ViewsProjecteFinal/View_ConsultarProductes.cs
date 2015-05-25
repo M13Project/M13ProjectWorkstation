@@ -54,11 +54,11 @@ namespace ViewsProjecteFinal
             {
                 if (txtSelect.Text.Equals(""))
                 {
-                    MessageBox.Show("Introdueix una id al camp de text!");
+                    MessageBox.Show("You must write an Id in the Select text!");
                 }
                 else
                 {
-                    MessageBox.Show("Valor incorrecte!");
+                    MessageBox.Show("Incorrect Value!");
                 }
             }
         }
@@ -85,11 +85,11 @@ namespace ViewsProjecteFinal
             {
                 if (txtSelect.Text.Equals(""))
                 {
-                    MessageBox.Show("Introdueix una id al camp de text!");
+                    MessageBox.Show("You must write an Id in the Select text!");
                 }
                 else
                 {
-                    MessageBox.Show("Valor incorrecte!");
+                    MessageBox.Show("Incorrect Value!");
                 }
             }
         }

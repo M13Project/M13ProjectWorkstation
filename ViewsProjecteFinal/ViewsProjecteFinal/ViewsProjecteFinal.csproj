@@ -380,12 +380,15 @@
     <None Include="Resources\logout.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Statistics.png" />
+    <None Include="Resources\Orders.png" />
     <None Include="Resources\Products.PNG" />
     <None Include="Resources\LogoAppMaster.png" />
     <None Include="Resources\LogoText.png" />
     <None Include="Resources\AgentComercial.PNG" />
     <None Include="Resources\Clients.PNG" />
     <None Include="Resources\Categories.PNG" />
+    <None Include="Resources\AgentComercialDefecte.png" />
     <Content Include="Resources\logout2.png" />
     <None Include="Resources\logout21.png" />
   </ItemGroup>

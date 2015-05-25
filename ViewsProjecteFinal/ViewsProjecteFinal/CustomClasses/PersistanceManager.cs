@@ -33,10 +33,10 @@ namespace ViewsProjecteFinal.CustomClasses
             {
                 remoteDataContext.AddToComercial(comercial);
                 remoteDataContext.SaveChanges();
-                MessageBox.Show("S'ha inserit correctament.");
+                MessageBox.Show("Successfully added!");
 
             } catch (Exception e){
-                MessageBox.Show("No s'ha pogut inserir: " + e);
+                MessageBox.Show("The Agent couldn't be added: " + e);
         }
          }
         public int InsertUser(Usuari usuari)
@@ -46,7 +46,7 @@ namespace ViewsProjecteFinal.CustomClasses
             remoteDataContext.AddToUsuari(usuari);
             remoteDataContext.SaveChanges();
             } catch (Exception e){
-                MessageBox.Show("No s'ha pogut inserir: " + e);
+                MessageBox.Show("The Agent couldn't be added " + e);
         }
             return usuari.Id;
         }
@@ -55,10 +55,12 @@ namespace ViewsProjecteFinal.CustomClasses
             try
             {
             remoteDataContext.AddToCategoria(categoria);
-            MessageBox.Show("S'ha inserit correctament.");
             remoteDataContext.SaveChanges();
-            } catch (Exception e){
-                MessageBox.Show("No s'ha pogut inserir: " + e);
+            MessageBox.Show("Successfully added!");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("The Category couldn't be added " + e);
             }
         }
         public void InsertProduct(Producte producte)
@@ -67,11 +69,11 @@ namespace ViewsProjecteFinal.CustomClasses
             {
             remoteDataContext.AddToProducte(producte);
             remoteDataContext.SaveChanges();
-            MessageBox.Show("S'ha inserit correctament.");
-        }
+            MessageBox.Show("Successfully added!");
+            }
             catch (Exception e)
             {
-                MessageBox.Show("No s'ha pogut inserir: " + e);
+                MessageBox.Show("The Product couldn't be added " + e);
             }
             
         }
@@ -81,10 +83,12 @@ namespace ViewsProjecteFinal.CustomClasses
             {
             remoteDataContext.AddToClient(client);
             remoteDataContext.SaveChanges();
-            MessageBox.Show("S'ha inserit correctament.");
-            } catch (Exception e){
-                MessageBox.Show("No s'ha pogut inserir: " + e);
-            } 
+            MessageBox.Show("Successfully added!");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("The Client couldn't be added " + e);
+            }
         }
         public void InsertComanda_Producte(Comanda_Producte comanda_producte)
         {
@@ -92,11 +96,11 @@ namespace ViewsProjecteFinal.CustomClasses
             {
                 remoteDataContext.AddToComanda_Producte(comanda_producte);
                 remoteDataContext.SaveChanges();
-                MessageBox.Show("S'ha inserit correctament.");
+                MessageBox.Show("Successfully added!");
                             }
             catch (Exception e)
             {
-                MessageBox.Show("No s'ha pogut inserir: " + e);
+                MessageBox.Show("The Order couldn't be added " + e);
             }
         }
         //public void AddCategoria(Producte category) {
@@ -123,6 +127,13 @@ namespace ViewsProjecteFinal.CustomClasses
         {
 
             var cli =  from client in remoteDataContext.Client select client;
+            return cli;
+
+        }
+        public IQueryable<Client> AllClientAgent(int id)
+        {
+
+            var cli = from client in remoteDataContext.Client where client.ComercialId == id select client;
             return cli;
 
         }
@@ -353,19 +364,21 @@ namespace ViewsProjecteFinal.CustomClasses
             //Change or Delete all clients of comercial
             try
             {
-                IQueryable<Client> client = AllClient();
-                foreach (Client cli in client)
+                IQueryable<Client> client = AllClientAgent(c.Id);
+                if (client.Count() != 0)
                 {
-                    DeleteClient(cli);
-                    // Change 
-                    //cli.Comercial = NouComercial;
-                    //cli.ComercialId = NouComercia.Id;
-                    //UpdateClient(cli);
+                    foreach (Client cli in client)
+                    {
+                        DeleteClient(cli);
+                        // Change 
+                        //cli.Comercial = NouComercial;
+                        //cli.ComercialId = NouComercia.Id;
+                        //UpdateClient(cli);
 
+                    }
+                    remoteDataContext.DeleteObject(c);
+                    remoteDataContext.SaveChanges();
                 }
-
-                remoteDataContext.DeleteObject(c);
-                remoteDataContext.SaveChanges();
                 remoteDataContext.DeleteObject(getUsuari(c.Id));
                 remoteDataContext.SaveChanges();
             }
@@ -381,14 +394,14 @@ namespace ViewsProjecteFinal.CustomClasses
                         {
                             asd.Id,
                             Name = asd.Nom,
-                            asd.Preu,
-                            asd.Descompte,
-                            asd.Habilitat,
-                            Categoria = asd.Categoria
+                            Price = asd.Preu,
+                            Discount = asd.Descompte,
+                            Enabled = asd.Habilitat,
+                            Name_Category = asd.Categoria.Nom
                         };
              foreach (var productGroup in query)
              {
-                 Console.WriteLine(productGroup);
+                 Console.WriteLine(productGroup.Name_Category);
                  prod.Add(productGroup);
              }
             return prod;
@@ -400,20 +413,20 @@ namespace ViewsProjecteFinal.CustomClasses
                          select new
                          {
                              asd.Usuari.Id,
-                             asd.Usuari.Nom,
-                             asd.Usuari.Cognom,
-                             asd.Usuari.Dni,
-                             asd.Usuari.Contrasenya,
-                             asd.AnyInici, 
-                             ZonaT = asd.ZonaTreball,
-                             asd.Habilitat
+                             Name = asd.Usuari.Nom,
+                             Surname = asd.Usuari.Cognom,
+                             Username = asd.Usuari.Usuari1,
+                             IDCard = asd.Usuari.Dni,
+                             Start_Year = asd.AnyInici, 
+                             Work_Zone = asd.ZonaTreball,
+                             Enabled = asd.Habilitat
                          };
 
             foreach (var productGroup in query)
             {
-                Console.WriteLine(productGroup.AnyInici);
-                Console.WriteLine(productGroup.ZonaT);
-                Console.WriteLine(productGroup.Habilitat);
+                Console.WriteLine(productGroup.Start_Year);
+                Console.WriteLine(productGroup.Work_Zone);
+                Console.WriteLine(productGroup.Enabled);
                 prod.Add(productGroup);
             }
             return prod;

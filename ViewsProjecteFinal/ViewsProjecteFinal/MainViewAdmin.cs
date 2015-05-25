@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ViewsProjecteFinal.CustomClasses;
+using ViewsProjecteFinal.ServiceReference;
 
 namespace ViewsProjecteFinal
 {
@@ -15,11 +16,18 @@ namespace ViewsProjecteFinal
     {
         private static int adminId;
 
+        PersistanceManager pm = new PersistanceManager();
+
         public MainViewAdmin(int adminIdMain)
         {
+            Usuari usuari = new Usuari();
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
             adminId = adminIdMain;
+            usuari = pm.getUsuari(adminIdMain);
+            String salutacio ="Welcome " + usuari.Nom + " " + usuari.Cognom;
+            lblWelcome.Text = salutacio;
+            this.lblWelcome.ForeColor = Color.FromArgb(7, 59, 90);
             this.lblTitolView.ForeColor = Color.FromArgb(26, 183, 234);
         }
 
@@ -40,9 +48,9 @@ namespace ViewsProjecteFinal
             chooseView_UC1.changeImage(ViewsProjecteFinal.Properties.Resources.AgentComercial);
             chooseView_UC2.changeImage(ViewsProjecteFinal.Properties.Resources.Clients);
             chooseView_UC3.changeImage(ViewsProjecteFinal.Properties.Resources.Products);
-            //chooseView_UC4.changeImage(ViewsProjecteFinal.Properties.Resources.Orders);
+            chooseView_UC4.changeImage(ViewsProjecteFinal.Properties.Resources.Orders);
             chooseView_UC5.changeImage(ViewsProjecteFinal.Properties.Resources.Categories);
-            //chooseView_UC6.changeImage(ViewsProjecteFinal.Properties.Resources.Statistics);
+            chooseView_UC6.changeImage(ViewsProjecteFinal.Properties.Resources.Statistics);
         }
     }
 }

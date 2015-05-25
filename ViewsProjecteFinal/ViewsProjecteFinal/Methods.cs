@@ -30,7 +30,7 @@ namespace ViewsProjecteFinal
         {
             DialogResult result;
             string message = "Estas segur que vols eliminar?";
-            string caption = "Eliminar Categoriat";
+            string caption = "Eliminar Categoria";
             MessageBoxButtons buttons = MessageBoxButtons.OKCancel;
 
             result = MessageBox.Show(message, caption, buttons);

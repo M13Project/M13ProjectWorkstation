@@ -46,9 +46,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBoxLogout_UC1 = new ViewsProjecteFinal.PictureBoxLogout_UC();
             this.buttonBack_UC1 = new ViewsProjecteFinal.ButtonBack_UC();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pboxPerfil = new System.Windows.Forms.PictureBox();
             this.lblHelp = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxPerfil)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAdd
@@ -134,9 +134,9 @@
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 10F);
             this.label1.Location = new System.Drawing.Point(333, 257);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 19);
+            this.label1.Size = new System.Drawing.Size(64, 19);
             this.label1.TabIndex = 13;
-            this.label1.Text = "DNI:";
+            this.label1.Text = "ID Card:";
             // 
             // lblTitolView
             // 
@@ -224,13 +224,15 @@
             this.buttonBack_UC1.Size = new System.Drawing.Size(70, 21);
             this.buttonBack_UC1.TabIndex = 25;
             // 
-            // pictureBox1
+            // pboxPerfil
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(909, 156);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(174, 175);
-            this.pictureBox1.TabIndex = 32;
-            this.pictureBox1.TabStop = false;
+            this.pboxPerfil.BackColor = System.Drawing.Color.Transparent;
+            this.pboxPerfil.Location = new System.Drawing.Point(909, 156);
+            this.pboxPerfil.Name = "pboxPerfil";
+            this.pboxPerfil.Size = new System.Drawing.Size(174, 175);
+            this.pboxPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pboxPerfil.TabIndex = 32;
+            this.pboxPerfil.TabStop = false;
             // 
             // lblHelp
             // 
@@ -247,7 +249,7 @@
             this.BackgroundImage = global::ViewsProjecteFinal.Properties.Resources.fonsViews;
             this.ClientSize = new System.Drawing.Size(1354, 733);
             this.Controls.Add(this.lblHelp);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pboxPerfil);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -269,7 +271,7 @@
             this.Name = "View_AfegirAgent";
             this.Text = "View_AfegirAgent";
             this.Load += new System.EventHandler(this.View_AfegirAgent_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxPerfil)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -295,7 +297,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pboxPerfil;
         private System.Windows.Forms.Label lblHelp;
     }
 }

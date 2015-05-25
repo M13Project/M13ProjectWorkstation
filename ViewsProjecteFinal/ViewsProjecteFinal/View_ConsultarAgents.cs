@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ViewsProjecteFinal.ServiceReference;
 using ViewsProjecteFinal.CustomClasses;
+using System.Web;
 
 namespace ViewsProjecteFinal
 {
@@ -70,11 +71,11 @@ namespace ViewsProjecteFinal
             {
                 if (txtSelect.Text.Equals(""))
                 {
-                    MessageBox.Show("Introdueix una id al camp de text!");
+                    MessageBox.Show("You must write an Id in the Select text!");
                 }
                 else
                 {
-                    MessageBox.Show("Valor incorrecte!");
+                    MessageBox.Show("Incorrect Value!");
                 }
             }
         }
@@ -93,11 +94,11 @@ namespace ViewsProjecteFinal
             {
                 if (txtSelect.Text.Equals(""))
                 {
-                    MessageBox.Show("Introdueix una id al camp de text!");
+                    MessageBox.Show("You must write an Id in the Select text!");
                 }
                 else
                 {
-                    MessageBox.Show("Valor incorrecte!");
+                    MessageBox.Show("Incorrect Value!");
                 }
             }
         }

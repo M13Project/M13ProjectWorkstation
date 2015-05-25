@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.lblTitolView = new System.Windows.Forms.Label();
+            this.lblWelcome = new System.Windows.Forms.Label();
             this.chooseView_UC6 = new ViewsProjecteFinal.ChooseView_UC();
             this.chooseView_UC4 = new ViewsProjecteFinal.ChooseView_UC();
             this.chooseView_UC5 = new ViewsProjecteFinal.ChooseView_UC();
@@ -43,11 +44,22 @@
             this.lblTitolView.AutoSize = true;
             this.lblTitolView.BackColor = System.Drawing.Color.Transparent;
             this.lblTitolView.Font = new System.Drawing.Font("Palatino Linotype", 40F);
-            this.lblTitolView.Location = new System.Drawing.Point(616, 39);
+            this.lblTitolView.Location = new System.Drawing.Point(421, 40);
             this.lblTitolView.Name = "lblTitolView";
-            this.lblTitolView.Size = new System.Drawing.Size(157, 73);
-            this.lblTitolView.TabIndex = 15;
-            this.lblTitolView.Text = "Main";
+            this.lblTitolView.Size = new System.Drawing.Size(512, 73);
+            this.lblTitolView.TabIndex = 22;
+            this.lblTitolView.Text = "Main Administrator";
+            // 
+            // lblWelcome
+            // 
+            this.lblWelcome.AutoSize = true;
+            this.lblWelcome.BackColor = System.Drawing.Color.Transparent;
+            this.lblWelcome.Font = new System.Drawing.Font("Palatino Linotype", 12F);
+            this.lblWelcome.Location = new System.Drawing.Point(1064, 9);
+            this.lblWelcome.Name = "lblWelcome";
+            this.lblWelcome.Size = new System.Drawing.Size(27, 22);
+            this.lblWelcome.TabIndex = 23;
+            this.lblWelcome.Text = "lbl";
             // 
             // chooseView_UC6
             // 
@@ -100,7 +112,7 @@
             // pictureBoxLogout_UC1
             // 
             this.pictureBoxLogout_UC1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxLogout_UC1.Location = new System.Drawing.Point(1310, 2);
+            this.pictureBoxLogout_UC1.Location = new System.Drawing.Point(1312, 0);
             this.pictureBoxLogout_UC1.Name = "pictureBoxLogout_UC1";
             this.pictureBoxLogout_UC1.Size = new System.Drawing.Size(50, 50);
             this.pictureBoxLogout_UC1.TabIndex = 8;
@@ -111,13 +123,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ViewsProjecteFinal.Properties.Resources.fonsViews;
             this.ClientSize = new System.Drawing.Size(1354, 733);
+            this.Controls.Add(this.lblWelcome);
+            this.Controls.Add(this.lblTitolView);
             this.Controls.Add(this.chooseView_UC6);
             this.Controls.Add(this.chooseView_UC4);
             this.Controls.Add(this.chooseView_UC5);
             this.Controls.Add(this.chooseView_UC3);
             this.Controls.Add(this.chooseView_UC2);
             this.Controls.Add(this.chooseView_UC1);
-            this.Controls.Add(this.lblTitolView);
             this.Controls.Add(this.pictureBoxLogout_UC1);
             this.Name = "MainViewAdmin";
             this.Text = "MainView";
@@ -130,12 +143,13 @@
         #endregion
 
         private PictureBoxLogout_UC pictureBoxLogout_UC1;
-        private System.Windows.Forms.Label lblTitolView;
         private ChooseView_UC chooseView_UC1;
         private ChooseView_UC chooseView_UC2;
         private ChooseView_UC chooseView_UC3;
         private ChooseView_UC chooseView_UC5;
         private ChooseView_UC chooseView_UC4;
         private ChooseView_UC chooseView_UC6;
+        private System.Windows.Forms.Label lblTitolView;
+        private System.Windows.Forms.Label lblWelcome;
     }
 }
