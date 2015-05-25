@@ -46,7 +46,6 @@
             this.txtPassword.MaximumSize = new System.Drawing.Size(700, 100);
             this.txtPassword.MinimumSize = new System.Drawing.Size(400, 67);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
             this.txtPassword.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtPassword.Size = new System.Drawing.Size(447, 52);
             this.txtPassword.TabIndex = 2;
@@ -107,7 +106,6 @@
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.btnSignIn);
             this.Name = "View_Login";
-            this.Text = "Login";
             this.Load += new System.EventHandler(this.View_Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

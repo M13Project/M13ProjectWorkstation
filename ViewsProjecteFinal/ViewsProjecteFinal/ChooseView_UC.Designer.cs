@@ -39,6 +39,7 @@
             this.pboxOption.Location = new System.Drawing.Point(3, 3);
             this.pboxOption.Name = "pboxOption";
             this.pboxOption.Size = new System.Drawing.Size(150, 109);
+            this.pboxOption.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pboxOption.TabIndex = 0;
             this.pboxOption.TabStop = false;
             this.pboxOption.Click += new System.EventHandler(this.pboxOption_Click);

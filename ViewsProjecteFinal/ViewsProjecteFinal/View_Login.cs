@@ -61,6 +61,7 @@ namespace ViewsProjecteFinal
         private void txtPassword_EnterFocus(object sender, EventArgs e)
         {
             txtPassword.Text = "";
+            this.txtPassword.PasswordChar = '*';
         }        
     }
 }

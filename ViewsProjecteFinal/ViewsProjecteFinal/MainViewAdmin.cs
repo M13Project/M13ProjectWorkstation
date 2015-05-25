@@ -37,6 +37,12 @@ namespace ViewsProjecteFinal
             chooseView_UC4.changeLabelName(EnglishStringValues.SELECTION_4);
             chooseView_UC5.changeLabelName(EnglishStringValues.SELECTION_5);
             chooseView_UC6.changeLabelName(EnglishStringValues.SELECTION_6);
+            chooseView_UC1.changeImage(ViewsProjecteFinal.Properties.Resources.AgentComercial);
+            chooseView_UC2.changeImage(ViewsProjecteFinal.Properties.Resources.Clients);
+            chooseView_UC3.changeImage(ViewsProjecteFinal.Properties.Resources.Products);
+            //chooseView_UC4.changeImage(ViewsProjecteFinal.Properties.Resources.Orders);
+            chooseView_UC5.changeImage(ViewsProjecteFinal.Properties.Resources.Categories);
+            //chooseView_UC6.changeImage(ViewsProjecteFinal.Properties.Resources.Statistics);
         }
     }
 }

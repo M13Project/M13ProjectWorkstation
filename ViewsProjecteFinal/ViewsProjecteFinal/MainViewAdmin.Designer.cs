@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.lblTitolView = new System.Windows.Forms.Label();
-            this.pictureBoxLogout_UC1 = new ViewsProjecteFinal.PictureBoxLogout_UC();
-            this.chooseView_UC1 = new ViewsProjecteFinal.ChooseView_UC();
-            this.chooseView_UC2 = new ViewsProjecteFinal.ChooseView_UC();
-            this.chooseView_UC3 = new ViewsProjecteFinal.ChooseView_UC();
-            this.chooseView_UC5 = new ViewsProjecteFinal.ChooseView_UC();
-            this.chooseView_UC4 = new ViewsProjecteFinal.ChooseView_UC();
             this.chooseView_UC6 = new ViewsProjecteFinal.ChooseView_UC();
+            this.chooseView_UC4 = new ViewsProjecteFinal.ChooseView_UC();
+            this.chooseView_UC5 = new ViewsProjecteFinal.ChooseView_UC();
+            this.chooseView_UC3 = new ViewsProjecteFinal.ChooseView_UC();
+            this.chooseView_UC2 = new ViewsProjecteFinal.ChooseView_UC();
+            this.chooseView_UC1 = new ViewsProjecteFinal.ChooseView_UC();
+            this.pictureBoxLogout_UC1 = new ViewsProjecteFinal.PictureBoxLogout_UC();
             this.SuspendLayout();
             // 
             // lblTitolView
@@ -49,44 +49,13 @@
             this.lblTitolView.TabIndex = 15;
             this.lblTitolView.Text = "Main";
             // 
-            // pictureBoxLogout_UC1
+            // chooseView_UC6
             // 
-            this.pictureBoxLogout_UC1.Location = new System.Drawing.Point(1310, 2);
-            this.pictureBoxLogout_UC1.Name = "pictureBoxLogout_UC1";
-            this.pictureBoxLogout_UC1.Size = new System.Drawing.Size(50, 50);
-            this.pictureBoxLogout_UC1.TabIndex = 8;
-            // 
-            // chooseView_UC1
-            // 
-            this.chooseView_UC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(59)))), ((int)(((byte)(90)))));
-            this.chooseView_UC1.Location = new System.Drawing.Point(322, 147);
-            this.chooseView_UC1.Name = "chooseView_UC1";
-            this.chooseView_UC1.Size = new System.Drawing.Size(156, 157);
-            this.chooseView_UC1.TabIndex = 16;
-            // 
-            // chooseView_UC2
-            // 
-            this.chooseView_UC2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(59)))), ((int)(((byte)(90)))));
-            this.chooseView_UC2.Location = new System.Drawing.Point(617, 147);
-            this.chooseView_UC2.Name = "chooseView_UC2";
-            this.chooseView_UC2.Size = new System.Drawing.Size(156, 157);
-            this.chooseView_UC2.TabIndex = 17;
-            // 
-            // chooseView_UC3
-            // 
-            this.chooseView_UC3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(59)))), ((int)(((byte)(90)))));
-            this.chooseView_UC3.Location = new System.Drawing.Point(907, 147);
-            this.chooseView_UC3.Name = "chooseView_UC3";
-            this.chooseView_UC3.Size = new System.Drawing.Size(156, 157);
-            this.chooseView_UC3.TabIndex = 18;
-            // 
-            // chooseView_UC5
-            // 
-            this.chooseView_UC5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(59)))), ((int)(((byte)(90)))));
-            this.chooseView_UC5.Location = new System.Drawing.Point(617, 420);
-            this.chooseView_UC5.Name = "chooseView_UC5";
-            this.chooseView_UC5.Size = new System.Drawing.Size(156, 157);
-            this.chooseView_UC5.TabIndex = 19;
+            this.chooseView_UC6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(59)))), ((int)(((byte)(90)))));
+            this.chooseView_UC6.Location = new System.Drawing.Point(907, 420);
+            this.chooseView_UC6.Name = "chooseView_UC6";
+            this.chooseView_UC6.Size = new System.Drawing.Size(156, 157);
+            this.chooseView_UC6.TabIndex = 21;
             // 
             // chooseView_UC4
             // 
@@ -96,13 +65,45 @@
             this.chooseView_UC4.Size = new System.Drawing.Size(156, 157);
             this.chooseView_UC4.TabIndex = 20;
             // 
-            // chooseView_UC6
+            // chooseView_UC5
             // 
-            this.chooseView_UC6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(59)))), ((int)(((byte)(90)))));
-            this.chooseView_UC6.Location = new System.Drawing.Point(907, 420);
-            this.chooseView_UC6.Name = "chooseView_UC6";
-            this.chooseView_UC6.Size = new System.Drawing.Size(156, 157);
-            this.chooseView_UC6.TabIndex = 21;
+            this.chooseView_UC5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(59)))), ((int)(((byte)(90)))));
+            this.chooseView_UC5.Location = new System.Drawing.Point(617, 420);
+            this.chooseView_UC5.Name = "chooseView_UC5";
+            this.chooseView_UC5.Size = new System.Drawing.Size(156, 157);
+            this.chooseView_UC5.TabIndex = 19;
+            // 
+            // chooseView_UC3
+            // 
+            this.chooseView_UC3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(59)))), ((int)(((byte)(90)))));
+            this.chooseView_UC3.Location = new System.Drawing.Point(907, 147);
+            this.chooseView_UC3.Name = "chooseView_UC3";
+            this.chooseView_UC3.Size = new System.Drawing.Size(156, 157);
+            this.chooseView_UC3.TabIndex = 18;
+            // 
+            // chooseView_UC2
+            // 
+            this.chooseView_UC2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(59)))), ((int)(((byte)(90)))));
+            this.chooseView_UC2.Location = new System.Drawing.Point(617, 147);
+            this.chooseView_UC2.Name = "chooseView_UC2";
+            this.chooseView_UC2.Size = new System.Drawing.Size(156, 157);
+            this.chooseView_UC2.TabIndex = 17;
+            // 
+            // chooseView_UC1
+            // 
+            this.chooseView_UC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(59)))), ((int)(((byte)(90)))));
+            this.chooseView_UC1.Location = new System.Drawing.Point(322, 147);
+            this.chooseView_UC1.Name = "chooseView_UC1";
+            this.chooseView_UC1.Size = new System.Drawing.Size(156, 157);
+            this.chooseView_UC1.TabIndex = 16;
+            // 
+            // pictureBoxLogout_UC1
+            // 
+            this.pictureBoxLogout_UC1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxLogout_UC1.Location = new System.Drawing.Point(1310, 2);
+            this.pictureBoxLogout_UC1.Name = "pictureBoxLogout_UC1";
+            this.pictureBoxLogout_UC1.Size = new System.Drawing.Size(50, 50);
+            this.pictureBoxLogout_UC1.TabIndex = 8;
             // 
             // MainViewAdmin
             // 

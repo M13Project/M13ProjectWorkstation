@@ -63,9 +63,39 @@ namespace ViewsProjecteFinal.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap AgentComercial {
+            get {
+                object obj = ResourceManager.GetObject("AgentComercial", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap buttonLogin {
             get {
                 object obj = ResourceManager.GetObject("buttonLogin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Categories {
+            get {
+                object obj = ResourceManager.GetObject("Categories", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Clients {
+            get {
+                object obj = ResourceManager.GetObject("Clients", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -136,6 +166,16 @@ namespace ViewsProjecteFinal.Properties {
         internal static System.Drawing.Bitmap logout2 {
             get {
                 object obj = ResourceManager.GetObject("logout2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Products {
+            get {
+                object obj = ResourceManager.GetObject("Products", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
