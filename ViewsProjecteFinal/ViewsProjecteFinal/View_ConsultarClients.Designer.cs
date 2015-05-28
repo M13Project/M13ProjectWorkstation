@@ -52,6 +52,7 @@
             // 
             // gridView
             // 
+            this.gridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridView.BackgroundColor = System.Drawing.Color.LightCyan;
             this.gridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridView.Location = new System.Drawing.Point(256, 151);
@@ -75,7 +76,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ViewsProjecteFinal.Properties.Resources.fonsViews;
-            this.ClientSize = new System.Drawing.Size(1362, 741);
+            this.ClientSize = new System.Drawing.Size(1354, 733);
             this.Controls.Add(this.lblTitolView);
             this.Controls.Add(this.gridView);
             this.Controls.Add(this.pictureBoxLogout_UC1);

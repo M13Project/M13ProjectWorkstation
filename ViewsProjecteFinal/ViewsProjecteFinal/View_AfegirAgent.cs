@@ -47,8 +47,9 @@ namespace ViewsProjecteFinal
                 us.Usuari1 = txtUsername.Text;
                 us.Contrasenya = Methods.ComputeHash(txtPassword.Text.ToString(), new SHA256CryptoServiceProvider());
 
+                //pm.validateFields(txtDNI.Text, characterLimit);
+
                 id = pm.InsertUser(us);
-                MessageBox.Show(id.ToString());
                 Comercial com = new Comercial();
                 string date = txtStartYear.Text.ToString();
                 DateTime dt = Convert.ToDateTime(date);
@@ -57,6 +58,7 @@ namespace ViewsProjecteFinal
                 com.ZonaTreball = txtWorkZone.Text;
                 com.Id = id;
                 pm.InsertAgent(com);
+
             } catch(Exception ex)
             {
                 MessageBox.Show("Error adding the new Agent: " + ex);

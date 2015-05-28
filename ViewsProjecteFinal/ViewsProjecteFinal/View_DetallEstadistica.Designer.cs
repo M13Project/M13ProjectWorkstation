@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(View_DetallEstadistica));
             this.pictureBoxLogout_UC1 = new ViewsProjecteFinal.PictureBoxLogout_UC();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,6 +41,7 @@
             // 
             // pictureBoxLogout_UC1
             // 
+            this.pictureBoxLogout_UC1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxLogout_UC1.Location = new System.Drawing.Point(1303, 0);
             this.pictureBoxLogout_UC1.Name = "pictureBoxLogout_UC1";
             this.pictureBoxLogout_UC1.Size = new System.Drawing.Size(50, 50);
@@ -118,7 +120,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::ViewsProjecteFinal.Properties.Resources.fonsViews;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1354, 733);
             this.Controls.Add(this.lblTitolView);
             this.Controls.Add(this.reportViewer1);

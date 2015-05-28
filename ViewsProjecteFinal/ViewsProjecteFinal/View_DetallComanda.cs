@@ -17,13 +17,13 @@ namespace ViewsProjecteFinal
         String webServiceDomain = "http://localhost:52220/M13ProjectWcfDataService.svc/";
         m13_projectEntities1 entities;
         PersistanceManager pm = new PersistanceManager();
-        public View_DetallComanda(int id)
+        public View_DetallComanda(int id, int idCom)
         {
             InitializeComponent();
             this.lblTitolView.ForeColor = Color.FromArgb(26, 183, 234);
 
             entities = new m13_projectEntities1(new Uri(webServiceDomain));
-            this.gridView.DataSource = pm.gridDetallComandes(id).ToList();
+            this.gridView.DataSource = pm.gridDetallComandes(id, idCom).ToList();
         }
 
         private void View_DetallComanda_Load(object sender, EventArgs e)

@@ -27,6 +27,7 @@ namespace ViewsProjecteFinal
             this.label3.ForeColor = Color.FromArgb(7, 59, 90);
             this.label4.ForeColor = Color.FromArgb(7, 59, 90);
             this.btnUpdate.ForeColor = Color.FromArgb(7, 59, 90);
+            pboxProfilePicture.Image = ViewsProjecteFinal.Properties.Resources.ProductDefault;
             pm = new PersistanceManager();
             foreach (Categoria cat in pm.AllCategoria())
             {

@@ -380,6 +380,7 @@
     <None Include="Resources\logout.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\ProductDefault.png" />
     <None Include="Resources\Statistics.png" />
     <None Include="Resources\Orders.png" />
     <None Include="Resources\Products.PNG" />

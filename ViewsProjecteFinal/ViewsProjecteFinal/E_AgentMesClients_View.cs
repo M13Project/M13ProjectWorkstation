@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using ViewsProjecteFinal.ServiceReference;
 using ViewsProjecteFinal.CustomClasses;
 using System.Windows.Forms.DataVisualization.Charting;
+using System.Data.SqlClient;
 
 namespace ViewsProjecteFinal
 {
@@ -26,7 +27,8 @@ namespace ViewsProjecteFinal
         private void E_AgentMesClients_View_Load(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
-            provaChart();
+            prova();
+            this.reportViewer1.RefreshReport();
         }
         public void provaChart()
         {
@@ -48,8 +50,69 @@ namespace ViewsProjecteFinal
                 //chartAgentsMesClients.Series["RuntimeSeries"].Points.AddY(usuari.Comercial.Client.Count);
             }    
         }
+
+        public void prova()
+        {
+            String strCon = "Data Source=MARCPB;Initial Catalog=m13_project;Integrated Security=True";
+            SqlConnection conBD = new SqlConnection(strCon);
+            SqlCommand sql = new SqlCommand("SELECT count(ComercialId) as numClients FROM Client GROUP BY ComercialId;", conBD);
+            SqlDataReader myReader;
+            try
+            {
+                conBD.Open();
+                myReader = sql.ExecuteReader();
+                while (myReader.Read())
+                {
+                    this.chartAgentsMesClients.Series["Series1"].Points.AddXY(myReader["numClients"].ToString(), myReader["punts"]);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                if (conBD.State == ConnectionState.Open)
+                {
+                    conBD.Close();
+                }
+            }
+        }
+
+        /*
+        public void prova()
+        {
+            PersistanceManager pm = new PersistanceManager();
+            IQueryable<Client> client = pm.AllClient();
+            List<int> f = new List<int>(); 
+            //Select count(ComercialId) From client 
+            for (int i = 0; i < client.ToList().Count(); i++ )
+            {
+                f.Add(pm.countClient(client(i).ComercialId));
+                Console.WriteLine(f.ToString());
+            } 
+
+            //chartAgentsMesClients.Series["Nom"].ChartType = SeriesChartType.Bar;
+            //chartAgentsMesClients.Series["Nom"].Points.AddY(1);
+            //chartAgentsMesClients.Series["Nom"].ChartArea = "ChartArea1";
+
+            this.dataGridView1.DataSource = f;
+            try
+            {
+                foreach (Client cli in client) {
+                    chartAgentsMesClients.Series["Series1"].Points.AddY(cli.Comercial.Client.Count); 
+                    //(myReader["usuari"].ToString(), myReader["punts"]);                
+                }   
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }*/
     }
 }
+
 //// TODO: This line of code loads data into the 'MyTestDatabaseDataSet.Usuari' table. You can move, or remove it, as needed.
 //            this.UsuariTableAdapter.Fill(this.MyTestDatabaseDataSet.Usuari);
 //            //label1.Text = ComputeHash("qwertyuiop", new SHA256CryptoServiceProvider());

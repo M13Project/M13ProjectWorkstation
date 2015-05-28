@@ -18,6 +18,7 @@ namespace ViewsProjecteFinal
         PersistanceManager pm;
         static String webServiceDomain = "http://localhost:52220/M13ProjectWcfDataService.svc/";
         m13_projectEntities1 entities = new m13_projectEntities1(new Uri(webServiceDomain));
+        List<Object> categories = new List<Object>();
         public View_ConsultarCategories()
         {
             InitializeComponent();
@@ -31,8 +32,8 @@ namespace ViewsProjecteFinal
             this.btnAdd.ForeColor = Color.FromArgb(7, 59, 90);
             pm = new PersistanceManager();
 
-            
-            this.gridView.DataSource = entities.Categoria.ToList();
+            categories = pm.gridCategoria();
+            this.gridView.DataSource = categories.ToList();
 
         }
 
@@ -54,9 +55,11 @@ namespace ViewsProjecteFinal
             } catch {
                 if (txtSelect.Text.Equals(""))
                 {
-                    MessageBox.Show("Introdueix una id al camp de text!");
-                } else {
-                    MessageBox.Show("Valor incorrecte!");
+                    MessageBox.Show("You must write an Id in the Select text!");
+                }
+                else
+                {
+                    MessageBox.Show("Incorrect Value!");
                 }
             }
         }
@@ -82,11 +85,11 @@ namespace ViewsProjecteFinal
             {
                 if (txtSelect.Text.Equals(""))
                 {
-                    MessageBox.Show("Introdueix una id al camp de text!");
+                    MessageBox.Show("You must write an Id in the Select text!");
                 }
                 else
                 {
-                    MessageBox.Show("Valor incorrecte!");
+                    MessageBox.Show("Incorrect Value!");
                 }
             }
         }
@@ -94,7 +97,8 @@ namespace ViewsProjecteFinal
         private void View_ConsultarCategories_VisibleChanged(object sender, EventArgs e)
         {
             this.gridView.Update();
-            this.gridView.DataSource = entities.Categoria.ToList();
+            categories = pm.gridCategoria();
+            this.gridView.DataSource = categories.ToList();
             this.gridView.Refresh();
         }
 

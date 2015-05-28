@@ -98,7 +98,8 @@ namespace ViewsProjecteFinal
         {
             this.Refresh();
             this.Update();
-            this.gridView.DataSource = pm.AllProductes().ToList();
+            productes = pm.gridProductes();
+            this.gridView.DataSource = productes.ToList();
         }
 
         private void View_ConsultarProductes_Load(object sender, EventArgs e)

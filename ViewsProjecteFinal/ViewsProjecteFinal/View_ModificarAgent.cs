@@ -14,12 +14,12 @@ using ViewsProjecteFinal.ServiceReference;
 namespace ViewsProjecteFinal
 {
     
-    public partial class View_ModificarAgent : Form
+    public partial class Views_ProjecteFinal : Form
     {
         PersistanceManager pm;
         Usuari usuari = new Usuari();
         Comercial comercial = new Comercial();
-        public View_ModificarAgent(int id)
+        public Views_ProjecteFinal(int id)
         {
             InitializeComponent();
 
@@ -32,7 +32,9 @@ namespace ViewsProjecteFinal
             this.label5.ForeColor = Color.FromArgb(7, 59, 90);
             this.label6.ForeColor = Color.FromArgb(7, 59, 90);
             this.label7.ForeColor = Color.FromArgb(7, 59, 90);
+            this.label8.ForeColor = Color.FromArgb(7, 59, 90);
             this.btnUpdate.ForeColor = Color.FromArgb(7, 59, 90);
+            pboxPerfil.Image = ViewsProjecteFinal.Properties.Resources.AgentComercialDefecte;
             pm = new PersistanceManager();
             usuari = pm.getUsuari(id);
             comercial = pm.getComercial(id);
@@ -61,8 +63,9 @@ namespace ViewsProjecteFinal
         }
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            
-            //comercial.AnyInici = txtStartYear.Text.ToString();
+            string date = txtStartYear.Text.ToString();
+            DateTime dt = Convert.ToDateTime(date);
+            comercial.AnyInici = dt;
             comercial.ZonaTreball = txtWorkZone.Text.ToString();
             comercial.Habilitat = bool.Parse(cboxHabilitat.Checked.ToString());
             usuari.Nom = txtName.Text.ToString();
@@ -71,9 +74,6 @@ namespace ViewsProjecteFinal
             usuari.Dni = txtDNI.Text.ToString();
             usuari.Usuari1 = txtUsername.Text.ToString();
 
-            //usuari.Imatge = pictureBox1.
-            //usuari.Comercial = comercial;
-            //comercial.Usuari = usuari;
             pm.UpdateAgent(comercial);
             pm.UpdatePerfil(usuari);
 

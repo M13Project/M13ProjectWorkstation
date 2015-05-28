@@ -47,9 +47,11 @@
             // 
             // pboxProfilePicture
             // 
+            this.pboxProfilePicture.BackColor = System.Drawing.Color.Transparent;
             this.pboxProfilePicture.Location = new System.Drawing.Point(733, 157);
             this.pboxProfilePicture.Name = "pboxProfilePicture";
             this.pboxProfilePicture.Size = new System.Drawing.Size(151, 178);
+            this.pboxProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pboxProfilePicture.TabIndex = 47;
             this.pboxProfilePicture.TabStop = false;
             // 
@@ -93,7 +95,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Palatino Linotype", 10F);
-            this.label4.Location = new System.Drawing.Point(488, 275);
+            this.label4.Location = new System.Drawing.Point(467, 277);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(69, 19);
             this.label4.TabIndex = 39;
@@ -104,18 +106,18 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Palatino Linotype", 10F);
-            this.label3.Location = new System.Drawing.Point(488, 198);
+            this.label3.Location = new System.Drawing.Point(467, 198);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 19);
+            this.label3.Size = new System.Drawing.Size(60, 19);
             this.label3.TabIndex = 38;
-            this.label3.Text = "Preu:";
+            this.label3.Text = "Preu(€):";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 10F);
-            this.label2.Location = new System.Drawing.Point(488, 157);
+            this.label2.Location = new System.Drawing.Point(467, 157);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 19);
             this.label2.TabIndex = 37;
@@ -126,11 +128,11 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 10F);
-            this.label1.Location = new System.Drawing.Point(488, 237);
+            this.label1.Location = new System.Drawing.Point(467, 237);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 19);
+            this.label1.Size = new System.Drawing.Size(103, 19);
             this.label1.TabIndex = 36;
-            this.label1.Text = "Descompte:";
+            this.label1.Text = "Descompte(%):";
             // 
             // lblTitolView
             // 
@@ -148,7 +150,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Palatino Linotype", 10F);
-            this.label5.Location = new System.Drawing.Point(488, 316);
+            this.label5.Location = new System.Drawing.Point(467, 316);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(74, 19);
             this.label5.TabIndex = 73;

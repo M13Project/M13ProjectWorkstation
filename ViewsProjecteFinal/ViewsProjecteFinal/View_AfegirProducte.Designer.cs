@@ -88,9 +88,9 @@
             this.label4.Font = new System.Drawing.Font("Palatino Linotype", 10F);
             this.label4.Location = new System.Drawing.Point(508, 291);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 19);
+            this.label4.Size = new System.Drawing.Size(64, 19);
             this.label4.TabIndex = 27;
-            this.label4.Text = "Habilitat:";
+            this.label4.Text = "Enabled:";
             // 
             // label3
             // 
@@ -131,6 +131,7 @@
             this.pboxProfilePicture.Location = new System.Drawing.Point(746, 173);
             this.pboxProfilePicture.Name = "pboxProfilePicture";
             this.pboxProfilePicture.Size = new System.Drawing.Size(147, 175);
+            this.pboxProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pboxProfilePicture.TabIndex = 35;
             this.pboxProfilePicture.TabStop = false;
             // 
@@ -173,12 +174,13 @@
             this.label5.Font = new System.Drawing.Font("Palatino Linotype", 10F);
             this.label5.Location = new System.Drawing.Point(509, 329);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 19);
+            this.label5.Size = new System.Drawing.Size(67, 19);
             this.label5.TabIndex = 77;
-            this.label5.Text = "Categoria:";
+            this.label5.Text = "Category";
             // 
             // pictureBoxLogout_UC1
             // 
+            this.pictureBoxLogout_UC1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxLogout_UC1.Location = new System.Drawing.Point(1310, 2);
             this.pictureBoxLogout_UC1.Name = "pictureBoxLogout_UC1";
             this.pictureBoxLogout_UC1.Size = new System.Drawing.Size(50, 50);

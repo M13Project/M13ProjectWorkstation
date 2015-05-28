@@ -36,7 +36,7 @@ namespace ViewsProjecteFinal.CustomClasses
                 MessageBox.Show("Successfully added!");
 
             } catch (Exception e){
-                MessageBox.Show("The Agent couldn't be added: " + e);
+                MessageBox.Show("The Agent couldn't be added: ");
         }
          }
         public int InsertUser(Usuari usuari)
@@ -46,7 +46,7 @@ namespace ViewsProjecteFinal.CustomClasses
             remoteDataContext.AddToUsuari(usuari);
             remoteDataContext.SaveChanges();
             } catch (Exception e){
-                MessageBox.Show("The Agent couldn't be added " + e);
+                MessageBox.Show("The User couldn't be added");
         }
             return usuari.Id;
         }
@@ -60,7 +60,7 @@ namespace ViewsProjecteFinal.CustomClasses
             }
             catch (Exception e)
             {
-                MessageBox.Show("The Category couldn't be added " + e);
+                MessageBox.Show("The Category couldn't be added ");
             }
         }
         public void InsertProduct(Producte producte)
@@ -73,7 +73,7 @@ namespace ViewsProjecteFinal.CustomClasses
             }
             catch (Exception e)
             {
-                MessageBox.Show("The Product couldn't be added " + e);
+                MessageBox.Show("The Product couldn't be added ");
             }
             
         }
@@ -87,7 +87,7 @@ namespace ViewsProjecteFinal.CustomClasses
             }
             catch (Exception e)
             {
-                MessageBox.Show("The Client couldn't be added " + e);
+                MessageBox.Show("The Client couldn't be added ");
             }
         }
         public void InsertComanda_Producte(Comanda_Producte comanda_producte)
@@ -100,7 +100,7 @@ namespace ViewsProjecteFinal.CustomClasses
                             }
             catch (Exception e)
             {
-                MessageBox.Show("The Order couldn't be added " + e);
+                MessageBox.Show("The Order couldn't be added ");
             }
         }
         //public void AddCategoria(Producte category) {
@@ -213,17 +213,18 @@ namespace ViewsProjecteFinal.CustomClasses
             remoteDataContext.UpdateObject(comercial);
             remoteDataContext.SaveChanges();
             } catch (Exception e){
-                MessageBox.Show("No s'ha actualitzar inserir: " + e);
+                MessageBox.Show("The Comercial couldn't be modified");
             } 
         }
         public void UpdateUser(Usuari usuari)
         {
             try{
             remoteDataContext.UpdateObject(usuari);
+
             remoteDataContext.SaveChanges();
-            MessageBox.Show("S'ha actualitzar correctament.");
+            MessageBox.Show("Successfully modified!");
             } catch (Exception e){
-                MessageBox.Show("No s'ha pogut actualitzar: " + e);
+                MessageBox.Show("The User couldn't be modified");
             } 
         }
         public void UpdateClient(Client client)
@@ -232,11 +233,11 @@ namespace ViewsProjecteFinal.CustomClasses
             {
                 remoteDataContext.UpdateObject(client);
                 remoteDataContext.SaveChanges();
-                MessageBox.Show("S'ha actualitzar correctament.");
+                MessageBox.Show("Successfully modified!");
             }
             catch (Exception e)
             {
-                MessageBox.Show("No s'ha pogut actualitzar: " + e);
+                MessageBox.Show("The Client couldn't be modified");
             }
 
 
@@ -246,9 +247,9 @@ namespace ViewsProjecteFinal.CustomClasses
             try{
             remoteDataContext.UpdateObject(categoria);
             remoteDataContext.SaveChanges();
-            MessageBox.Show("S'ha actualitzar correctament.");
+            MessageBox.Show("Successfully modified!");
             } catch (Exception e){
-                MessageBox.Show("No s'ha pogut actualitzar: " + e);
+                MessageBox.Show("The Category couldn't be modified");
             } 
         }
         public void UpdateProducte(Producte producte)
@@ -256,9 +257,9 @@ namespace ViewsProjecteFinal.CustomClasses
             try{
             remoteDataContext.UpdateObject(producte);
             remoteDataContext.SaveChanges();
-            MessageBox.Show("S'ha actualitzar correctament.");
+            MessageBox.Show("Successfully modified!");
             } catch (Exception e){
-                MessageBox.Show("No s'ha pogut actualitzar: " + e);
+                MessageBox.Show("The Product couldn't be modified");
             } 
         }
         public void UpdatePerfil(Usuari usuari)
@@ -267,9 +268,9 @@ namespace ViewsProjecteFinal.CustomClasses
             {
             remoteDataContext.UpdateObject(usuari);
             remoteDataContext.SaveChanges();
-            MessageBox.Show("S'ha actualitzar correctament.");
+            MessageBox.Show("Successfully modified!");
             } catch (Exception e){
-                MessageBox.Show("No s'ha pogut actualitzar: " + e);
+                MessageBox.Show("The User Profile couldn't be modified");
             } 
         }
         //Deletes
@@ -397,11 +398,18 @@ namespace ViewsProjecteFinal.CustomClasses
                             Price = asd.Preu,
                             Discount = asd.Descompte,
                             Enabled = asd.Habilitat,
-                            Name_Category = asd.Categoria.Nom
+                            Name_Category = asd.Categoria.Nom,
+                            CategoryId = asd.CategoriaId
                         };
              foreach (var productGroup in query)
              {
+                 Console.WriteLine(productGroup.Id);
+                 Console.WriteLine(productGroup.Name);
+                 Console.WriteLine(productGroup.Price);
+                 Console.WriteLine(productGroup.Discount);
+                 Console.WriteLine(productGroup.Enabled);
                  Console.WriteLine(productGroup.Name_Category);
+                 Console.WriteLine(productGroup.CategoryId);
                  prod.Add(productGroup);
              }
             return prod;
@@ -431,10 +439,88 @@ namespace ViewsProjecteFinal.CustomClasses
             }
             return prod;
         }
-        public List<Object> gridDetallComandes(int id) {
+        public List<Object> gridClients()
+        {
+            List<Object> prod = new List<Object>();
+            var query = from asd in remoteDataContext.Client
+                        select new
+                        {
+                            asd.Id,
+                            Name = asd.Nom,
+                            Surname = asd.Cognom,
+                            Age = asd.Edat,
+                            IDCard = asd.Dni,
+                            Next_Visit = asd.DataProperaVisita,
+                            Localization = asd.Localitzacio,
+                            asd.ComercialId
+                        };
+
+            foreach (var productGroup in query)
+            {
+                Console.WriteLine(productGroup.Id);
+                Console.WriteLine(productGroup.Name);
+                Console.WriteLine(productGroup.Surname);
+                Console.WriteLine(productGroup.Age);
+                Console.WriteLine(productGroup.IDCard);
+                Console.WriteLine(productGroup.Next_Visit);
+                Console.WriteLine(productGroup.Localization);
+                Console.WriteLine(productGroup.ComercialId);
+                prod.Add(productGroup);
+            }
+            return prod;
+        }
+        public List<Object> gridCategoria()
+        {
+            List<Object> cat = new List<Object>();
+            var query = from asd in remoteDataContext.Categoria
+                        select new
+                        {
+                            asd.Id,
+                            Name = asd.Nom,
+                            Discount = asd.Descompte
+                        };
+
+            foreach (var productGroup in query)
+            {
+                Console.WriteLine(productGroup.Id);
+                Console.WriteLine(productGroup.Name);
+                Console.WriteLine(productGroup.Discount);
+                cat.Add(productGroup);
+            }
+            return cat;
+        }
+        public List<Object> gridComandes()
+        {
+            List<Object> com = new List<Object>();
+            var query = from asd in remoteDataContext.Comanda
+                        select new
+                        {
+                            asd.Id,
+                            asd.ComercialId,
+                            Delivered = asd.Lliurada,
+                            Date = asd.Data,
+                            asd.ClientId,
+                            Name = asd.Client.Nom,
+                            Surname = asd.Client.Cognom
+                        };
+
+            foreach (var productGroup in query)
+            {
+                Console.WriteLine(productGroup.Id);
+                Console.WriteLine(productGroup.Delivered);
+                Console.WriteLine(productGroup.Date);
+                Console.WriteLine(productGroup.ClientId);
+                Console.WriteLine(productGroup.Name);
+                Console.WriteLine(productGroup.Surname);
+                Console.WriteLine(productGroup.ComercialId);
+                com.Add(productGroup);
+            }
+            return com;
+        }
+        public List<Object> gridDetallComandes(int id, int idCom) {
             List<Object> com_prod = new List<Object>();
 
-            var query = from asd in remoteDataContext.Comanda_Producte where asd.ComandaId == id
+            var query = from asd in remoteDataContext.Comanda_Producte where asd.ComandaId == id && asd.ComercialId == idCom
                         select new
                         {
                             Quantity = asd.Quantitat,
@@ -460,6 +546,20 @@ namespace ViewsProjecteFinal.CustomClasses
                 com_prod.Add(productGroup);
             }
             return com_prod;
+        }
+        public bool validateFields(String a, int i) {
+            bool comprovar = false;
+
+            if (a.Count() < i) {
+                comprovar = true;
+            }
+
+            return comprovar;
+        }
+        public int countClient(int id)
+        {
+            int cli = (from client in remoteDataContext.Client where client.ComercialId == id select client).Count();
+            return cli;
         }
     }
 }

@@ -15,8 +15,9 @@ namespace ViewsProjecteFinal
             f.Hide();
  
             f2.ShowDialog();
-
+            
             f.Show();
+            
         }
         public static string ComputeHash(string input, HashAlgorithm algorithm)
         {
@@ -29,9 +30,9 @@ namespace ViewsProjecteFinal
         public static DialogResult PerformCalculations()
         {
             DialogResult result;
-            string message = "Estas segur que vols eliminar?";
-            string caption = "Eliminar Categoria";
-            MessageBoxButtons buttons = MessageBoxButtons.OKCancel;
+            string message = "Are you sure that you want to delete?";
+            string caption = "Delete Category";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
 
             result = MessageBox.Show(message, caption, buttons);
 

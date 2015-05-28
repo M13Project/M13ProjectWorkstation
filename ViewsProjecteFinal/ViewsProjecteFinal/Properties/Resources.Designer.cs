@@ -193,6 +193,16 @@ namespace ViewsProjecteFinal.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ProductDefault {
+            get {
+                object obj = ResourceManager.GetObject("ProductDefault", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Products {
             get {
                 object obj = ResourceManager.GetObject("Products", resourceCulture);

@@ -87,7 +87,7 @@ namespace ViewsProjecteFinal
                 int id;
                 id = int.Parse(this.txtSelect.Text);
 
-                Form modificarAgent = new View_ModificarAgent(id);
+                Form modificarAgent = new Views_ProjecteFinal(id);
                 Methods.back(this, modificarAgent);
             }
             catch

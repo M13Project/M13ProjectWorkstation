@@ -69,18 +69,18 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Palatino Linotype", 10F);
-            this.label3.Location = new System.Drawing.Point(575, 213);
+            this.label3.Location = new System.Drawing.Point(564, 213);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 19);
+            this.label3.Size = new System.Drawing.Size(93, 19);
             this.label3.TabIndex = 48;
-            this.label3.Text = "Discount:";
+            this.label3.Text = "Discount(%):";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 10F);
-            this.label2.Location = new System.Drawing.Point(575, 172);
+            this.label2.Location = new System.Drawing.Point(564, 172);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 19);
             this.label2.TabIndex = 47;
