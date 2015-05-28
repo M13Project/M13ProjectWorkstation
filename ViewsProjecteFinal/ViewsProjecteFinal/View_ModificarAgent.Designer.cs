@@ -1,6 +1,6 @@
 ﻿namespace ViewsProjecteFinal
 {
-    partial class Views_ProjecteFinal
+    partial class ModificarAgent
     {
         /// <summary>
         /// Required designer variable.
@@ -159,6 +159,7 @@
             this.pboxPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pboxPerfil.TabIndex = 73;
             this.pboxPerfil.TabStop = false;
+            this.pboxPerfil.Click += new System.EventHandler(this.pboxPerfil_Click);
             // 
             // label7
             // 
@@ -254,7 +255,7 @@
             this.lblHelp.Size = new System.Drawing.Size(0, 13);
             this.lblHelp.TabIndex = 79;
             // 
-            // Views_ProjecteFinal
+            // ModificarAgent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -281,7 +282,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Views_ProjecteFinal";
+            this.Name = "ModificarAgent";
             this.Text = "View_ModificarAgent";
             this.Load += new System.EventHandler(this.View_ModificarAgent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pboxPerfil)).EndInit();

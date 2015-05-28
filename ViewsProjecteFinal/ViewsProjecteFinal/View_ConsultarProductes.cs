@@ -73,7 +73,7 @@ namespace ViewsProjecteFinal
                 producte = pm.getProducte(id);
                 DialogResult result;
                 result = Methods.PerformCalculations();
-                if (result == System.Windows.Forms.DialogResult.OK)
+                if (result == System.Windows.Forms.DialogResult.Yes)
                 {
                     pm.DeleteProducte(producte);
                     productes = pm.gridProductes();

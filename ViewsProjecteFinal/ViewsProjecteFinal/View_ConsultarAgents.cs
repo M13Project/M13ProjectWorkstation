@@ -59,7 +59,7 @@ namespace ViewsProjecteFinal
                 comercial = pm.getComercial(id);
                 DialogResult result;
                 result = Methods.PerformCalculations();
-                if (result == System.Windows.Forms.DialogResult.OK)
+                if (result == System.Windows.Forms.DialogResult.Yes)
                 {
                     pm.DeleteComercial(comercial);
                     comercials = pm.gridUsuaris();
@@ -87,7 +87,7 @@ namespace ViewsProjecteFinal
                 int id;
                 id = int.Parse(this.txtSelect.Text);
 
-                Form modificarAgent = new Views_ProjecteFinal(id);
+                Form modificarAgent = new ModificarAgent(id);
                 Methods.back(this, modificarAgent);
             }
             catch

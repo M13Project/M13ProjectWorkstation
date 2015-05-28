@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -14,12 +15,12 @@ using ViewsProjecteFinal.ServiceReference;
 namespace ViewsProjecteFinal
 {
     
-    public partial class Views_ProjecteFinal : Form
+    public partial class ModificarAgent : Form
     {
         PersistanceManager pm;
         Usuari usuari = new Usuari();
         Comercial comercial = new Comercial();
-        public Views_ProjecteFinal(int id)
+        public ModificarAgent(int id)
         {
             InitializeComponent();
 
@@ -48,6 +49,7 @@ namespace ViewsProjecteFinal
             DateTime dt = (DateTime)comercial.AnyInici;
             txtStartYear.Text = dt.Date.ToString();
             this.cboxHabilitat.Checked = comercial.Habilitat;
+            this.pboxPerfil.ImageLocation = usuari.Imatge;
         }
         private void txtStartYear_Enter(object sender, EventArgs e)
         {
@@ -73,6 +75,7 @@ namespace ViewsProjecteFinal
             usuari.Contrasenya = Methods.ComputeHash( txtPassword.Text.ToString() , new SHA256CryptoServiceProvider());
             usuari.Dni = txtDNI.Text.ToString();
             usuari.Usuari1 = txtUsername.Text.ToString();
+            usuari.Imatge = pboxPerfil.ImageLocation;
 
             pm.UpdateAgent(comercial);
             pm.UpdatePerfil(usuari);
@@ -82,6 +85,38 @@ namespace ViewsProjecteFinal
         private void View_ModificarAgent_Load(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void pboxPerfil_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog opFile = new OpenFileDialog();
+            opFile.Title = "Select a Image";
+            opFile.Filter = "Jpg files (*.jpg)|*.jpg|Png files (*.png)|*.png|All files (*.*)|*.*";
+
+            string appPath = Path.GetDirectoryName(Application.ExecutablePath) + @"\ProImages\";
+            if (Directory.Exists(appPath) == false)
+            {
+                Directory.CreateDirectory(appPath);
+            }
+            if (opFile.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    string iName = opFile.SafeFileName;
+                    string filepath = opFile.FileName;
+
+                    File.Copy(filepath, appPath + iName);
+                    pboxPerfil.Image = new Bitmap(opFile.OpenFile());
+                }
+                catch (Exception exp)
+                {
+                    MessageBox.Show("Unable to open file " + exp.Message);
+                }
+            }
+            else
+            {
+                opFile.Dispose();
+            }
         }
     }
 }

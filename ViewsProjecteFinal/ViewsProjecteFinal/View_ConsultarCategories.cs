@@ -74,7 +74,7 @@ namespace ViewsProjecteFinal
                 categoria = pm.getCategoria(id);
                 DialogResult result;
                 result = Methods.PerformCalculations();
-                if (result == System.Windows.Forms.DialogResult.OK)
+                if (result == System.Windows.Forms.DialogResult.Yes)
                 {
                     pm.DeleteCategoria(categoria);
                     this.gridView.DataSource = entities.Categoria.ToList();

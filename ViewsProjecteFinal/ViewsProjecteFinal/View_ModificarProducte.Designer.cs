@@ -54,6 +54,7 @@
             this.pboxProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pboxProfilePicture.TabIndex = 47;
             this.pboxProfilePicture.TabStop = false;
+            this.pboxProfilePicture.Click += new System.EventHandler(this.pboxProfilePicture_Click);
             // 
             // btnUpdate
             // 

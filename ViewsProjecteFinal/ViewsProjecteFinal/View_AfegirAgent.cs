@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using ViewsProjecteFinal.ServiceReference;
 using ViewsProjecteFinal.CustomClasses;
 using System.Security.Cryptography;
+using System.IO;
 
 
 namespace ViewsProjecteFinal
@@ -46,9 +47,6 @@ namespace ViewsProjecteFinal
                 us.Dni = txtDNI.Text;
                 us.Usuari1 = txtUsername.Text;
                 us.Contrasenya = Methods.ComputeHash(txtPassword.Text.ToString(), new SHA256CryptoServiceProvider());
-
-                //pm.validateFields(txtDNI.Text, characterLimit);
-
                 id = pm.InsertUser(us);
                 Comercial com = new Comercial();
                 string date = txtStartYear.Text.ToString();
@@ -81,6 +79,38 @@ namespace ViewsProjecteFinal
         private void View_AfegirAgent_Load(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void pboxPerfil_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog opFile = new OpenFileDialog();
+            opFile.Title = "Select a Image";
+            opFile.Filter = "Jpg files (*.jpg)|*.jpg|Png files (*.png)|*.png|All files (*.*)|*.*";
+
+            string appPath = Path.GetDirectoryName(Application.ExecutablePath) + @"\ProImages\";
+            if (Directory.Exists(appPath) == false)
+            {
+                Directory.CreateDirectory(appPath);
+            }
+            if (opFile.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    string iName = opFile.SafeFileName;
+                    string filepath = opFile.FileName;
+
+                    File.Copy(filepath, appPath + iName);
+                    pboxPerfil.Image = new Bitmap(opFile.OpenFile());
+                }
+                catch (Exception exp)
+                {
+                    MessageBox.Show("Unable to open file " + exp.Message);
+                }
+            }
+            else
+            {
+                opFile.Dispose();
+            }
         }
     }
 }

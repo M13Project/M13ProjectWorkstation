@@ -233,6 +233,7 @@
             this.pboxPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pboxPerfil.TabIndex = 32;
             this.pboxPerfil.TabStop = false;
+            this.pboxPerfil.Click += new System.EventHandler(this.pboxPerfil_Click);
             // 
             // lblHelp
             // 
